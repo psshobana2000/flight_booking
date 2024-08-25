@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traveller Management</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 50px auto;
+    overflow-x: auto;
+}
+
+.traveller-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 16px;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.traveller-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.traveller-table th, .traveller-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.traveller-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.traveller-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.traveller-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.manage-amount {
+    width: 100px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn {
+    padding: 8px 16px;
+    margin: 4px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.refund-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.refund-btn:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table class="traveller-table">
+            <thead>
+                <tr>
+                    <th>Customer Name</th>
+                    <th>Trip</th>
+                    <th>Date Booked</th>
+                    <th>Total Amount</th>
+                    <th>Manage Amount</th>
+                    <th>Payment Status</th>
+                    <th>Cancellation Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>Paris Trip</td>
+                    <td>2024-06-25</td>
+                    <td>$1200</td>
+                    <td><input type="number" min="5" class="manage-amount"></td>
+                    <td>Paid</td>
+                    <td>Not Cancelled</td>
+                    <td><button class="btn refund-btn">Refund</button></td>
+                </tr>
+                <tr>
+                    <td>Daniel</td>
+                    <td>Goa Trip</td>
+                    <td>2024-07-05</td>
+                    <td>$1100</td>
+                    <td><input type="number" min="0" class="manage-amount"></td>
+                    <td>Paid</td>
+                    <td>Not Cancelled</td>
+                    <td><button class="btn refund-btn">Refund</button></td>
+                </tr>
+                <tr>
+                    <td>jonnie</td>
+                    <td>london Trip</td>
+                    <td>2024-05-12</td>
+                    <td>$1300</td>
+                    <td><input type="number" min="0" class="manage-amount"></td>
+                    <td>Paid</td>
+                    <td>Cancelled</td>
+                    <td><button class="btn refund-btn">Refund</button></td>
+                </tr>
+                <tr>
+                    <td>math</td>
+                    <td>Paris Trip</td>
+                    <td>2024-07-26</td>
+                    <td>$1200</td>
+                    <td><input type="number" min="0" class="manage-amount"></td>
+                    <td>Paid</td>
+                    <td>Not Cancelled</td>
+                    <td><button class="btn refund-btn">Refund</button></td>
+                </tr>
+                
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

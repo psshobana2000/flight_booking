@@ -1,0 +1,1169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static%}
+    <link rel="stylesheet" href="../static/app.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/> 
+    <style>
+    .page {
+      display: none;
+  }
+  
+  .page.active {
+      display: block;
+  }
+  
+  button.ridge, button.bride, button.ride {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+  }
+  
+  .hidden {
+      display: none;
+  }
+  .flights  a
+{
+    color:#666666;
+    margin-left: 5px;
+
+
+}
+.flights:hover a
+{
+    color: red;
+}
+.Hotel{
+    margin-left:10px;
+}
+.Hotel:hover{
+    color: red;
+}
+.Hotel a
+{
+    color:#666666;
+    padding-right:5px;
+  
+
+}
+.Hotel:hover a{
+    color:red;
+    }
+.buses{
+    margin-left: 10px;
+    }
+    .buses:hover{
+        color: red;
+    }
+.buses a
+{
+    color: #666666;
+    padding-right:5px;
+}
+.buses:hover a
+{
+    color: red;
+}
+.Holidays{
+    margin-left: 10px;
+}
+.Holidays:hover{
+    color: red;
+}
+.Holidays a
+{
+    color: #666666;
+
+}
+.Holidays:hover a
+{
+    color: red;
+}
+.cabs{
+    margin-left: 10px;
+}
+.cabs:hover{
+    color: red;
+}
+.cabs a {
+    color: #666666;
+}
+.cabs:hover a
+{
+    color: red;
+}
+.visa{
+    margin-left: 10px;
+}
+.visa:hover{
+    color: red;
+}
+.visa a
+{
+    color: #666666;
+}
+.visa:hover a
+{
+    color: red;
+}
+.img {
+    width: 130px;
+    height: 34px;
+    margin-left: 130px;
+    margin-top: 25px;
+}
+.unorder{
+    font-size: 14px !important;
+    margin-top: 10px;
+}
+.more {
+    padding: 10px;
+
+}
+.max{
+    margin-top: 2px;
+    width: 100px;
+    height: 35px;
+}
+.flighting{
+    margin-left: 14px;
+
+}
+.flighting:hover{
+    color: red;
+}
+.hotels{
+    margin-left: 11px;
+}
+.hotels:hover{
+    color: red;
+}
+.beachs{
+    margin-left: 20px;
+}
+.beachs:hover{
+    color: red;
+}
+.simple{
+    margin-left: 16px;
+}
+.simple:hover{
+    color: red;
+}
+.caring{
+    margin-left: 8px;
+}
+.caring:hover{
+    color: red;
+}
+.visas{
+    margin-left: 5px;
+}
+.visas:hover{
+    color: red;
+}
+.journey{
+    padding-top: 13px;
+    padding-left: 209px;
+}
+.journeys{
+    padding-left: 0px;
+    padding-top: 14px;
+}
+.lists{
+    list-style-type: none;
+}
+.offering{
+    padding-left: 15px !important;
+    padding-top: 20px !important;
+}
+.businessing{
+    padding-right: 58px !important;
+  padding-top: 20px !important;
+}
+.link{
+    position: fixed;
+    box-shadow: 0 4px 8px 0 rgba(212, 203, 203, 0.762);
+    background-color: white;
+    margin-top: 92px;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-left: -20px !important; 
+}
+.menu:hover a {
+    color: red;
+}
+.meta:hover a {
+    color: red;
+}
+.max:hover a {
+    color: red;
+}
+.mini:hover a {
+    color: red;
+}
+.drop:hover a {
+    color: red;
+}
+.down:hover a {
+    color: red;
+}
+.limit:hover a {
+    color: red;
+}
+.act:hover a {
+    color: red;
+}
+.explore:hover a {
+    color: red;
+}
+.auto:hover a {
+    color: red;
+}
+.item:hover a {
+    color: red;
+}
+.section2{
+    border: 1px solid #bdd4be;
+    width: 441px;
+    height: 609px;
+    margin-top: 115px;
+    margin-left: 61px;
+  }
+.ridge{
+    border: 2px solid rgb(220, 205, 205);
+    width: 116px;
+    height: 34px;
+    margin-left: 0px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 10px;
+}
+
+.ridge:hover{
+    color: red;
+    border-color:red;
+}
+.ridge:active{
+    color: red;
+    border-color:red;
+}
+.bride{
+    border: 2px solid rgb(220, 205, 205);
+    width: 116px;
+    height: 34px;
+    margin-left: 0px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 10px;
+  }
+.bride:hover{
+    color: red;
+    border-color: red;
+}
+.ride{
+    border: 2px solid rgb(220, 205, 205);
+    width: 116px;
+    height: 34px;
+    margin-left: 0px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 10px;
+}
+.ride:hover{
+    color: red;
+    border-color: red;
+}
+.side{
+    text-align: right;
+}
+.h3{
+    color: rgb(144, 184, 197);
+
+}
+.low{
+    font-size: 0.75rem !important;
+}
+.blue{
+    background: #228ee9;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.red{
+    background: #ea2330;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 20px;
+    width: 47%;
+    margin-top: 15px;
+}
+h5{
+    color:skyblue;
+    margin-left: 285px;
+    margin-top: -47px;
+}
+.aside{
+    display: flex;
+    margin-top: 10px;
+}
+.aside1{
+    display: flex;
+}
+.book-date{
+    margin-left:190px;
+}
+.book-trip{
+    color: skyblue;
+  font-weight: 504;
+  font-size: 19px;
+  margin-left: -3px;
+}
+.bom{
+    margin-left: 69px;
+}
+.button-icon{
+    margin-left: 88px;
+  margin-top: 33px;
+  border-radius: 20px;
+  padding: 9px;
+  background-color: white;
+  border-color: #ff0000a1;
+  border-style: solid;
+  color: #ff0000a1;
+
+}
+.metadata{
+    display: flex;
+}
+.font{
+   float: right; 
+}
+.data{
+    float: left;
+    margin-top: 89px;
+    margin-left: 169px;
+    padding: 27px;
+    box-shadow:0 4px 8px 0 rgba(212, 203, 203, 0.762), 0 6px 20px 0 rgba(234, 219, 219, 0.97);
+    position: fixed;
+}
+.metadata1{
+    float: right;
+    width: 771px;
+    margin-top: 71px;
+    margin-right: 23px;
+}
+.image1{
+    padding-top: 19px;
+  width: 99%;
+  border-radius: 7px;
+}
+.image2{
+    padding-top: 24px;
+    width: 46%;
+    border-radius: 7px;
+    height: 114px;
+  }
+.image3{
+    padding-top: 26px;
+  width: 52%;
+  margin-left: 0px;
+  border-radius: 7px;
+  height: 114px;
+}
+.imagrede4{
+    padding-top: 30px;
+    width: 98%;
+    border-radius: 7px;
+}
+.image-font{
+    height: 254px;
+}
+.button-more{
+    background-color: white !important;
+    color: black !important;
+    border:1px solid whitesmoke !important;
+    border-radius: 10px !important;
+}
+.button-account{
+    background-color: white !important;
+    color: black !important;
+    border: none !important;
+}
+.button-support{
+    background-color: white !important;
+    color: black !important;
+    border: none !important;
+    /* margin-left: -155px !important; */
+    margin-top: -2px !important;
+}
+.views{
+    color: skyblue;
+}
+.flights{
+    margin-left: 56px;
+}
+.flights:hover{
+    color: red;
+}
+.flights:active{
+    color: red;
+    border-bottom: 2px solid red;
+}
+.flights1:active{
+    color: red;
+}
+.dropdown-booking{
+    position: relative !important;
+  margin-top: -172px !important;
+}
+.demo-banner{
+    display: flex;
+    width: 35%;
+    padding-left: 0px;
+}
+.demo-pass{
+    height: 237px;
+    width: 82% !important;
+    margin-top: 17px;
+}
+.paragraph{
+    font-size: 20px !important;
+}
+.hang{
+    font-size: 19px;
+    font-family: Rubik,sans-serif;
+  font-weight: 400;
+}
+.card-place{
+    width: 100%;
+}
+.card-price{
+    color: red;
+}
+.card-row{
+    display: flex;
+    margin-left: 741px;
+}
+.card-column{
+    width: 18%;
+    margin-left: 38px;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    margin-top: 35px;
+    position: static !important;
+  
+}
+.lines{
+    margin-left: 800px;
+   
+}
+.line1{
+    font-size: 31px;
+  font-weight: 400;
+  margin-top: 34px;
+    margin-left: -37px;
+}
+.card-from{
+    font-weight: bold;
+    margin-left: -38px;
+}
+.card-reaction{
+    margin-left: -54px;
+}
+.roles{
+    display: flex;
+  margin-left: 717px;
+  width: 893px;
+  height: 252px;
+}
+.temp{
+    color: black !important;
+}
+.temp:hover{
+    color:skyblue !important;
+}
+.yarta2{
+    margin-bottom: 50px;
+    margin-left: 756px;
+    width: 50%;
+    height: 289px;
+    margin-top: 37px;
+}
+.para{
+    margin-left: 760px;
+  width: 50%;
+  padding: 20px;
+  box-shadow: 4px 4px 4px 4px #aaaaaa;
+  height: 468px;
+}
+.query{
+    color: rgb(196, 8, 8);
+}
+.arrow-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  
+  .arrow-button .left-arrow::before {
+    content: "\2190"; /* Unicode character for left arrow */
+    margin-right: 5px;
+  }
+  
+  .arrow-button .right-arrow::after {
+    content: "\2192"; /* Unicode character for right arrow */
+    margin-left: 5px;
+  }
+  .scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 20px;
+  }
+  
+  .scroll-container img {
+    display: inline-block;
+    width: 200px; /* Adjust image width as needed */
+    height: 35px;
+    margin-right: 10px; /* Adjust spacing between images */
+  }
+  
+  .scroll-button {
+    background-color: #ddd;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .scroll-button:hover {
+    background-color: #ccc;
+  }
+  .one{
+    height: 35px !important;
+  }
+  .two{
+    height: 35px !important;
+  }
+.box{
+    margin-top: 53px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    width: 59%;
+    height: 39px;
+    margin-left: 145px;
+    text-align: justify;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 4px;
+}
+.front{
+    color: grey;
+    margin-right: 40px;
+    
+}
+.front1{
+    color: grey;
+}
+.lens{
+    color: grey;
+    
+}
+.data{
+    height: 610px !important;
+    line-height: 15px !important;
+    width: 30% !important;
+}
+
+  
+      </style>
+</head>
+<body>
+  
+   
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    
+      <div class="link">
+        
+      <img src="{% static 'images/p7.png' %}" alt="image" class="img" width="8%">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 hang unorder">
+              <li class="nav-item flights">
+                <i class="fa fa-plane flighting"></i>
+                <span class="flights1">Flights</span>
+              </li>
+              <li class="nav-item Hotel">
+                <i class="fa fa-hotel hotels"></i>
+                <span class="flights1">Hotel</span>
+              </li>
+              <li class="nav-item Holidays">
+                <i class="fa fa-umbrella-beach beachs"></i>
+                <span class="flights1">Holidays</span>
+              </li>
+              <li class="nav-item buses">
+                <i class="fa fa-bus simple"></i>
+                <span class="flights1">buses</span>
+              </li>
+              <li class="nav-item cabs">
+                <i class="fa fa-car caring" class="max"></i>
+                <span class="flights1">cabs</span>
+              </li>
+              <li class="nav-item visa">
+                <i class="fa-brands fa-cc-visa visas"></i>
+                <span class="flights1">visa</span>
+              </li>
+              
+              <div class="dropdown more"> 
+                <a class="btn btn-secondary dropdown-toggle button-more" href="#"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-bs-toggle="dropdown" aria-expanded="false"> 
+                  +more
+                </a> 
+                <ul class="dropdown-menu"
+                    aria-labelledby="dropdownMenuLink"> 
+                  <li class="menu"><a class="dropdown-item" href="#"> 
+                    spirtuval journey
+                  </a> 
+                  </li> 
+                  <li class="meta"><a class="dropdown-item" href="#"> 
+                    luxury trains
+                    </a> 
+                  </li> 
+                  <li class="max"><a class="dropdown-item" href="#"> 
+                    vills & stays
+                    </a> 
+                  </li>
+                  <li class="mini"><a class="dropdown-item" href="#"> 
+                    gift voucher
+                    </a> 
+                  </li> 
+                  <li class="drop"><a class="dropdown-item" href="#"> 
+                    trains
+                    </a> 
+                  </li> 
+                  <li class="limit"><a class="dropdown-item" href="#"> 
+                     curise
+                    </a> 
+                  </li> 
+                  <li class="down"><a class="dropdown-item" href="#"> 
+                    freight
+                    </a> 
+                  </li> 
+                  <li class="item"><a class="dropdown-item" href="#"> 
+                    adventures
+                    </a> 
+                  </li> 
+                  <li class="act"><a class="dropdown-item" href="#"> 
+                    activities
+                    </a> 
+                  </li> 
+                  <li class="auto"><a class="dropdown-item" href="#"> 
+                    monuments
+                    </a> 
+                  </li>
+                  <li class="explore"><a class="dropdown-item" href="#"> 
+                    xplore 
+                    </a> 
+                  </li>  
+                </ul> 
+              </div> 
+              <div class="dropdown  journey"> 
+                <a class="btn btn-secondary dropdown-toggle button-account"
+                  href="#"
+                  role="button" id="dropdownMenuLink"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"> 
+                  My Accounts
+                </a> 
+                <form class="dropdown-menu p-4 dropdown-booking">
+                  <div class="mb-3">
+                    <p>My booking</p>
+                    <p>My fund</p>
+                    <button type="submit" class="btn btn-primary">login</button>
+                  </div>
+                  <div class="mb-3">
+                    <p>My for Bussiness</p>
+                    <p>My for travel agents</p>
+                    <button type="submit" class="btn btn-primary">Sign up</button>
+                  </div>
+                    </div>
+                  
+                </form>
+              
+              <script> 
+                $(document).ready(function () { 
+                  $('.dropdown').hover(function () { 
+                    $(this).find('.dropdown-menu') 
+                    .stop(true, true).delay(100).fadeIn(200); 
+                  }, function () { 
+                    $(this).find('.dropdown-menu') 
+                    .stop(true, true).delay(100).fadeOut(200); 
+                  }); 
+                }); 
+            
+              </script>
+              <div class="dropdown  journeys"> 
+                <a class="btn btn-secondary dropdown-toggle button-support"
+                  href="#"
+                  role="button" id="dropdownMenuLink"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"> 
+                 supports
+                </a> 
+  
+                <ul class="dropdown-menu"
+                  aria-labelledby="dropdownMenuLink"> 
+                  <li><a class="dropdown-item" href="#"> 
+                talk to us
+                    </a> 
+                  </li> 
+                  <li><a class="dropdown-item" href="#"> 
+                    check your refund 
+                    </a> 
+                  </li> 
+                  <li><a class="dropdown-item" href="#"> 
+                    contact us
+                  </a> 
+                </li> 
+                <li><a class="dropdown-item" href="#"> 
+                  complete booking
+                </a> 
+              </li> 
+              <li><a class="dropdown-item" href="#"> 
+                make a payment
+              </a> 
+            </li> 
+            <li><a class="dropdown-item" href="#"> 
+              flight cancellation charges 
+                   
+            </a> 
+          </li> 
+          <li><a class="dropdown-item" href="#"> 
+             complete holiday booking
+            
+          </a> 
+          </li> 
+                </ul> 
+              </div> 
+            
+              <script> 
+                $(document).ready(function () { 
+                  $('.dropdown').hover(function () { 
+                    $(this).addClass('show'); 
+                    $(this).find('.dropdown-menu').addClass('show'); 
+                  }, function () { 
+                    $(this).removeClass('show'); 
+                    $(this).find('.dropdown-menu').removeClass('show'); 
+                  }); 
+                }); 
+              </script> 
+    
+              <li class="lists"><a class="dropdown-item offering" href="#"> 
+                Offers
+                </a> 
+              </li> 
+              <li class="lists"><a class="dropdown-item businessing" href="#"> 
+                Yatra for Bussiness 
+              </a> 
+            </li>   
+            </form>
+          </div>
+        </div>
+          </div>
+      </nav> 
+      <div class="main">
+        <div class="data">
+            <p class="paragraph"><b>Book flights,Hotels and Holiday Packages</b></p>
+
+            
+          <button class="ridge" onclick="showPage('oneWay')">ONE WAY</button>
+          <button class="bride" onclick="showPage('roundTrip')">ROUND STRIP</button>
+          <button class="ride" onclick="showPage('multiCity')">MULTI-CITY</button>
+          
+            <div id="oneWay" class="page active">
+            <div class="aside">
+              <span>
+            <h6 class="front">Depart from </h6>
+            <h3 class="low">New Delhi</h3>
+            <h6 class="front1">DEL</h6>
+          </span>
+          <br>
+          <span>
+            <button class="button-icon">&#x21C4;</button>
+          </span>
+              <span class="bom">
+            <h6 class="lens">Going to</h6>
+            <h3 class="low">Mumbai</h3>
+            <h6 class="lens">BOM</h6>
+          </span>
+            </div>
+            <hr>
+            <div class="aside1">
+           <span>
+            <h6 class="lens">Departure Date</h6>
+            <h3 class="low">8 Apr'24</h3>
+            <br>
+            <h6 class="lens">Monday</h6>
+          </span>
+          <span class="book-date">
+          <h6 class="lens">Return Date</h6>
+            <br>
+            <span class="book-trip">Book round trip<br>to save extra</span>
+          </span>
+        </div>
+            <hr>
+       
+             <h6 class="lens">Traveller(s),class</h6>
+             <br>
+             1 Traveller Economy 
+             <hr>
+        <input type="checkbox" id="v1" name="stage1">
+        <label for="vehicle1"> Non Stop Flights</label><br>
+        <input type="checkbox" id="v2" name="stage2">
+        <label for="vehicle2"> Students Fare</label><br>
+        <input type="checkbox" id="v3" name="stage3">
+        <label for="vehicle3"> Armed Force</label><br>
+        <input type="checkbox" id="v4" name="stage4">
+        <label for="vehicle1"> senior citizen</label><br>
+      <button class="blue">Check Your Refund</button>
+      <a href="firstapp/sec.html" class="red">Search Flights</a>
+    
+  </div>
+  <div id="roundTrip" class="page hidden">
+    <!-- Round Trip Content -->
+    <div class="aside">
+        <span>
+            <h6 class="front">Depart from </h6>
+            <h3 class="low">New Delhi</h3>
+            <h6 class="front1">DEL</h6>
+        </span>
+        <br>
+        <span>
+            <button class="button-icon">&#x21C4;</button>
+        </span>
+        <span class="bom">
+            <h6 class="lens">Going to</h6>
+            <h3 class="low">Mumbai</h3>
+            <h6 class="lens">BOM</h6>
+        </span>
+    </div>
+    <hr>
+    <div class="aside1">
+        <span>
+            <h6 class="lens">Departure Date</h6>
+            <h3 class="low">8 Apr'24</h3>
+            <br>
+            <h6 class="lens">Monday</h6>
+        </span>
+        <span class="book-date">
+            <h6 class="lens">Return Date</h6>
+            <h3 class="low">15 Apr'24</h3>
+            <br>
+            <span class="book-trip">Book round trip<br>to save extra</span>
+        </span>
+    </div>
+    <hr>
+    <h6 class="lens">Traveller(s), class</h6>
+    <br>
+    1 Traveller Economy 
+    <hr>
+    <input type="checkbox" id="v1" name="stage1">
+    <label for="vehicle1"> Non Stop Flights</label><br>
+    <input type="checkbox" id="v2" name="stage2">
+    <label for="vehicle2"> Students Fare</label><br>
+    <input type="checkbox" id="v3" name="stage3">
+    <label for="vehicle3"> Armed Force</label><br>
+    <input type="checkbox" id="v4" name="stage4">
+    <label for="vehicle1"> Senior Citizen</label><br>
+    <button class="blue">Check Your Refund</button>
+    <a href="firstapp/sec.html" class="red">Search Flights</a>
+</div>
+
+<!-- Multi-City Page -->
+<div id="multiCity" class="page hidden">
+    <!-- Multi-City Content -->
+    <div class="aside">
+        <span>
+            <h6 class="front">Depart from </h6>
+            <h5>New Delhi</h5>
+            <h6 class="front1">DEL</h6>
+        </span>
+        <br>
+        
+        <span>
+          <h6 class="front">Depart To </h6>
+          <h5></h5>Goa
+          <h6 class="front1">DEL</h6>
+      </span>
+      <br>
+        <span class="bom">
+            <h6 class="lens">Departure date</h6>
+            <h3>8 AUG 24</h3>
+            <h6 class="lens">Thursday</h6>
+        </span>
+    </div>
+    <hr>
+    <div class="aside1">
+        <span>
+            <h6 class="lens">Departure Date</h6>
+            <h3 class="low">8 Apr'24</h3>
+            <br>
+            <h6 class="lens">Monday</h6>
+        </span>
+        <span class="book-date">
+            <h6 class="lens">Return Date</h6>
+            <h3 class="low">15 Apr'24</h3>
+            <br>
+            <span class="book-trip">Book round trip<br>to save extra</span>
+        </span>
+    </div>
+    <hr>
+    <h6 class="lens">Traveller(s), class</h6>
+    <br>
+    1 Traveller Economy 
+    <hr>
+    <input type="checkbox" id="v1" name="stage1">
+    <label for="vehicle1"> Non Stop Flights</label><br>
+   
+    <a href="firstapp/sec.html" class="red">Search Flights</a>
+</div>
+</div>
+        </div>
+        <div class="metadata1">
+          
+            <img src="{% static 'images/p1.png' %}" alt="yatra-img" class="image1">
+            <img src="{% static 'images/p2.png' %}" alt="yatra-img1" class="image2">
+            <img src="{% static 'images/p3.png' %}" alt="yatra-img2" class="image3">
+            <img src="{% static 'images/p4.png' %}" alt="yatra-img3" class="image4">
+            <div class="demo-banner">
+      
+              <img src="{% static 'images/p5.png' %}" class="card-img-top image-font" alt="card1">
+        
+              <img src="{% static 'images/p6.png' %}" class="card-img-top image-font" alt="card1">
+          
+              <img src="{% static 'images/p8.png' %}" class="card-img-top demo-pass " alt="card1">
+          
+        </div>
+        </div>
+    
+    </div>
+  
+      <div class="lines">
+    <h4 class="line1">Popular Domestic Flight Routes</h4>
+    <span class="card-from">From -</span>
+    <span>
+    <ul class="nav nav-underline card-reaction">
+      <li class="nav-item">
+        <a class="nav-link active temp" aria-current="page" href="#">DELHI</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link temp" href="#">MUMBAI</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link temp" href="#">BANGALORE</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link temp" href="#">HYDERABAD</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link temp" href="#">KOLKATA</a>
+      </li>
+    
+    </ul>
+  </span>
+  </div>
+  <div class="card-row roles">
+    <div class="card card-column">
+      <div class="card-body">
+        <h3 class="card-place"><b>Delhi</b></h3>
+        <p>Tuesday 14,May</p>
+        <p><b>Mumbai</b></p>
+        <p class="card-text">Starting from</p>
+        <p class="card-price"><b>₹4,322</b></p>
+      </div>
+    </div>
+    <div class="card card-column">
+      <div class="card-body">
+        <h3 class="card-place"><b>Delhi</b></h3>
+        <p>Tuesday 14,May</p>
+        <p><b>Bangalore</b></p>
+        <p class="card-text">Starting from</p>
+        <p class="card-price"><b>₹6,322</b></p>
+      </div>
+    </div>
+    <div class="card card-column">
+      <div class="card-body">
+        <h3 class="card-place"><b>Delhi</b></h3>
+        <p>Tuesday 14,May</p>
+        <p><b>Pune</b></p>
+        <p class="card-text">Starting from</p>
+        <p class="card-price"><b>₹5,322</b></p>
+      </div>
+    </div>
+    <div class="card card-column">
+      <div class="card-body">
+        <h3 class="card-place"><b>Delhi</b></h3>
+        <p>Tuesday 14,May</p>
+        <p><b>Srinagar</b></p>
+        <p class="card-text">Starting from</p>
+        <p class="card-price"><b>₹4,322</b></p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="lines">
+    <h4 class="line1">Popular International Flight Routes</h4>
+    <span class="card-from">From -</span>
+    <span>
+    <ul class="nav nav-underline card-reaction">
+      <li class="nav-item">
+        <a class="nav-link active temp" aria-current="page" href="#">DELHI</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link temp" href="#">MUMBAI</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link temp" href="#">BANGALORE</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link temp" href="#">HYDERABAD</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link temp" href="#">KOLKATA</a>
+      </li>
+    
+    </ul>
+  </span>
+  </div>
+  <div class="card-row roles">
+    <div class="card card-column">
+      <div class="card-body">
+        <h3 class="card-place"><b>Delhi</b></h3>
+        <p>Tuesday 14,May</p>
+        <p><b>Mumbai</b></p>
+        <p class="card-text">Starting from</p>
+        <p class="card-price"><b>₹4,322</b></p>
+      </div>
+    </div>
+    <div class="card card-column">
+      <div class="card-body">
+        <h3 class="card-place"><b>Delhi</b></h3>
+        <p>Tuesday 14,May</p>
+        <p><b>Bangalore</b></p>
+        <p class="card-text">Starting from</p>
+        <p class="card-price"><b>₹6,322</b></p>
+      </div>
+    </div>
+    <div class="card card-column">
+      <div class="card-body">
+        <h3 class="card-place"><b>Delhi</b></h3>
+        <p>Tuesday 14,May</p>
+        <p><b>Pune</b></p>
+        <p class="card-text">Starting from</p>
+        <p class="card-price"><b>₹5,322</b></p>
+      </div>
+    </div>
+    <div class="card card-column">
+      <div class="card-body">
+        <h3 class="card-place"><b>Delhi</b></h3>
+        <p>Tuesday 14,May</p>
+        <p><b>Srinagar</b></p>
+        <p class="card-text">Starting from</p>
+        <p class="card-price"><b>₹4,322</b></p>
+        
+      </div>
+    </div>
+  </div>
+
+<div>
+  <img src="{% static 'images/yatra2.jpg' %}" alt="yatra" class="yarta2">
+</div>
+<div class="para">
+  <h3 class="query">Why book with Yatra.com?</h3>
+  <p>7 Brilliant reasons Yatra should be your one-stop-shop!</p>
+  <br>
+  <h4><b>Book Flights, Hotels, Trains, Buses, Cruise and Holiday Packages</b></h4>
+  <p>On Yatra.com, you can tailor your trip from end-to-end by scouring suitable flights and making your flight booking<br> before proceeding with your hotel bookings. Yatra’s vast hotel repository will see you through this process<br> seamlessly. Any intervening journey can be conveniently planned by searching up relevant train connectivity and<br> making an IRCTC ticket booking. Look up well-researched holiday packages, sift through cruise packages and finalise<br> your entire trip on just one platform.</p>
+<br>
+
+<a href="./about.html">READ MORE....</a>
+<div>
+  <h4 class="box">Customer Testimonial For Covid Refund</h4>
+
+</div>
+   
+</div>
+<script>
+  function showPage(pageId) {
+  // Hide all pages
+  document.querySelectorAll('.page').forEach(page => {
+      page.classList.remove('active');
+      page.classList.add('hidden');
+  });
+
+  // Show the selected page
+  document.getElementById(pageId).classList.add('active');
+  document.getElementById(pageId).classList.remove('hidden');
+}
+
+// Initial page load
+document.getElementById('oneWay').classList.add('active');
+
+</script> 
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

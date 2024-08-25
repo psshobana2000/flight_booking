@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traveller Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            overflow-x: auto;
+        }
+
+        .traveller-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 18px;
+            text-align: left;
+            background-color: #fff;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .traveller-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .traveller-table th, .traveller-table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+        }
+
+        .traveller-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .traveller-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .traveller-table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            margin: 4px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .cancel-btn {
+            background-color: #ff4b4b;
+            color: white;
+        }
+
+        .cancel-btn:hover {
+            background-color: #e60000;
+        }
+
+        .refund-btn {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .refund-btn:hover {
+            background-color: #45a049;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            width: 50px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            appearance: textfield;
+            -webkit-appearance: none;
+            -moz-appearance: textfield;
+        }
+
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table class="traveller-table">
+            <thead>
+                <tr>
+                    <th>Flight Name</th>
+                    <th>No of Seats</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Air india</td>
+                    <td><input type="number" value="222" min="1"></td>
+                    <td>
+                        <button class="btn cancel-btn">Cancel</button>
+                        <button class="btn refund-btn">Refund</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Vistara</td>
+                    <td><input type="number" value="321" min="1"></td>
+                    <td>
+                        <button class="btn cancel-btn">Cancel</button>
+                        <button class="btn refund-btn">Refund</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Spicjet</td>
+                    <td><input type="number" value="149" min="1"></td>
+                    <td>
+                        <button class="btn cancel-btn">Cancel</button>
+                        <button class="btn refund-btn">Refund</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Airindia Express</td>
+                    <td><input type="number" value="180" min="1"></td>
+                    <td>
+                        <button class="btn cancel-btn">Cancel</button>
+                        <button class="btn refund-btn">Refund</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Akasa Air</td>
+                    <td><input type="number" value="189" min="1"></td>
+                    <td>
+                        <button class="btn cancel-btn">Cancel</button>
+                        <button class="btn refund-btn">Refund</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Multiple Airline</td>
+                    <td><input type="number" value="900" min="1"></td>
+                    <td>
+                        <button class="btn cancel-btn">Cancel</button>
+                        <button class="btn refund-btn">Refund</button>
+                    </td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+.progress-bar-content{
+    border: 4px solid;
+    border-radius: 90px;
+    width: 72px;
+    text-align: center;
+    font-size: 12px;
+    padding: 2px;
+    margin-left: 0px;
+ }
+ .progress-bar-content1{
+   border: 4px solid;
+   border-radius: 90px;
+   width: 72px;
+   text-align: center;
+   font-size: 12px;
+   padding: 2px;
+   margin-left: 0px;
+}
+.progress-bar-content2{
+   border: 4px solid;
+   border-radius: 90px;
+   width: 72px;
+   text-align: center;
+   font-size: 12px;
+   padding: 2px;
+   margin-left: 0px;
+}
+ .progress-bars{
+    display: flex;
+ }
+ .progress-bar-title{
+   border: 2px solid gray;
+   width: 86px;
+   text-align: center;
+   border-radius: 70px;
+   padding: 7px;
+ }
+ .progress-bar-title1{
+   border: 2px solid gray;
+   width: 86px;
+   text-align: center;
+   border-radius: 70px;
+   padding: 7px;
+   margin-left: 10px;
+ }
+ .progress-bar-title2{
+   border: 2px solid gray;
+   width: 86px;
+   text-align: center;
+   border-radius: 70px;
+   padding: 7px;
+ }
+ .main-content{
+    background-color: rgba(242, 68, 68, 0.08);
+ }
+.content{
+   margin-left: 18px;
+   border-radius: 25px;
+}
+.text-content{
+   margin-top: 40px;
+   border-radius: 20px;
+}
+.text-travel{
+   margin-left: 20px;
+}
+.row1{
+   display: flex;
+}
+.content-checkbox{
+   margin-top: 42px;
+   border-radius: 20px;
+}
+.image-content{
+   width: 40%;
+   margin-left: 177px;
+}
+.text-data{
+   border-radius: 20px;
+}
+.image-details{
+   display: flex;
+}
+.image-data{
+   width: 40%;
+   margin-left: 10px;
+}
+.places{
+   display: flex;
+}
+.london{
+   margin-left: 42px
+}
+.Switzerland{
+   margin-left: 74px;
+}
+.England{
+   margin-left: 45px;
+}

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .navbar {
+            width: 100%;
+            height: 100px; /* Increased height */
+            background-color: rgb(246, 100, 127);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: relative;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 14px 20px;
+        }
+        .navbar a:hover {
+            background-color: #cc0000;
+            border-radius: 5px;
+        }
+        .navbar form {
+            display: flex;
+            align-items: center;
+            position: relative; /* Added */
+        }
+        .navbar input, .navbar select, .navbar button {
+            margin-left: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+        .navbar button {
+            background-color: white;
+            color: #b7243a;
+            border: none;
+            cursor: pointer;
+        }
+        .navbar button:hover {
+            background-color: #b7243a;
+            color: white;
+        }
+        .fare-dropdown, .traveller-dropdown {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            top: 100px; /* Adjust based on navbar height */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+        .fare-dropdown label, .traveller-dropdown label {
+            display: block;
+            margin: 5px 0;
+        }
+        .fare-dropdown input, .traveller-dropdown input {
+            margin-right: 10px;
+        }
+        .trip-options {
+            display: flex;
+            align-items: center;
+        }
+        .trip-options label {
+            color: white;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        .trip-options input[type="radio"] {
+            margin-right: 5px;
+        }
+        .filter-bar {
+            width: 100%;
+            height: 27px;
+            background-color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 14px;
+        }
+        .filter-bar .filter-dropdown {
+            position: relative;
+            display: inline-block;
+            margin-left: 127px;
+        }
+        .filter-bar .filter-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            width: 1502px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            height: 300px;
+            margin-left: -280px;
+        }
+        .filter-bar .filter-dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .filter-bar .filter-dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .filter-bar .filter-dropdown:hover .filter-dropdown-content {
+            display: block;
+        }
+        .filter-bar button {
+            color: black;
+            padding: 5px;
+            cursor: pointer;
+        }
+        /* Added styles for dropdown arrows */
+        .fa-chevron-down {
+            margin-left: 5px;
+        }
+        .new-div {
+        width: 90%;
+        height: 70px;
+        box-shadow: 0px 4px 8px grey; /* White box shadow */
+        background-color:white;
+        margin-left: 100px;
+        display: flex;
+}
+.data-single{
+    display: flex;
+
+}
+.data-one{
+    margin-left: 10px;
+}
+.card-button{
+    width: 100%;
+}
+.card-col{
+    border-right: 1px solid #f8eded;
+  height: 63px;
+  text-align: center;
+  margin-top: 3px;
+}
+.card-rows{
+    width: 100%;
+}
+ .display-section{
+    display: flex;
+ }
+ .button-class{
+    
+  padding: 1px;
+  background-color: white;
+  border: none;
+  margin-bottom: 14px;
+
+ } 
+ p{
+    font: bold;
+ } 
+ .stock{
+    width: 90%;
+    height: 40px;
+    box-shadow: 0px 4px 8px grey; 
+    margin-left: 100px;
+    margin-top: 27px;
+    background-color: #ede7e7;
+    display: flex;
+  
+ }    
+ .card-filter{
+    margin-left: 102px;
+    margin-bottom: 17px;
+ } 
+ .card-feature{
+    background-color: white;
+ }
+ .class-card{
+    display: flex;
+ }
+ .blocks{
+    margin-left: 100px;
+ }
+ .blocks1{
+    margin-left: 100px;
+ }
+ .mark{
+    padding: 10px;
+    background-color: #f7f1f1;
+    font-size: 12px; 
+ }
+ .mark:hover{
+    color: rgb(128, 212, 245);
+ }
+ div.relative {
+  position: relative;
+  width: 400px;
+  height: 232px;
+  border: 3px solid #c7ccc0;
+  margin-top: 30px;
+  width: 90%;
+  margin-left: 100px;
+  border-radius: 6px;
+  
+} 
+
+div.absolute {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #f6faef;
+  margin-right: 425px;
+  height: 70px;
+  margin-top: 63px;
+  border-radius: 5px;
+  text-align: center;
+}
+ 
+div.absolute1 {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #f3faec;
+  margin-right: 646px;
+  height: 70px;
+  margin-top: 63px;
+  border-radius: 5px;
+  text-align: center;
+}
+div.absolute2 {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #f5fbef;
+  margin-right: 861px;
+  height: 70px;
+  margin-top: 63px;
+  border-radius: 5px;
+  text-align: center;
+}
+.mentor{
+  width: 2.5%;
+  margin-left: 10px;
+  margin-top: -11px;
+  border-radius: 5px;
+}
+.system{
+  margin-left: 53px;
+  margin-top: -32px;
+  font-size: 13px;
+  color: black;
+  padding: 2px;
+  font-weight: bold;
+}
+ .flow{
+  margin-left: 52px;
+  margin-top: -46px;
+  font-size: 10px;
+  color: grey;
+ }
+ .views{
+  color: skyblue;
+  margin-left: 21px;
+  font-size: 12px;
+  margin-top: -43px;
+ }
+ .fare{
+  margin-left: 20px;
+  margin-top: 40px;
+ }
+ .city{
+  margin-left: 349px;
+  margin-top: -48px;
+ }
+ .city2{
+  margin-left: 772px;
+  margin-top: -83px;
+ }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#home"><i class="fa fa-plane">...</i></a>
+    <div class="trip-options">
+        <label><input type="radio" name="trip" value="oneway"> One-Way</label>
+        <label><input type="radio" name="trip" value="roundtrip"> Round-Trip</label>
+        <label><input type="radio" name="trip" value="multicity"> Multi-City</label>
+    </div>
+    <form id="searchForm" onsubmit="event.preventDefault(); showFareDropdown();">
+        <input type="text" name="from" placeholder="From">
+        <input type="text" name="to" placeholder="To">
+        <input type="date" name="date">
+        <select name="class" onclick="showTravellerDropdown()">
+            <option value="economy">Traveller Economy</option>
+        </select>
+        <button type="submit">Search</button>
+    </form>
+    <div class="traveller-dropdown" id="travellerDropdown">
+        <label><input type="checkbox" name="traveller" value="adult"> Adult</label>
+        <label><input type="checkbox" name="traveller" value="infant"> Infant</label>
+        <label><input type="checkbox" name="traveller" value="child"> Child</label>
+    </div>
+    <div class="fare-dropdown" id="fareDropdown">
+        <label><input type="checkbox" name="fare" value="student"> Student Fare</label>
+        <label><input type="checkbox" name="fare" value="business"> Business Citizen</label>
+        <label><input type="checkbox" name="fare" value="senior"> Senior Citizen</label>
+    </div>
+</div>
+
+<div class="filter-bar">
+    <i class="fa fa-filter card-filter">Filter</i>
+    <div class="filter-dropdown">
+        <button class="button-class">Stops: 1 <i class="fas fa-chevron-down"></i></button>
+        <div class="filter-dropdown-content">
+            <div class="card card-button">
+                <h5 class="card-header card-feature">Featured</h5>
+                <div class="card-body">
+                  <h5 class="card-title data-single"><button type="button" class="btn btn-outline-secondary data-one">0</button>
+                    <button type="button" class="btn btn-outline-secondary data-one">1</button>
+                    <button type="button" class="btn btn-outline-secondary data-one">2</button>
+                
+
+                </h5>
+                  <p class="card-text">Wigguhjg</p>
+                 
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="filter-dropdown">
+        <button class="button-class">Price <i class="fas fa-chevron-down"></i></button>
+        <div class="filter-dropdown-content">
+            <div class="card card-button">
+                <h5 class="card-header">Featured</h5>
+                <div class="card-body class-card">
+                    <div>
+                  <h5 class="card-title data-single"><button type="button" class="btn btn-outline-secondary data-one">0</button>
+                    <button type="button" class="btn btn-outline-secondary data-one">1</button>
+                    <button type="button" class="btn btn-outline-secondary data-one">2</button>
+                
+
+                </h5>
+                  <p class="card-text">Wigguhjg</p>
+                 
+                </div>
+                <div class="blocks">kahvkdahnvLKDAHNVJKDAHBGnjvh akzkh</div>
+                <div class="blocks1">jfjagvjhgdjcghjdschjsdgjgjd</div>
+
+            </div>
+              </div>
+        </div>
+    </div>
+    <div class="filter-dropdown">
+        <button class="button-class">Depart Time <i class="fas fa-chevron-down"></i></button>
+        <div class="filter-dropdown-content">
+            <a href="#">Morning</a>
+            <a href="#">Afternoon</a>
+            <a href="#">Evening</a>
+        </div>
+    </div>
+    <div class="filter-dropdown">
+        <button class="button-class">Airline <i class="fas fa-chevron-down"></i></button>
+        <div class="filter-dropdown-content">
+            <a href="#">Airline 1</a>
+            <a href="#">Airline 2</a>
+            <a href="#">Airline 3</a>
+        </div>
+    </div>
+</div>
+    <div class="new-div">
+        <div class="row card-rows">
+        <div class="display-section">
+            <div class="col card-col">
+              Thu,23 May
+              <p>₹17,689</p>
+            </div>
+            <div class="col card-col">
+                Fri,24 May
+                <p>₹6,384</p>
+            </div>
+            <div class="col card-col">
+                Sat,25 May
+                <p>₹5,930</p>
+            </div>
+            <div class="col card-col">
+                Sun,26 May
+                <p>₹7,352</p>
+              </div>
+              <div class="col card-col">
+                Mon,27 May
+                <p>₹8,909</p>
+              </div>
+              <div class="col card-col">
+                Tue,28 May
+                <p>₹5,430</p>
+              </div>
+              <div class="col card-col">
+                wed,29 May
+                <p>₹6,650</p>
+              </div>
+              <div class="col card-col">
+                Thu,30 May
+                <p>₹5,790</p>
+              </div>
+              <div class="col card-col">
+                Fri,31 May
+                <p>₹7,980</p>
+              </div>
+              <div class="col card-col">
+                Sat,1 jan<br>
+                <p>₹6,234</p>
+              </div>
+              <div class="date-picker">
+                <input type="date" id="date" name="date">
+              </div>
+              </div>
+          </div>
+        </div>
+    </div>
+    <div class="stock">
+        <p class="mark">Sort by:</p>
+        <P class="mark">DEPART</P>
+        <p class="mark">DURATION</p>
+        <p class="mark">ARRIVE</p>
+        <p class="mark">PRIZE PER ADULT</p>
+    </div>
+    <div class="relative">Avail Flat 13% OFF on ICICI Bank Credit Cards. Use promo code - YRICICICC<hr>
+      <img src="/demo/static/images/indigo.png" class="mentor"><p class="system">indigo</p> <br> <p class="flow">6E-6114</p>
+      <h6 class="city">New Delhi[DEL]<br>10:30<br>30 may<br>indria gandhi(T-12)</h6>
+      <h6 class="city2">New Delhi[DEL]<br>10:30<br>30 may<br>indria gandhi(T-12)</h6>
+      
+      <h6 class="fare">Fare options</h6>
+      <p class="views">view Details</p>
+    
+        <div class="absolute"><input type="radio" checked="checked"> Super 6E<br>₹17,985</div>
+        <div class="absolute1"><input type="radio" checked="checked"> Flexi Plus<br>₹14,359</div>
+        <div class="absolute2"><input type="radio" checked="checked"> save fare<br>₹21,123</div>
+      </div>
+      
+
+      <div class="relative">Avail Flat 13% OFF on ICICI Bank Credit Cards. Use promo code - YRICICICC<hr>
+        <img src="/demo/static/images/indigo.png" class="mentor"><p class="system">indigo</p> <br> <p class="flow">6E-6114</p>
+        <h6 class="fare">Fare options</h6>
+      <p class="views">view Details</p>
+    
+        <div class="absolute"><input type="radio" checked="checked"> Super 6E<br>₹12,935</div>
+        <div class="absolute1"><input type="radio" checked="checked"> Flexi Plus<br>₹16,922</div>
+        <div class="absolute2"><input type="radio" checked="checked"> save fare<br>₹20,910</div>
+      </div>
+
+
+      <div class="relative">Avail Flat 13% OFF on ICICI Bank Credit Cards. Use promo code - YRICICICC<hr>
+        <img src="/demo/static/images/indigo.png" class="mentor"><p class="system">indigo</p> <br> <p class="flow">6E-6114</p>
+        <h6 class="fare">Fare options</h6>
+      <p class="views">view Details</p>
+    
+        <div class="absolute"><input type="radio" checked="checked"> Super 6E<br>₹23,925</div>
+        <div class="absolute1"><input type="radio" checked="checked"> Flexi Plus<br>₹19,985</div>
+        <div class="absolute2"><input type="radio" checked="checked"> save fare<br>₹20,905</div>
+      </div>
+      
+       
+      <div class="relative">Avail Flat 13% OFF on ICICI Bank Credit Cards. Use promo code - YRICICICC<hr>
+        <img src="/demo/static/images/indigo.png" class="mentor"><p class="system">indigo</p> <br> <p class="flow">6E-6114</p>
+        <h6 class="fare">Fare options</h6>
+      <p class="views">view Details</p>
+    
+        <div class="absolute"><input type="radio" checked="checked"> Super 6E<br>₹18,002</div>
+        <div class="absolute1"><input type="radio" checked="checked"> Flexi Plus<br>₹17,945</div>
+        <div class="absolute2"><input type="radio" checked="checked"> save fare<br>₹14,095</div>
+      </div>
+      
+      <div class="relative">Avail Flat 13% OFF on ICICI Bank Credit Cards. Use promo code - YRICICICC<hr>
+        <img src="/demo/static/images/indigo.png" class="mentor"><p class="system">indigo</p> <br> <p class="flow">6E-6114</p>
+        <h6 class="fare">Fare options</h6>
+      <p class="views">view Details</p>
+    
+        <div class="absolute"><input type="radio" checked="checked"> Super 6E<br>₹21,900</div>
+        <div class="absolute1"><input type="radio" checked="checked"> Flexi Plus<br>₹17,485</div>
+        <div class="absolute2"><input type="radio" checked="checked"> save fare<br>₹19,105</div>
+      </div>
+
+      <div class="relative">Avail Flat 13% OFF on ICICI Bank Credit Cards. Use promo code - YRICICICC<hr>
+        <img src="/demo/static/images/indigo.png" class="mentor"><p class="system">indigo</p> <br> <p class="flow">6E-6114</p>
+        <h6 class="fare">Fare options</h6>
+      <p class="views">view Details</p>
+    
+         <div class="absolute"><input type="radio" checked="checked"> Super 6E<br>₹25,123</div>
+        <div class="absolute1"><input type="radio" checked="checked"> Flexi Plus<br>₹27,678</div>
+        <div class="absolute2"><input type="radio" checked="checked"> save fare<br>₹28,456</div>
+      </div>
+      
+      <div class="relative">Avail Flat 13% OFF on ICICI Bank Credit Cards. Use promo code - YRICICICC<hr>
+        <img src="/demo/static/images/indigo.png" class="mentor"><p class="system">indigo</p> <br> <p class="flow">6E-6114</p>
+        <h6 class="fare">Fare options</h6>
+      <p class="views">view Details</p>
+    
+        <div class="absolute"><input type="radio" checked="checked"> Super 6E<br>₹17,985</div>
+        <div class="absolute1"><input type="radio" checked="checked"> Flexi Plus<br>₹17,985</div>
+        <div class="absolute2"><input type="radio" checked="checked"> save fare<br>₹17,985</div>
+      </div>
+      
+      <div class="relative">Avail Flat 13% OFF on ICICI Bank Credit Cards. Use promo code - YRICICICC<hr>
+        <img src="/demo/static/images/indigo.png" class="mentor"><p class="system">indigo</p> <br> <p class="flow">6E-6114</p>
+        <h6 class="fare">Fare options</h6>
+      <p class="views">view Details</p>
+    
+        <div class="absolute"><input type="radio" checked="checked"> Super 6E<br>₹19,905</div>
+        <div class="absolute1"><input type="radio" checked="checked"> Flexi Plus<br>₹22,735</div>
+        <div class="absolute2"><input type="radio" checked="checked"> save fare<br>₹24,455</div>
+      </div>
+
+
+      
+
+      
+   

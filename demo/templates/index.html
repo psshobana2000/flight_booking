@@ -1,0 +1,101 @@
+
+<!-- <nav class="navbar navbar-inverse navbar-fixed-top color"> -->
+  {% block content %}
+
+  <style>
+.btn1{
+  background-color: red;
+  border-color: red;
+  border-radius: 10px;
+}
+.btn2{
+  background-color: red;
+  border-color: red;
+  border-radius: 10px;
+}
+.nav{
+  width: 100%;
+  height: 200px;
+}
+  </style>
+  <div class="nav">
+  <div class="dropdown journey"> 
+      <a class="btn btn-secondary dropdown-toggle button-account"
+        href="#"
+        role="button" id="dropdownMenuLink1"
+        data-bs-toggle="dropdown"`
+        aria-expanded="false"> 
+        My Accounts
+      </a> 
+      <form class="dropdown-menu p-4 dropdown-booking">
+        <div class="mb-3">
+          <p>My booking</p>
+          <p>My fund</p>
+          <button type="submit" class="btn btn-primary btn1"><a href="{% url 'login' %}">Login</a></button>
+        </div>
+        <div class="mb-3">
+          <p>My for Bussiness</p>
+          <p>My for travel agents</p>
+          <button type="submit" class="btn btn-primary btn2"><a href="{% url 'signup' %}">signup</a></button>
+        </div>
+      </form>
+  </div>
+  <script> 
+    $(document).ready(function () { 
+      $('.journey').hover(function () { 
+        $(this).find('.dropdown-menu') 
+        .stop(true, true).delay(100).fadeIn(200); 
+      }, function () { 
+        $(this).find('.dropdown-menu') 
+        .stop(true, true).delay(100).fadeOut(200); 
+      }); 
+    }); 
+  </script>
+
+  <div class="dropdown journeys"> 
+      <a class="btn btn-secondary dropdown-toggle button-support"
+        href="#"
+        role="button" id="dropdownMenuLink2"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"> 
+        Supports
+      </a> 
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink2"> 
+        <li><a class="dropdown-item" href="#">talk to us</a></li> 
+        <li><a class="dropdown-item" href="#">check your refund</a></li> 
+        <li><a class="dropdown-item" href="#">contact us</a></li> 
+        <li><a class="dropdown-item" href="#">complete booking</a></li> 
+        <li><a class="dropdown-item" href="#">make a payment</a></li> 
+        <li><a class="dropdown-item" href="#">flight cancellation charges</a></li> 
+        <li><a class="dropdown-item" href="#">complete holiday booking</a></li> 
+      </ul> 
+  </div> 
+  <script> 
+    $(document).ready(function () { 
+      $('.journeys').hover(function () { 
+        $(this).addClass('show'); 
+        $(this).find('.dropdown-menu').addClass('show'); 
+      }, function () { 
+        $(this).removeClass('show'); 
+        $(this).find('.dropdown-menu').removeClass('show'); 
+      }); 
+    }); 
+  </script>
+
+  <div class="dropdown"> 
+    <a class="btn btn-secondary dropdown-toggle button-support"
+      href="#"
+      role="button" id="dropdownMenuLink3"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"> 
+      Recent Search
+    </a> 
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink3"> 
+      <li><a class="dropdown-item" href="#">talk to us</a></li> 
+      <li><a class="dropdown-item" href="#">check your refund</a></li> 
+      <li><a class="dropdown-item offering" href="#">Offers</a></li> 
+    </ul> 
+  </div>
+  </div>
+</nav>
+{% endblock %}

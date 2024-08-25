@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Flight Routes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .add-route {
+            top: 20px;
+            right: 20px;
+            background-color: #42cefc;
+            color: white;
+            padding: 15px 22px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            width: 2%;
+            height: 12px;
+            margin-left: 1183px;
+        }
+
+        .add-route i {
+            margin-right: 3px;
+            margin-top: -5px;
+            margin-left: -10px;
+        }
+
+        .add-route:hover {
+            background-color: #51c7fd;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .action-buttons a {
+            padding: 8px 12px;
+            border-radius: 4px;
+            color: white;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .action-buttons a.edit {
+            background-color: #28a745;
+        }
+
+        .action-buttons a.edit:hover {
+            background-color: #218838;
+        }
+
+        .action-buttons a.delete {
+            background-color: #dc3545;
+        }
+
+        .action-buttons a.delete:hover {
+            background-color: #c82333;
+        }
+
+        .action-buttons i {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <a href="{% url 'routes' %}" class="add-route">
+        <i class="fas fa-plus"></i>
+    </a>
+    <h1>Manage Flight Routes</h1>
+
+    <!-- Add Flight Route Form -->
+   
+    <table>
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="select-all"></th>
+                <th>Name</th>
+                <th>Departure</th>
+                <th>Arrival</th>
+                <th>Prize</th>
+                <th>Distance</th>
+                <th>Fare Option</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for route in routes %}
+                <tr>
+                    <td><input type="checkbox" class="select-row"></td>
+                    <td>{{ route.name }}</td>
+                    <td>{{ route.departure }}</td>
+                    <td>{{ route.arrival }}</td>
+                    <td>{{ route.prize }}</td>
+                    <td>{{ route.distance }}</td>
+                    <td>{{ route.fare_option }}</td>       
+                    <td class="action-buttons">
+                        <a href="{% url 'route_edit' route.pk %}" class="edit"><i class="fas fa-edit"></i></a>
+                        <a href="{% url 'route_delete' route.pk %}" class="delete"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+        // JavaScript for Select All functionality
+        document.getElementById('select-all').addEventListener('change', function() {
+            const checkboxes = document.querySelectorAll('.select-row');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = this.checked;
+            });
+        });
+    </script>
+</body>
+</html>

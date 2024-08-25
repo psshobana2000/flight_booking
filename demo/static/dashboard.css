@@ -1,0 +1,212 @@
+.Total{
+  height: 450px;
+}
+
+.Button{
+ width: 100%;
+  padding: 5px;
+  border:none;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  border-radius: 2px;
+}
+.Button:hover{
+  /* background-color: rgb(26, 142, 237); */
+  color: black;
+}
+
+.center{
+margin-left: -3px;
+  height: 70px;
+  width: 70%; 
+   border: 1px solid rgb(230, 231, 233);
+   
+}
+
+.Navbar{
+  width: 20%; 
+  
+   color:white;
+}
+.Page{
+color: black;
+  height: 500px;
+  width: 80%;
+  float: right;
+  margin-top: -1100px;
+
+
+}
+.Sidebar{
+  list-style-type: none;
+ margin-top:0px;
+  padding: 0;
+  width: 99%;
+  height: 1100px;
+  background-color:rgb(28, 32, 42);
+
+ 
+}
+
+.CloseButton{
+  font-size: 20px;
+   width: 15%;
+    float: right;
+    margin-top: -45px;
+    margin-right:10px;
+    background-color: rgb(28, 32, 42);
+    border: none;
+    color: white;
+ 
+  }
+.Dashboard{
+  height: 380px;
+  font-size: medium;
+  width: 100%;
+margin-top: -40px;
+margin-right: 10px;
+ background-color: rgb(245, 245, 245);
+
+  
+}
+.Dashboard-Home{
+  height: 30px;
+  font-size: xx-large;
+  color:rgb(19, 19, 19);
+  width: 95%;
+  margin-top: 50px;
+  font-weight: 500;
+  text-decoration: none;
+  padding-left: 9px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+ 
+}
+.Dashboard-Topdivs{
+  height: 190px;
+  display: flex;
+  width: 100%;
+  margin-left: -17px;
+}
+.fourdivs{
+  height: 160px;
+  width:23% ;
+  display: inline-block;
+  margin: 2%;
+  border-radius: 3px;
+
+ margin-left: 3%;
+ 
+}
+.fourdivtop{
+  background-color:rgb(16, 144, 191);
+  height: 35px;
+border-top-right-radius: 3px;
+border-top-left-radius:3px;
+color: white;
+
+}
+.Total-Orders{
+  padding: 5px;
+  font-weight: 500;
+}
+.Total-Sales{
+  padding: 5px;
+  font-weight: 500;
+}
+.Total-Customers{
+  padding: 5px;
+   font-weight: 500;
+}
+.People-Online{
+  padding: 5px;
+  font-weight: 500;
+}
+.zero{
+  float: right;
+  margin-top: -43px;
+  margin-right: 5px;
+  font-weight: 500;
+}
+.fourdivcenter{
+  height: 120px;
+  background-color:rgb(23, 129, 167);
+  color: rgb(100, 191, 240);
+  font-size:50px;
+ padding-top: 15px;
+ padding-left: 10px;
+}
+.fourdivcenter:hover{
+  color: white;
+}
+
+.numbers{
+  margin-left: 100px;
+  margin-top: -6px;
+  color: white;
+  font-weight: 500;
+}
+.fourdivbottom{
+  height:30px;
+  background-color: rgb(10, 112, 143);
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  color: white;
+  padding-left: 3%;
+
+}
+
+.Dashboard-Home-Content{
+  float: right;
+  margin-right: 1532px;
+  font-size: medium;
+  margin-top: 16px;
+}
+.Home a{
+  text-decoration: none;
+}
+
+
+
+
+i{
+  padding: 5px;
+  padding-right: 10px;
+  
+}
+
+
+.new{
+  display: flex;
+  margin-top: 50px;
+  margin-left: -225px;
+}
+.table-head{
+  font-weight: bold;
+}
+.table-data{
+  width: 55%;
+  margin-left: 111px;
+}
+.card-table{
+  width: 293px;
+  margin-left: 245px;
+  height: 100px;
+}
+.number{
+  
+    font-size: 61px;
+    text-align: center;
+    margin-top: -67px;
+
+}
+.number1{
+  margin-top: -72px;
+  font-size: 61px;
+  text-align: center;
+}
+.breadcrumb-detail{
+  font-size: 14px;
+  background-color: rgb(245, 245, 245);
+  margin-top: 18px;
+}

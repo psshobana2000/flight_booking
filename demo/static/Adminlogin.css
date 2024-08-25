@@ -1,0 +1,141 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.title{
+    border-right: 1px solid #eee !important;
+}
+
+.navbar {
+    padding: 0px !important;
+    
+}
+
+.admin-main-div{
+    background: #F6F6F8;
+    padding: 3%;
+    min-height: 512px;
+    border: 2px solid #eee;
+}
+
+.admin-login-div {
+    border: thin solid #ccc;
+    width: 32%;
+    margin: auto;
+}
+#login-btn{
+    margin-left: 379px;
+}
+
+.alert-div {
+    margin-top: 15px;
+    padding: 5px !important;
+    color: #c72f1d !important;
+}
+
+.btn-div {
+    font-size: 8px;
+    padding-top: 15px !important;
+    float: right;
+}
+
+.login-details-div {
+    padding: 1% 4%;
+    color: #545454;
+    border-bottom: 1px solid #ccc;
+    margin-top: 8px;
+}
+
+h6{
+    padding-top: 1%;
+}
+form{
+    margin: 0;
+    padding: 0;
+}
+.input-div{
+    background-color: #ffffff;
+    padding: 0% 4%;
+}
+
+.clearfix {
+    box-sizing: border-box;
+    overflow: hidden;
+    content: "";
+    display: block;
+    clear: both;
+    min-height: 250px;
+}
+
+#user{
+    padding-top: 7%;
+    font-weight: bold;
+    color: #545454;
+    font-size: 13px;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    cursor: default;
+}
+.alert-danger {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    padding: 5px;
+}
+#pass{
+    padding-top: 1%;
+    font-weight: bold;
+    color: #545454;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: default;
+}
+
+#hr {
+    display: block;
+    border: 0;
+    border-top: 1px solid #fffefe;
+    margin: 10px 0;
+    padding: 0;
+  }
+
+#Username:focus, #Password:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+#Username::placeholder, #Password::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #a89797;
+    font-family: inherit;
+    font-size: 14px;
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+
+#Username:-ms-input-placeholder, #Password:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #eee;
+}
+#Username::-ms-input-placeholder, #Password:-ms-input-placeholder { /* Microsoft Edge */
+    color: #eee;
+}
+
+#login-btn {
+    margin-top: 7%;
+    margin-bottom: 5%;
+    background-color: rgb(54, 156, 208);
+    font-size: 13px;
+    float: right;
+    color: #ffffff;
+}
+
+@media (max-width:768px){
+.admin-login-div{
+        width: 100% !important;
+    }
+}

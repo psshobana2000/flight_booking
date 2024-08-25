@@ -1,0 +1,68 @@
+{% block content %}
+    
+<style>
+.btn{
+    border-color: red;
+    background-color: red;
+    border-radius: 10px;
+}
+</style>
+<h1>Welcome to Yatra!</h1>
+<p>We just need a few more details to create your Yarta Acoount</p>
+
+<form method="POST" action="/create account/">
+    {% csrf_token %}
+    
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter Your Email"><a href="mail to mail@sample.com"></a>
+        </div>
+        <br>
+
+        
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="Enter your password">
+        </div>
+        <br>
+
+        
+        <div>
+            <label for="phone_number">Phone Number:</label>
+            <input type="tel" id="phone_number" name="phone_number" required placeholder="Enter Mobile Number">
+        </div>
+        <br>
+
+    
+        <div>
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required placeholder=" Firstname">
+        </div>
+        <br>
+
+      
+        <div>
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" required placeholder=" Lastname">
+        </div>
+        <br>
+
+        <label for="op1">
+            <input type="checkbox" id="op1" name="prefer" value="Op 1"> I would like to be kept informed of Special Promotions and offers by Yatra.
+        </label>
+        <br>
+
+        <label for="op2">
+            <input type="checkbox" id="op2" name="prefer" value="Op 2"> I would like to get What'sApp notifications.
+        </label>
+        <br>
+
+        <div>
+            <button type="submit" class="btn">Create Account</button>
+        </div>
+    </form>
+    
+</body>
+</html>
+{% endblock %}

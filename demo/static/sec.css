@@ -1,0 +1,37 @@
+.banner{
+  
+    width: 54%;
+    margin-left: 232px;
+    margin-top: 95px;
+    height: 300px; 
+}
+.image-align{
+    display: flex
+}
+.image-alignmrnt{
+    height: 100%;
+    width: 60%;
+    margin-left: 2px;
+}
+.images-cars{
+    width: 68%;
+  margin-left: 220px;
+  margin-top: 38px;
+
+}
+.card-border{
+    border: none;
+    background-color:rgb(236, 243, 246)
+}
+.image-details{
+    width: 60%;
+    margin-left: 246px;
+}
+.card-still{
+    width: 65% !important;
+     margin-left: 241px !important;
+    margin-top: 24px !important;
+}
+.stable{
+    background-color:rgb(236, 243, 246)
+}

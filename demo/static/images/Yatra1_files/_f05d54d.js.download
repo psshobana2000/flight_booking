@@ -1,0 +1,311 @@
+try { 
+	/*if (webengage_fs_configurationMap.config.webPushConfig) {
+    webengage_fs_configurationMap.config.webPushConfig.hideSubscriptionMessage = true;
+}*/
+
+var lsf = webengage.util.getCookie('_we_wk_ss_lsf_');
+
+if (lsf) {
+    webengage.util.setCookie('_we_wk_ss_lsf_', lsf, '', '/', '.yatra.com');
+}
+/*
+webengage.util.withWeJquery(function () {
+    webengage.options('webpush.disablePrompt', true);
+    if ($weJQuery("link[rel*=manifest]") && $weJQuery("link[rel*=manifest]").length == 1) {
+        setTimeout(function () {
+            var webpush = webengage.require('webengage/web-push');
+            webengage.options('webpush.disablePrompt', false);
+            webpush.init();
+        }, 5000);
+    }
+});*/
+var _weq = window._weq || {};
+_weq['webengage.enableCallbacks'] = true;
+webengage.util.onReady(function () {
+    var dayusecta;
+    if (window.location.href.indexOf("appType=HOTEL") > -1) {
+        dayusecta = window.location.href.replace("#", "").replace("appType=HOTEL", "appType=SHORTSTAY") + "&timeSlot=8-12&utm_source=webengage-day-use&utm_medium=cross-sell&utm_campaign=hotel-srp";
+    }
+    else {
+        dayusecta = window.location.href.replace("#", "") + "&appType=SHORTSTAY&timeSlot=8-12&utm_source=webengage-day-use&utm_medium=cross-sell&utm_campaign=hotel-srp";
+    }
+
+    //hotelId1
+    if (typeof hotelId1 !== 'undefined') {
+        webengage.screen({
+            'hotelId1': hotelId1
+        });
+    }
+
+    //AB testing
+    _weq['webengage.ruleData'] = webengage.util.copy(_weq['webengage.ruleData'] || {}, {
+        "visitorBucket": (function () {
+            var _hash = webengage.util.getHashCode(webengage.util.getWebengageCookie().luid);
+            return Math.abs(_hash % 100);
+        })()
+    }, true);
+    _weq['webengage.customData'] = webengage.util.copy(_weq['webengage.customData'] || {}, {
+        "visitorBucket": (function () {
+            var _hash = webengage.util.getHashCode(webengage.util.getWebengageCookie().luid);
+            return Math.abs(_hash % 100);
+        })()
+    }, true);
+
+    //Pass username in token through cookies
+    var userName = webengage.util.getCookie("userName", true);
+    if (!_weq["webengage.tokens"] || !_weq["webengage.tokens"].userName) {
+        _weq['webengage.tokens'] = webengage.util.copy(_weq['webengage.tokens'] || {}, {
+            userName: userName
+        }, true);
+    }
+    _weq['webengage.ruleData'] = webengage.util.copy(_weq['webengage.ruleData'] || {}, {
+        userName: userName
+    }, true);
+    _weq['webengage.customData'] = webengage.util.copy(_weq['webengage.customData'] || {}, {
+        userName: userName
+    }, true);
+
+    //To pass return url in token (url which the user will be redirected to after login)
+    var returnUrl = encodeURIComponent(window.location.href);
+    _weq['webengage.tokens'] = webengage.util.copy(_weq['webengage.tokens'] || {}, {
+        "returnUrl": returnUrl,
+        "dayusecta": dayusecta
+    }, true);
+    //To determine user login (for Goals)
+    //var userName = webengage.util.getCookie("userName");
+    var firstTimeLogIn = webengage.util.getCookie("firstTimeLogIn");
+    if (userName !== null && firstTimeLogIn === null) {
+        document.cookie = "firstTimeLogIn=true;domain=.yatra.com;path=/";
+    }
+    else if (firstTimeLogIn == "true") {
+        document.cookie = "firstTimeLogIn=false;domain=.yatra.com;path=/";
+    }
+    firstTimeLogIn = webengage.util.getCookie("firstTimeLogIn");
+    _weq['webengage.ruleData'] = webengage.util.copy(_weq['webengage.ruleData'] || {}, {
+        firstTimeLogIn: (firstTimeLogIn ? firstTimeLogIn : "")
+    }, true);
+
+    //GTM
+    var obj = "";
+    if (typeof dataLayer != 'undefined') {
+        for (var i = 0; i < dataLayer.length; i++) {
+            if (dataLayer[i].google_tag_params)
+                obj = obj || dataLayer[i].google_tag_params;
+        }
+    }
+    _weq['webengage.ruleData'] = webengage.util.copy(_weq['webengage.ruleData'] || {}, obj, true);
+    _weq['webengage.customData'] = webengage.util.copy(_weq['webengage.customData'] || {}, obj, true);
+
+    function flatten(o, seperator, prefix, map) {
+        var seenObjects = [];
+
+        function flatten_(o, seperator, prefix, map) {
+            map = map || {};
+            prefix = prefix || "";
+            //if root is array call individual elements on same map object and exit
+            if (!prefix && o.constructor == Array) {
+                for (var k = 0; k < o.length; k++) {
+                    if (seenObjects.indexOf(o[k]) === -1) {
+                        if (Object.prototype.toString.call(o[k]) === '[object Array]') {
+                            seenObjects.push(o[k]);
+                        }
+                        flatten_(o[k], seperator, prefix, map);
+                    }
+                }
+                return map;
+            }
+            for (var i in o) {
+                if (!o[i] && o[i] !== 0) {
+                    continue;
+                }
+                if (o.hasOwnProperty(i) && (isPrimitive(o[i]) || o[i].constructor == Array)) {
+                    var key = prefix + seperator + i;
+                    var value = o[i];
+                    if (key.indexOf('.') > -1) {
+                        key = key.replace(".", "_");
+                    }
+                    map[key.substring(1)] = value;
+                }
+            }
+            return map;
+        }
+
+        return flatten_(o, seperator, prefix, map);
+    }
+
+    function isPrimitive(arg) {
+        var type = typeof arg;
+        return (type != "object" && type != "function");
+    }
+
+    /*var timer = setInterval(function () {
+        if(window.location.href.indexOf("hotel") > -1 && (typeof dataLayer != "undefined") && dataLayer.length) {
+            var _weqDataLayer = flatten(typeof dataLayer !== 'object' ? {} : dataLayer, '-');
+            console.log(_weqDataLayer);
+            _weq['webengage.ruleData'] = webengage.util.copy(_weq['webengage.ruleData'] || {}, _weqDataLayer, true);
+            _weq['webengage.customData'] = webengage.util.copy(_weq['webengage.customData'] || {}, _weqDataLayer, true);
+            if (window.location.href.indexOf("hotel") > 0 && typeof(_weqDataLayer.site_type) != 'undefined' && _weqDataLayer.hrental_pagetype != 'conversion') {
+                //webengage.screen(_weqDataLayer);
+                var gtmData = {
+                        //'hrental_pagetype' : hrental_pagetype ? hrental_pagetype : null,
+                        'site_type': typeof(_weqDataLayer.site_type) != 'undefined' && _weqDataLayer.site_type ? _weqDataLayer.site_type : null,
+                        'hrental_dest': typeof(_weqDataLayer.hrental_dest) != 'undefined' && _weqDataLayer.hrental_dest ? _weqDataLayer.hrental_dest : null,
+                        'hrental_name': typeof(_weqDataLayer.hrental_name) != 'undefined' && _weqDataLayer.hrental_name ? _weqDataLayer.hrental_name : null,
+                        'hrental_id': typeof(_weqDataLayer.hrental_id) != 'undefined' && _weqDataLayer.hrental_id ? _weqDataLayer.hrental_id : null,
+                        'hrental_star': typeof(_weqDataLayer.hrental_star) != 'undefined' && _weqDataLayer.hrental_star ? parseInt(_weqDataLayer.hrental_star, 10) : null,
+                        'hrental_price': typeof(_weqDataLayer.hrental_price) != 'undefined' && _weqDataLayer.hrental_price ? parseInt(_weqDataLayer.hrental_price, 10) : null,
+                        'hrental_totalprice': typeof(_weqDataLayer.hrental_totalprice) != 'undefined' && _weqDataLayer.hrental_totalprice ? parseInt(_weqDataLayer.hrental_totalprice, 10) : null,
+                        'hrental_imageurl': typeof(_weqDataLayer.hrental_imageurl) != 'undefined' && _weqDataLayer.hrental_imageurl ? _weqDataLayer.hrental_imageurl : null,
+                        'hrental_startdate': typeof(_weqDataLayer.hrental_startdate) != 'undefined' && _weqDataLayer.hrental_startdate ? new Date(_weqDataLayer.hrental_startdate) : null,
+                        'hrental_enddate': typeof(_weqDataLayer.hrental_enddate) != 'undefined' && _weqDataLayer.hrental_enddate ? new Date(_weqDataLayer.hrental_enddate) : null,
+                        'hrental_adults': typeof(_weqDataLayer.hrental_adults) != 'undefined' && _weqDataLayer.hrental_adults ? parseInt(_weqDataLayer.hrental_adults, 10) : null,
+                        'hrental_child': typeof(_weqDataLayer.hrental_child) != 'undefined' && _weqDataLayer.hrental_child ? parseInt(_weqDataLayer.hrental_child, 10) : null,
+                        'hrental_roomnights': typeof(_weqDataLayer.hrental_roomnights) != 'undefined' && _weqDataLayer.hrental_roomnights ? parseInt(_weqDataLayer.hrental_roomnights, 10) : null,
+                        'hrental_discode': typeof(_weqDataLayer.hrental_discode) != 'undefined' && _weqDataLayer.hrental_discode ? _weqDataLayer.hrental_discode : null,
+                        'hrental_coupon': typeof(_weqDataLayer.hrental_coupon) != 'undefined' && _weqDataLayer.hrental_coupon ? _weqDataLayer.hrental_coupon : null,
+                  'viaCWC' : true
+                    },
+                    eventData = {};
+                for (var key in gtmData) {
+                    if (gtmData.hasOwnProperty(key)) {
+                        if (gtmData[key] !== undefined && gtmData[key] !== null) {
+                            eventData[key] = gtmData[key];
+                        }
+                    }
+                }
+                webengage.track(_weqDataLayer.hrental_pagetype, eventData);
+            }
+            clearInterval(timer);
+        }
+    }, 100);*/
+
+
+});
+
+
+_weq['webengage.notification.onOpen'] = function (data) {
+    webengage.util.withWeJquery(function () {
+        function myFunc() {
+            var _weFrame = $weJQuery('#webklipper-publisher-widget-container-notification-frame');
+            var tempTip = _weFrame.contents().find("#we-knowmore-details");
+            if (tempTip) {
+                $weJQuery('body').append(tempTip);
+                var toolTip = $weJQuery("#we-knowmore-details");
+                var layout = webengage.$layoutInitializer ? webengage.$layoutInitializer.getLayout() : $weJQuery("#webklipper-publisher-widget-container-notification-frame").attr('data-notification-layout-name');
+                if (layout == 'header-desktop') {
+                    $weJQuery('<style>#we-knowmore-details {\ndisplay:none;z-index:16776286;position: fixed; background-color: #FFF;\n padding: 5px 10px;\n width: 300px;\n font-size: 13px;\n right: 115px;\n top: 45px;\n border: 1px solid #00566d;\n color: #00566D;\n}\n#we-knowmore-details::before {\n border: solid rgba(0, 0, 0, 0);\n content: " ";\n height: 0;\n width: 0;\n position: absolute;\n pointer-events: none;\n border-color: rgba(0, 0, 0, 0);\n border-width: 10px;\n border-bottom-color: #fff;\n top: -18px;\n left: 43%;\n z-index: 2;\n}</style>').appendTo('head');
+                }
+                else {
+                    $weJQuery('<style>#we-knowmore-details {\ndisplay:none;z-index:16776286;position: fixed; background-color: #FFF;\n padding: 5px 10px;\n width: 300px;\n font-size: 13px;\n right: 115px;\n bottom: 52px;\n border: 1px solid #00566d;\n color: #00566D;\n}\n#we-knowmore-details::before {\n border: solid rgba(0, 0, 0, 0);\n content: " ";\n height: 0;\n width: 0;\n position: absolute;\n pointer-events: none;\n border-color: rgba(0, 0, 0, 0);\n border-width: 10px;\n border-top-color: #fff;\n bottom: -18px;\n left: 43%;\n z-index: 2;\n}</style>').appendTo('head');
+                }
+                var _button = _weFrame.contents().find('.cta');
+                _button.mouseover(function () {
+                    toolTip.css('display', 'block');
+                });
+                _button.mouseleave(function () {
+                    toolTip.css('display', 'none');
+                });
+                setTimeout(function () {
+                    toolTip.css('left', (_button.offset().left - 85) + 'px');
+                }, 700);
+            }
+        }
+
+        myFunc();
+        window.addEventListener('resize', myFunc);
+
+        //Increase header height
+        var layout = webengage.$layoutInitializer ? webengage.$layoutInitializer.getLayout() : $weJQuery("#webklipper-publisher-widget-container-notification-frame").attr('data-notification-layout-name');
+        if (layout == 'sticky' || layout == 'header-desktop') {
+            var notHeight = $weJQuery("#webklipper-publisher-widget-container-notification-frame").contents().find(".wrapper").height();
+            //setTimeout(function() {
+            $weJQuery("<style type='text/css'>  #webklipper-publisher-widget-container-notification-frame {height:" + notHeight + "px !important;} body .webengage-push-down {height:" + notHeight + "px !important;} #frescoHeader.yatra-header { top: auto !important }</style>").appendTo("head");                   //document.querySelector("#frescoHeader.yatra-header").style.top = "auto";
+            //}, 500);
+        }
+
+        //Timer
+        var span = $weJQuery("#webklipper-publisher-widget-container-notification-frame").contents().find('#we-time-ticker').get(0);
+        if (span) {
+            var notifications = webengage_fs_configurationMap.notificationRuleList;
+            var _ls;
+            for (var i in notifications) {
+                if (notifications[i].notificationEncId === data.notificationId) {
+                    _ls = notifications[i].endTimestamp;
+                    //console.log(_ls);
+                    break;
+                }
+            }
+            if (typeof _ls != 'undefined') {
+                var _cs = (new Date()).getTime();
+                setInterval(function () {
+                    if (!span) return;
+                    _cs += 1000;
+                    var seconds = Math.floor((_ls - _cs) / 1000);
+                    var days = Math.floor(seconds / 24 / 60 / 60);
+                    var hoursLeft = Math.floor((seconds) - (days * 86400));
+                    var hours = Math.floor(hoursLeft / 3600);
+                    var minutesLeft = Math.floor((hoursLeft) - (hours * 3600));
+                    var minutes = Math.floor(minutesLeft / 60);
+                    var remainingSeconds = seconds % 60;
+                    if (remainingSeconds < 10) {
+                        remainingSeconds = "0" + remainingSeconds;
+                    }
+
+                    //if(days <=2){
+                    hours = hours + (days * 24);
+                    days = 0;
+                    //}
+                    var dayLabel = " day";
+                    if (days > 1) {
+                        dayLabel = " days";
+                    }
+                    var hourLabel = " hour";
+                    if (hours > 1) {
+                        hourLabel = " hours";
+                    }
+                    var minLabel = " minute";
+                    if (minutes > 1) {
+                        minLabel = " minutes";
+                    }
+                    var secLabel = " second";
+                    if (seconds > 1) {
+                        secLabel = " seconds";
+                    }
+
+                    //console.log(days+" "+hours+" "+minutes+" "+remainingSeconds);
+                    $weJQuery(".we-day", span).html(days);
+                    $weJQuery(".we-hour", span).html(hours);
+                    $weJQuery(".we-min", span).html(minutes);
+                    $weJQuery(".we-sec", span).html(remainingSeconds);
+                }, 1000);
+            }
+        }
+
+        /*if(data.notificationId == '~2514457b3') {
+          var playButton = $weJQuery("#webklipper-publisher-widget-container-notification-frame").contents().find("a[id='570da11a']");
+          playButton.bind("click", function(event) {
+            //console.log('a');
+              webengage.notification.render({
+                  notificationId: '3175c7a2',
+                  skipRules: true,
+                forcedRender: true
+              });
+          });
+        }*/
+    });
+};
+_weq['webengage.notification.onClick'] = function (data) {
+    webengage.util.withWeJquery(function () {
+        var toolTip = $weJQuery("#we-knowmore-details");
+        if (toolTip) {
+            toolTip.css('display', 'none');
+        }
+    });
+};
+ } catch(e) { 
+ 	if (e instanceof Error) { 
+		var data = e.stack || e.description;
+		data = (data.length > 900 ? data.substring(0, 900) : data);
+	 	webengage.eLog(null, 'error', data, 'cwc-error','cwc', '~f05d54d');
+	 }
+ }

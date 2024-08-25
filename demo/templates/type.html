@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        table {
+            width: 50%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>User Information Form</h2>
+    <form action="#" method="post">
+        {% csrf_token %}  <!-- CSRF token goes here -->
+        <table>
+            <tr>
+                <th>Field</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td><label for="name">Name:</label></td>
+                <td><input type="text" id="name" name="name" required></td>
+            </tr>
+            <tr>
+                <td><label for="age_category">Age Category:</label></td>
+                <td>
+                    <select id="age_category" name="age_category" required>
+                        <option value="Under 18">Under 18</option>
+                        <option value="18 to 30">18 to 30</option>
+                        <option value="31 to 50">31 to 50</option>
+                        <option value="Over 50">Over 50</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="physically_challenged">Physically Challenged:</label></td>
+                <td>
+                    <input type="checkbox" id="physically_challenged" name="physically_challenged">
+                    <label for="physically_challenged">Yes, I am physically challenged</label>
+                </td>
+            </tr>
+        </table>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

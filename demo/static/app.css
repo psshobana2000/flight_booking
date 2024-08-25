@@ -1,0 +1,572 @@
+.flights  a
+{
+    color:#666666;
+    margin-left: 5px;
+
+
+}
+.flights:hover a
+{
+    color: red;
+}
+.Hotel{
+    margin-left:10px;
+}
+.Hotel:hover{
+    color: red;
+}
+.Hotel a
+{
+    color:#666666;
+    padding-right:5px;
+  
+
+}
+.Hotel:hover a{
+    color:red;
+    }
+.buses{
+    margin-left: 10px;
+    }
+    .buses:hover{
+        color: red;
+    }
+.buses a
+{
+    color: #666666;
+    padding-right:5px;
+}
+.buses:hover a
+{
+    color: red;
+}
+.Holidays{
+    margin-left: 10px;
+}
+.Holidays:hover{
+    color: red;
+}
+.Holidays a
+{
+    color: #666666;
+
+}
+.Holidays:hover a
+{
+    color: red;
+}
+.cabs{
+    margin-left: 10px;
+}
+.cabs:hover{
+    color: red;
+}
+.cabs a {
+    color: #666666;
+}
+.cabs:hover a
+{
+    color: red;
+}
+.visa{
+    margin-left: 10px;
+}
+.visa:hover{
+    color: red;
+}
+.visa a
+{
+    color: #666666;
+}
+.visa:hover a
+{
+    color: red;
+}
+.img {
+    width: 130px;
+    height: 34px;
+    margin-left: 130px;
+    margin-top: 25px;
+}
+.unorder{
+    font-size: 14px !important;
+    margin-top: 10px;
+}
+.more {
+    padding: 10px;
+
+}
+.max{
+    margin-top: 2px;
+    width: 100px;
+    height: 35px;
+}
+.flighting{
+    margin-left: 14px;
+
+}
+.flighting:hover{
+    color: red;
+}
+.hotels{
+    margin-left: 11px;
+}
+.hotels:hover{
+    color: red;
+}
+.beachs{
+    margin-left: 20px;
+}
+.beachs:hover{
+    color: red;
+}
+.simple{
+    margin-left: 16px;
+}
+.simple:hover{
+    color: red;
+}
+.caring{
+    margin-left: 8px;
+}
+.caring:hover{
+    color: red;
+}
+.visas{
+    margin-left: 5px;
+}
+.visas:hover{
+    color: red;
+}
+.journey{
+    padding-top: 13px;
+    padding-left: 209px;
+}
+.journeys{
+    padding-left: 0px;
+    padding-top: 14px;
+}
+.lists{
+    list-style-type: none;
+}
+.offering{
+    padding-left: 15px !important;
+    padding-top: 20px !important;
+}
+.businessing{
+    padding-right: 58px !important;
+  padding-top: 20px !important;
+}
+.link{
+    position: fixed;
+    box-shadow: 0 4px 8px 0 rgba(212, 203, 203, 0.762);
+    background-color: white;
+    margin-top: 92px;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-left: -20px !important; 
+}
+.menu:hover a {
+    color: red;
+}
+.meta:hover a {
+    color: red;
+}
+.max:hover a {
+    color: red;
+}
+.mini:hover a {
+    color: red;
+}
+.drop:hover a {
+    color: red;
+}
+.down:hover a {
+    color: red;
+}
+.limit:hover a {
+    color: red;
+}
+.act:hover a {
+    color: red;
+}
+.explore:hover a {
+    color: red;
+}
+.auto:hover a {
+    color: red;
+}
+.item:hover a {
+    color: red;
+}
+.section2{
+    border: 1px solid #bdd4be;
+    width: 441px;
+    height: 609px;
+    margin-top: 115px;
+    margin-left: 61px;
+  }
+.ridge{
+    border: 2px solid rgb(220, 205, 205);
+    width: 116px;
+    height: 34px;
+    margin-left: 0px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 10px;
+}
+
+.ridge:hover{
+    color: red;
+    border-color:red;
+}
+.ridge:active{
+    color: red;
+    border-color:red;
+}
+.bride{
+    border: 2px solid rgb(220, 205, 205);
+    width: 116px;
+    height: 34px;
+    margin-left: 0px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 10px;
+  }
+.bride:hover{
+    color: red;
+    border-color: red;
+}
+.ride{
+    border: 2px solid rgb(220, 205, 205);
+    width: 116px;
+    height: 34px;
+    margin-left: 0px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 10px;
+}
+.ride:hover{
+    color: red;
+    border-color: red;
+}
+.side{
+    text-align: right;
+}
+.h3{
+    color: rgb(144, 184, 197);
+
+}
+.low{
+    font-size: 0.75rem !important;
+}
+.blue{
+    background: #228ee9;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.red{
+    background: #ea2330;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 20px;
+    width: 47%;
+    margin-top: 15px;
+}
+h5{
+    color:skyblue;
+    margin-left: 285px;
+    margin-top: -47px;
+}
+.aside{
+    display: flex;
+    margin-top: 10px;
+}
+.aside1{
+    display: flex;
+}
+.book-date{
+    margin-left:190px;
+}
+.book-trip{
+    color: skyblue;
+  font-weight: 504;
+  font-size: 19px;
+  margin-left: -3px;
+}
+.bom{
+    margin-left: 69px;
+}
+.button-icon{
+    margin-left: 88px;
+  margin-top: 33px;
+  border-radius: 20px;
+  padding: 9px;
+  background-color: white;
+  border-color: #ff0000a1;
+  border-style: solid;
+  color: #ff0000a1;
+
+}
+.metadata{
+    display: flex;
+}
+.font{
+   float: right; 
+}
+.data{
+    float: left;
+    margin-top: 89px;
+    margin-left: 169px;
+    padding: 27px;
+    box-shadow:0 4px 8px 0 rgba(212, 203, 203, 0.762), 0 6px 20px 0 rgba(234, 219, 219, 0.97);
+    position: fixed;
+}
+.metadata1{
+    float: right;
+    width: 771px;
+    margin-top: 71px;
+    margin-right: 23px;
+}
+.image1{
+    padding-top: 19px;
+  width: 99%;
+  border-radius: 7px;
+}
+.image2{
+    padding-top: 24px;
+    width: 46%;
+    border-radius: 7px;
+    height: 114px;
+  }
+.image3{
+    padding-top: 26px;
+  width: 52%;
+  margin-left: 0px;
+  border-radius: 7px;
+  height: 114px;
+}
+.imagrede4{
+    padding-top: 30px;
+    width: 98%;
+    border-radius: 7px;
+}
+.image-font{
+    height: 254px;
+}
+.button-more{
+    background-color: white !important;
+    color: black !important;
+    border:1px solid whitesmoke !important;
+    border-radius: 10px !important;
+}
+.button-account{
+    background-color: white !important;
+    color: black !important;
+    border: none !important;
+}
+.button-support{
+    background-color: white !important;
+    color: black !important;
+    border: none !important;
+    /* margin-left: -155px !important; */
+    margin-top: -2px !important;
+}
+.views{
+    color: skyblue;
+}
+.flights{
+    margin-left: 56px;
+}
+.flights:hover{
+    color: red;
+}
+.flights:active{
+    color: red;
+    border-bottom: 2px solid red;
+}
+.flights1:active{
+    color: red;
+}
+.dropdown-booking{
+    position: relative !important;
+  margin-top: -172px !important;
+}
+.demo-banner{
+    display: flex;
+    width: 35%;
+    padding-left: 0px;
+}
+.demo-pass{
+    height: 237px;
+    width: 82% !important;
+    margin-top: 17px;
+}
+.paragraph{
+    font-size: 20px !important;
+}
+.hang{
+    font-size: 19px;
+    font-family: Rubik,sans-serif;
+  font-weight: 400;
+}
+.card-place{
+    width: 100%;
+}
+.card-price{
+    color: red;
+}
+.card-row{
+    display: flex;
+    margin-left: 741px;
+}
+.card-column{
+    width: 18%;
+    margin-left: 38px;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    margin-top: 35px;
+    position: static !important;
+  
+}
+.lines{
+    margin-left: 800px;
+   
+}
+.line1{
+    font-size: 31px;
+  font-weight: 400;
+  margin-top: 34px;
+    margin-left: -37px;
+}
+.card-from{
+    font-weight: bold;
+    margin-left: -38px;
+}
+.card-reaction{
+    margin-left: -54px;
+}
+.roles{
+    display: flex;
+  margin-left: 717px;
+  width: 893px;
+  height: 252px;
+}
+.temp{
+    color: black !important;
+}
+.temp:hover{
+    color:skyblue !important;
+}
+.yarta2{
+    margin-bottom: 50px;
+    margin-left: 756px;
+    width: 50%;
+    height: 289px;
+    margin-top: 37px;
+}
+.para{
+    margin-left: 760px;
+  width: 50%;
+  padding: 20px;
+  box-shadow: 4px 4px 4px 4px #aaaaaa;
+  height: 468px;
+}
+.query{
+    color: rgb(196, 8, 8);
+}
+.arrow-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  
+  .arrow-button .left-arrow::before {
+    content: "\2190"; /* Unicode character for left arrow */
+    margin-right: 5px;
+  }
+  
+  .arrow-button .right-arrow::after {
+    content: "\2192"; /* Unicode character for right arrow */
+    margin-left: 5px;
+  }
+  .scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 20px;
+  }
+  
+  .scroll-container img {
+    display: inline-block;
+    width: 200px; /* Adjust image width as needed */
+    height: 35px;
+    margin-right: 10px; /* Adjust spacing between images */
+  }
+  
+  .scroll-button {
+    background-color: #ddd;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .scroll-button:hover {
+    background-color: #ccc;
+  }
+  .one{
+    height: 35px !important;
+  }
+  .two{
+    height: 35px !important;
+  }
+.box{
+    margin-top: 53px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    width: 59%;
+    height: 39px;
+    margin-left: 145px;
+    text-align: justify;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 4px;
+}
+.front{
+    color: grey;
+    margin-right: 40px;
+    
+}
+.front1{
+    color: grey;
+}
+.lens{
+    color: grey;
+    
+}
+.data{
+    height: 610px !important;
+    line-height: 15px !important;
+    width: 30% !important;
+}

@@ -1,0 +1,125 @@
+.body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.max {
+    color: black;
+    
+}
+
+.min {
+    color: black;
+}
+
+.left-links a {
+    color: rgb(159, 210, 230);
+    font-size: 30px;
+    font-weight: bold;
+}
+.menu{
+    margin-right: 1px;
+    display: flex;
+   margin-left: 20px;
+}
+.navigation{
+    margin-left: -18px;
+    font-size: 13px;
+    padding: 15px;
+}
+.icon-menu{
+margin-left: -22px;
+}
+.demo-icon{
+border-left: 1px solid #80808036;
+border-right: 1px solid #80808036;
+}
+.nav-item a {
+font-size: 14px;
+}
+
+/* Common styles for navbar */
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+background-color: #f8f9fa;
+border: 2px solid #ccc;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Styles for left links */
+.left-links {
+display: flex;
+gap: 15px;
+}
+
+.left-links a {
+color: rgb(159, 210, 230);
+font-size: 30px;
+font-weight: bold;
+}
+
+/* Styles for right links */
+.right-links {
+display: flex;
+gap: 15px;
+}
+
+/* Styles for all links */
+.navbar a {
+text-decoration: none;
+color: rgb(33, 23, 23);
+padding: 5px 10px;
+border-radius: 5px;
+}
+
+/* Hover effect for links */
+.navbar a:hover {
+background-color: #e9ecef;
+}
+.icon-detail{
+  display: flex;
+}
+.Dashboard{
+    height: 353px;
+    margin-left: 24px;
+}
+.dashboard-menu{
+  display: flex;
+  background-color: rgb(245, 245, 245);
+}
+.Dashboard-Home{
+    margin-top: 14px;
+}
+.fourdivs{
+    margin-top: -24px;
+}
+.new{
+    margin-top: 2px;
+}
+.number1{
+    margin-top: -61px;
+  font-size: 42px;
+  text-align: center;
+}
+.number{
+    font-size: 42px;
+  text-align: center;
+  margin-top: -61px;
+  margin-left: 161px;
+}
+.number2{
+    font-size: 42px;
+  text-align: center;
+  margin-top: -61px;
+  margin-left:192px !important;
+}
+.card-navigate{
+    margin-left: -39px;
+    margin-top: 19px;
+}

@@ -1,0 +1,165 @@
+{% include "nav.html" %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Users</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .table-container {
+            width: 60%;
+            margin-left: 305px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for the whole container */
+            border-radius: -2px;
+        
+            background-color: #fff; /* Ensure the background is consistent */
+
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            
+            margin-top: 60px;
+            
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f7c6ea;
+            color:black;
+        }
+
+        td {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .btn-group a, .btn-group button {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .edit {
+            background-color: #a5f6b3;
+            color: white;
+        }
+
+        .delete {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .edit i, .delete i {
+            margin-right: 5px;
+        }
+
+        .add-Profile {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            background-color: #a81c80;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            margin-left: 1138px;
+        }
+
+        .add-Profile i {
+            margin-right: 5px;
+        }
+        h2{
+            margin-left: 306px;
+        }
+        p{
+            margin-left: 306px;
+        }
+        .main-content header{
+        width: 100%;
+        }
+
+    </style>
+    <!-- Include FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <a href="{% url 'Profile' %}" class="add-Profile">
+        <i class="fas fa-plus"></i> 
+    </a>
+<h2 >Manage Users</h2>
+<p>Use the below form to update your profile</p>
+    <div class="table-container"> 
+        <table>
+            <thead>
+                <tr>
+                    <th></th> 
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Contact</th>
+                    <th>Designation</th>
+                    <th>Password</th>
+                    <th>Confirm Password</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for profile in profiles %}
+                <tr>
+                    <td><input type="checkbox" name="select_profile" value="{{ profile.id }}"></td> <!-- Checkbox column -->
+                    <td>{{ profile.name }}</td>
+                    <td>{{ profile.email }}</td>
+                    <td>{{ profile.contact }}</td>
+                    <td>{{ profile.designation }}</td>
+                    <td>*****</td> <!-- Hide password for security -->
+                    <td>*****</td> <!-- Hide confirm password for security -->
+                    <td>
+                        <div class="btn-group">
+                            <a href="{% url 'edit_profile' profile.id %}" class="edit">
+                                <i class="fas fa-edit"></i> 
+                            </a>
+                            <form action="{% url 'delete_profile' profile.id %}" method="post" style="display:inline;">
+                                {% csrf_token %}
+                                <button type="submit" class="delete">
+                                    <i class="fas fa-trash-alt"></i> 
+                                </button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

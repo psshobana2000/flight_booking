@@ -1,0 +1,70 @@
+try { 
+	/**
+
+22nd July, 19 
+*/
+
+function getQueryStringValue (key) {  
+  return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));  
+}  
+
+// interanl Util functions
+var setCookie = function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    cvalue = cvalue || "";
+    exdays = exdays || 365;
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";path=/";
+};
+var getCookie = function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1);
+        if (c.indexOf(name) === 0) return c.substring(name.length, c.length);
+    }
+    return "";
+};
+var display = function display(t) {
+    disp.innerHTML += t + " localstorage['data'] = " + localStorage['data'];
+    console.log(t);
+};
+var generateToken = function generateToken() {
+    var token = (function() {
+        var S4 = function() {
+            return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+        };
+        return ((new Date().getTime()) + S4() + S4() + S4() + S4());
+    })();
+    return token;
+};
+
+var deleteAllCookies = function deleteAllCookies() {
+    var cookies = document.cookie.split(";");
+
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    }
+};
+webengage.onReady(function(){
+	var srcTenant = getQueryStringValue('srcTenant');
+    if(srcTenant != "") {
+		setCookie('srcTenant',srcTenant,0); // note expire the cookie for next session
+    } else {
+    	//console.log('no srcTenant found');
+    }
+});
+
+
+ } catch(e) { 
+ 	if (e instanceof Error) { 
+		var data = e.stack || e.description;
+		data = (data.length > 900 ? data.substring(0, 900) : data);
+	 	webengage.eLog(null, 'error', data, 'cwc-error','cwc', '8eda44f');
+	 }
+ }

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+button.ridge, button.bride, button.ride {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+    </style>
+</head>
+<body>
+    <button class="ridge" onclick="showPage('oneWay')">ONE WAY</button>
+<button class="bride" onclick="showPage('roundTrip')">ROUND STRIP</button>
+<button class="ride" onclick="showPage('multiCity')">MULTI-CITY</button>
+
+<div id="content">
+    <!-- One Way Page -->
+    <div id="oneWay" class="page active">
+        <div class="aside">
+            <span>
+                <h6 class="front">Depart from </h6>
+                <h3>New Delhi</h3>
+                <h6 class="front1">DEL</h6>
+            </span>
+            <br>
+            <span>
+                <button class="button-icon">&#x21C4;</button>
+            </span>
+            <span class="bom">
+                <h6 class="lens">Going to</h6>
+                <h3>Mumbai</h3>
+                <h6 class="lens">BOM</h6>
+            </span>
+        </div>
+        <hr>
+        <div class="aside1">
+            <span>
+                <h6 class="lens">Departure Date</h6>
+                <h3>8 Apr'24</h3>
+                <br>
+                <h6 class="lens">Monday</h6>
+            </span>
+            <span class="book-date">
+                <h6 class="lens">Return Date</h6>
+                <br>
+                <span class="book-trip">Book round trip<br>to save extra</span>
+            </span>
+        </div>
+        <hr>
+        <h6 class="lens">Traveller(s), class</h6>
+        <br>
+        1 Traveller Economy 
+        <hr>
+        <input type="checkbox" id="v1" name="stage1">
+        <label for="vehicle1"> Non Stop Flights</label><br>
+        <input type="checkbox" id="v2" name="stage2">
+        <label for="vehicle2"> Students Fare</label><br>
+        <input type="checkbox" id="v3" name="stage3">
+        <label for="vehicle3"> Armed Force</label><br>
+        <input type="checkbox" id="v4" name="stage4">
+        <label for="vehicle1"> Senior Citizen</label><br>
+        <button class="blue">Check Your Refund</button>
+        <button class="red">Search Flights</button>
+    </div>
+
+    <!-- Round Trip Page -->
+    <div id="roundTrip" class="page hidden">
+        <!-- Round Trip Content -->
+        <div class="aside">
+            <span>
+                <h6 class="front">Depart from </h6>
+                <h3>New Delhi</h3>
+                <h6 class="front1">DEL</h6>
+            </span>
+            <br>
+            <span>
+                <button class="button-icon">&#x21C4;</button>
+            </span>
+            <span class="bom">
+                <h6 class="lens">Going to</h6>
+                <h3>Mumbai</h3>
+                <h6 class="lens">BOM</h6>
+            </span>
+        </div>
+        <hr>
+        <div class="aside1">
+            <span>
+                <h6 class="lens">Departure Date</h6>
+                <h3>8 Apr'24</h3>
+                <br>
+                <h6 class="lens">Monday</h6>
+            </span>
+            <span class="book-date">
+                <h6 class="lens">Return Date</h6>
+                <h3>15 Apr'24</h3>
+                <br>
+                <span class="book-trip">Book round trip<br>to save extra</span>
+            </span>
+        </div>
+        <hr>
+        <h6 class="lens">Traveller(s), class</h6>
+        <br>
+        1 Traveller Economy 
+        <hr>
+        <input type="checkbox" id="v1" name="stage1">
+        <label for="vehicle1"> Non Stop Flights</label><br>
+        <input type="checkbox" id="v2" name="stage2">
+        <label for="vehicle2"> Students Fare</label><br>
+        <input type="checkbox" id="v3" name="stage3">
+        <label for="vehicle3"> Armed Force</label><br>
+        <input type="checkbox" id="v4" name="stage4">
+        <label for="vehicle1"> Senior Citizen</label><br>
+        <button class="blue">Check Your Refund</button>
+        <button class="red">Search Flights</button>
+    </div>
+
+    <!-- Multi-City Page -->
+    <div id="multiCity" class="page hidden">
+        <!-- Multi-City Content -->
+        <div class="aside">
+            <span>
+                <h6 class="front">Depart from </h6>
+                <h3>New Delhi</h3>
+                <h6 class="front1">DEL</h6>
+            </span>
+            <br>
+            <span>
+                <button class="button-icon">&#x21C4;</button>
+            </span>
+            <span class="bom">
+                <h6 class="lens">Going to</h6>
+                <h3>Mumbai</h3>
+                <h6 class="lens">BOM</h6>
+            </span>
+        </div>
+        <hr>
+        <div class="aside1">
+            <span>
+                <h6 class="lens">Departure Date</h6>
+                <h3>8 Apr'24</h3>
+                <br>
+                <h6 class="lens">Monday</h6>
+            </span>
+            <span class="book-date">
+                <h6 class="lens">Return Date</h6>
+                <h3>15 Apr'24</h3>
+                <br>
+                <span class="book-trip">Book round trip<br>to save extra</span>
+            </span>
+        </div>
+        <hr>
+        <h6 class="lens">Traveller(s), class</h6>
+        <br>
+        1 Traveller Economy 
+        <hr>
+        <input type="checkbox" id="v1" name="stage1">
+        <label for="vehicle1"> Non Stop Flights</label><br>
+        <input type="checkbox" id="v2" name="stage2">
+        <label for="vehicle2"> Students Fare</label><br>
+        <input type="checkbox" id="v3" name="stage3">
+        <label for="vehicle3"> Armed Force</label><br>
+        <input type="checkbox" id="v4" name="stage4">
+        <label for="vehicle1"> Senior Citizen</label><br>
+        <button class="blue">Check Your Refund</button>
+        <button class="red">Search Flights</button>
+    </div>
+</div>
+<script>
+    function showPage(pageId) {
+    // Hide all pages
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+        page.classList.add('hidden');
+    });
+
+    // Show the selected page
+    document.getElementById(pageId).classList.add('active');
+    document.getElementById(pageId).classList.remove('hidden');
+}
+
+// Initial page load
+document.getElementById('oneWay').classList.add('active');
+
+</script>
+</body>
+</html>

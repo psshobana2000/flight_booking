@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Sidebar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Existing CSS styles... */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .sidebar {
+            width: 140px;
+            background-color: #cf3d74;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .sidebar .logo h2 {
+            margin: 0;
+            padding: 10px 0;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar nav ul li {
+            margin: 34px 0;
+            position: relative;
+        }
+
+        .sidebar nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar nav ul li a i {
+            margin-right: 10px;
+        }
+
+        .sidebar nav ul li a:hover {
+            background-color:pink;
+            padding-left: 10px;
+            transition: 0.3s;
+        }
+
+        .sidebar nav ul li .submenu {
+            display: none;
+            list-style-type: none;
+            padding-left: 19px;
+        }
+
+        .sidebar nav ul li.active .submenu {
+            display: block;
+        }
+
+        .sidebar nav ul li a:after {
+            content: '\25BC';
+            font-size: 12px;
+            position: absolute;
+            right: 10px;
+        }
+
+        .sidebar nav ul li.active > a:after {
+            content: '\25B2';
+        }
+        .sidebar nav ul li .submenu li a:after {
+            content: ''; 
+            
+        }
+        .dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 10px;
+    list-style-type: none;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f53b91;
+}
+
+.dropdown-menu li a:hover {
+    color: #fff;
+}
+
+        .main-content header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .user-info {
+    display: flex;
+    align-items: center;
+}
+
+header .user-info img {
+    border-radius: 50%;
+    margin-left: 10px;
+    width: 55px;
+    margin-right: 26px;
+}
+
+.profile-arrow {
+    font-size: 12px;
+    color: #333;
+    transition: transform 0.3s;
+    margin-left: 32px;
+}
+
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-dropdown.active .profile-arrow {
+    transform: rotate(180deg);
+}
+.toggle-button {
+  font-size: 33px;
+  cursor: pointer;
+  color: #333;
+  display: flex;
+  align-items: center;
+  margin-right: 1050px;
+}
+.name {
+    font-size: 13px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <h2>Nschool</h2>
+        </div>
+        <nav>
+            <ul>
+              <li><a href="#" class="board"><i class="fas fa-check-square"></i> Dashboard</a></li>
+
+                <li class="menu-item">
+                    <a href="#"><i class="fas fa-user"></i> User</a>
+                    <ul class="submenu">
+                        <li><a href="/Profile/">New user</a></li>
+                        <li><a href="/manage_users/">Manage user</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#"><i class="fas fa-plane"></i> Flight</a>
+                    <ul class="submenu">
+                        <li><a href="#">New Flight</a></li>
+                        <li><a href="#">Manage Flights</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#"><i class="fas fa-chair"></i> Seat</a>
+                    <ul class="submenu">
+                        <li><a href="#">New Seat</a></li>
+                        <li><a href="#">Manage Seat</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#"><i class="fas fa-walking"></i> Traveller</a>
+                    <ul class="submenu">
+                        <li><a href="#">New Travellers</a></li>
+                        <li><a href="#">Manage Traveller</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#"><i class="fas fa-user-friends"></i> Passenger</a>
+                    <ul class="submenu">
+                        <li><a href="#">New Passenger</a></li>
+                        <li><a href="#">Manage Passenger</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#"><i class="fas fa-credit-card"></i> Payment</a>
+                    <ul class="submenu">
+                        <li><a href="#">Add Payment</a></li>
+                        <li><a href="#">Manage Payment</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#"><i class="fas fa-file-alt"></i> Report</a>
+                    <ul class="submenu">
+                        <li><a href="#">Manage Flights</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#"><i class="fas fa-star"></i> Ratings</a>
+                    <ul class="submenu">
+                        <li><a href="#">View Ratings</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+      <header>
+          <div class="toggle-button" id="toggle-button">
+              <i class="fas fa-bars"></i>
+          </div>
+
+          <div class="user-info" id="user-info">
+              <img src="../static/images/profile.jpg" alt="User Profile">
+              <span class="name">
+                  <span style="font-weight: bold;">User Name</span><br>
+                  <span style="font-weight: lighter;">Admin</span>
+              </span>
+              <i class="fas fa-chevron-down profile-arrow"></i>
+              <div class="profile-dropdown">
+                  <ul class="dropdown-menu">
+                      <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+                      <li><a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                  </ul>
+              </div>
+          </div>
+      </header>
+  </div>
+    <script>
+        // Toggle submenu for each menu item
+        document.querySelectorAll('.menu-item > a').forEach(item => {
+            item.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default action (navigation)
+                const parent = this.parentElement;
+
+                // Toggle the active class to show/hide the submenu
+                if (parent.classList.contains('active')) {
+                    parent.classList.remove('active');
+                } else {
+                    document.querySelectorAll('.menu-item').forEach(el => el.classList.remove('active'));
+                    parent.classList.add('active');
+                }
+            });
+        });
+        
+        // Toggle profile dropdown
+        document.getElementById("user-info").addEventListener("click", function() {
+            this.classList.toggle("active");
+            let dropdownMenu = this.querySelector(".dropdown-menu");
+            dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+        });
+
+        // Redirect on logout click
+        document.getElementById('logout').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = '/panel'; 
+        });
+    </script>
+</body>
+</html>

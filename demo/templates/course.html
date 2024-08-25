@@ -1,0 +1,75 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .course-title {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .course-description {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .course-status {
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+        .course-images img {
+            max-width: 50%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .course-technologies {
+            font-size: 1em;
+            margin-top: 20px;
+        }
+        .course-technologies ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .course-technologies li {
+            background: #f4f4f4;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="course-title">Course Title</div>
+        <div class="course-description">
+            This is a detailed description of the course. It explains what the course is about, what students will learn, and any prerequisites.
+        </div>
+        <div class="course-status">
+            <strong>Status:</strong> Ongoing
+        </div>
+        <div class="course-images">
+            <img src="{% static 'images/flight1.jpg' %}" alt="Course Image 1">
+            <img src="{% static 'images/flight2.jpg' %}" alt="Course Image 2">
+        </div>
+        <div class="course-technologies">
+            <strong>Technologies Covered:</strong>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

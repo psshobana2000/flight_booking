@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Information</title>
+    <style>
+        table {
+            width: 70%;
+  border-collapse: collapse;
+  margin-top: 55px;
+  margin-left: 170px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #cefafb;
+        }
+        button {
+            padding: 6px 12px;
+            background-color:rgb(249, 190, 190);
+            border-color: red; 
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color:rgb(245, 5, 5)
+        }
+        h3{
+            
+  margin-left: 170px;
+  margin-top: 18px;
+}
+        
+    </style>
+</head>
+<body>
+
+<h3>Flight Information</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Airline Name</th>
+            <th>City</th>
+            <th>Depart Time</th>
+            <th> Depart Date</th>
+            <th>Type</th>
+            <th>Price</th>
+            <th>Action</th> <!-- Added action heading -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>IndiGo</td>
+            <td>New York</td>
+            <td>08:00 AM</td>
+            <td>2024-06-15</td>
+            <td>One-Way</td>
+            <td>$300</td>
+            <td>
+                <button onclick="editFlight(this)">Edit</button> <!-- Edit button -->
+                <button onclick="deleteFlight(this)">Delete</button> <!-- Delete button -->
+            </td>
+        </tr>
+        <tr>
+            <td>vistara</td>
+            <td>Mumbai</td>
+            <td>09:30 AM</td>
+            <td>2024-06-16</td>
+            <td>Round-Trip</td>
+            <td>$500</td>
+            <td>
+                <button onclick="editFlight(this)">Edit</button>
+                <button onclick="deleteFlight(this)">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Air india</td>
+            <td>Chicago</td>
+            <td>11:00 AM</td>
+            <td>2024-06-17</td>
+            <td>Multi-City</td>
+            <td>$400</td>
+            <td>
+                <button onclick="editFlight(this)">Edit</button>
+                <button onclick="deleteFlight(this)">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>spicejet</td>
+            <td>Bangalore</td>
+            <td>02:30 PM</td>
+            <td>2024-06-17</td>
+            <td>Multi-City</td>
+            <td>$600</td>
+            <td>
+                <button onclick="editFlight(this)">Edit</button>
+                <button onclick="deleteFlight(this)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    function editFlight(button) {
+        // Add your edit flight logic here
+        console.log("Edit flight");
+        // You can access row data and perform editing operations
+    }
+
+    function deleteFlight(button) {
+        // Add your delete flight logic here
+        button.closest("tr").remove(); // Remove the row from the table
+        console.log("Delete flight");
+        // You can also perform additional actions like making an API call to delete the flight from the database
+    }
+</script>
+
+</body>
+</html>
