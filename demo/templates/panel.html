@@ -5,67 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <style>
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
             display: flex;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
         }
 
         .login-container {
-            width: 36%;
-            max-width: 1000px;
+            width: 61%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             overflow: hidden;
-            background-color: #f7e2f72e;
-            padding: 40px;
+            background-color: rgb(251, 239, 241);
+            margin-left: 456px;
+            margin-top: 177px;
             display: flex;
             justify-content: space-between;
-            height: 350px;
+            height: 369px;
+            
         }
 
         form {
             width: 88%;
-  max-width: 400px;
-  margin: 0 auto;
-
-  margin-right: 93px;
+            max-width: 400px;
+            margin: 0 auto;
+            margin-right: 93px;
         }
         h2 {
-    margin-bottom: -19px;
-    color: black;
-    display: inline-block; 
-    padding-bottom: 8px; 
-    font-size: 19px;
-    font-weight: bold;
-    margin-left: 17px;
-    position: relative;
-    margin-bottom: 15px;
+            margin-bottom: -19px;
+            color: black;
+            display: inline-block; 
+            padding-bottom: 8px; 
+            font-size: 19px;
+            font-weight: bold;
+            margin-left: 17px;
+            position: relative;
+            margin-bottom: 15px;
+            margin-top: 72px;
 }
 
-h2::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: 0;
-    width: 15%; 
-    height: 3px; 
-    background-color:#9a1b69; 
-    border-radius: 2px; 
+        h2::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 15%; 
+            height: 3px; 
+            background-color:#9a1b69; 
+            border-radius: 2px; 
 }
 
-h2::after {
-    content: none; 
+        h2::after {
+            content: none; 
 }
-
-
         .input-group {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         input[type="text"],
@@ -86,31 +84,88 @@ h2::after {
         }
 
         button {
-            width: 23%;
-  padding: 10px;
-  background-color: #9a1b69;
-  color: #fff;
-  border: none;
-  border-radius: 23px;
-  font-size: 14px;
-  cursor: pointer;
-  margin-top: 10px;
-  height: 35px;
-  text-align: center;
-  margin-left: 326px;
+                width: 23%;
+                padding: 10px;
+                background-color: #9a1b69;
+                color: #fff;
+                border: none;
+                border-radius: 23px;
+                font-size: 14px;
+                cursor: pointer;
+                margin-top: 10px;
+                height: 35px;
+                text-align: center;
+                margin-left: 326px;
         }
+        
 
         .error {
             color: red;
             font-size: 14px;
             margin-left: 16px;
             display: none;
-            padding: 5px;
+            padding: 0px;
+        }
+        
+
+        .background-shape-2 {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 68%;
+                height: 56%;
+                background-color: #9a1b69;
+                z-index: -1;
+                clip-path: polygon(100% 100%, 0 100%, 100% 0);
+
+}
+
+        .background-shape {
+                position: absolute;
+                top: 300px;
+                left: 0;
+                width: 68%;
+                height: 56%;
+                background-color: #9a1b69;
+                z-index: -1;
+                clip-path: polygon(0 0, 100% 0, 0 100%);
+                }
+                
+         .navbar {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                background-color: white;
+                width: 164%;
+                height: 69px;
+                box-shadow:0 4px 8px rgba(82, 3, 58, 0.2);
+                margin-bottom: 20px;
+                margin-left: 2px;
+            }
+
+        .navbar img {
+            height: 40px; 
+            margin-right: 15px; 
         }
 
+        .navbar h1 {
+            font-size: 24px;
+            color: #00aaff;
+            margin: 0;
+        }
+        .login{
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
+    <div>
+    <nav class="navbar">
+        <img src="../static/images/logo-admin.png" alt="Administration Logo">
+        
+    </nav>
+<div class="login">
     <div class="login-container">
         <form id="login-form" method="POST">
             <h2>Log in as an admin user</h2>
@@ -125,7 +180,11 @@ h2::after {
             <button type="submit" class="Login">Log in</button>
         </form>
     </div>
-
+    <div class="background-shape"></div>
+    <div class="background-shape-2"></div>
+</div>
+</div>
+    
     <script>
         document.getElementById('login-form').addEventListener('submit', function(event) {
             event.preventDefault();
@@ -150,11 +209,13 @@ h2::after {
             }
 
             if (valid) {
-            
-                alert('Form is valid. Submitting...');
                 this.submit();
             }
         });
+    
     </script>
 </body>
 </html>
+
+
+
