@@ -419,15 +419,15 @@ from django.shortcuts import render, redirect
 from .forms import ProfileForm
 
 def Profile(request):
-    # if request.method == 'POST':
-    #     form = ProfileForm(request.POST)
-    #     if form.is_valid():
-    #         form.save()
-    #         return redirect('success')  
-    #     else:    
-    #         return render(request, 'Profile.html', {'form': form})
-    # else:
-    #     form = ProfileForm()
+    if request.method == 'POST':
+        form = ProfileForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('success.html')  
+        else:    
+            return render(request, 'Profile.html', {'form': form})
+    else:
+        form = ProfileForm()
     return render(request, 'Profile.html')
 
 

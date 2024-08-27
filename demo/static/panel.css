@@ -18,6 +18,7 @@ body {
     display: flex;
     justify-content: space-between;
     height: 379px;
+    margin-bottom: 100px;
     
 }
 
@@ -113,7 +114,6 @@ button {
         clip-path: polygon(100% 100%, 0 100%, 100% 0);
 
 }
-
 .background-shape {
         position: absolute;
         top: 300px;
@@ -122,7 +122,7 @@ button {
         height: 56%;
         background-color: #9a1b69;
         z-index: -1;
-        clip-path: polygon(0 0, 100% 0, 0 100%);
+
         }
         
  .navbar {
