@@ -419,18 +419,18 @@ from django.shortcuts import render, redirect
 from .forms import ProfileForm
 
 def Profile(request):
-    if request.method == 'POST':
-        form = ProfileForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('success')  
-        else:    
-            return render(request, 'Profile.html', {'form': form})
-    else:
-        form = ProfileForm()
-    return render(request, 'Profile.html', {'form': form})
+    # if request.method == 'POST':
+    #     form = ProfileForm(request.POST)
+    #     if form.is_valid():
+    #         form.save()
+    #         return redirect('success')  
+    #     else:    
+    #         return render(request, 'Profile.html', {'form': form})
+    # else:
+    #     form = ProfileForm()
+    return render(request, 'Profile.html')
 
-from .models import Profile
+
 def manage_users(request):
     profiles = Profile.objects.all()  
     return render(request, 'manage_users.html', {'profiles': profiles})
