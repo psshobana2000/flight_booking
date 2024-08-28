@@ -8,7 +8,7 @@ body {
 }
 
 .login-container {
-    width: 61%;
+    width: 55%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
@@ -18,7 +18,7 @@ body {
     display: flex;
     justify-content: space-between;
     height: 379px;
-    margin-bottom: 100px;
+    border-radius: 5px;
     
 }
 
@@ -26,7 +26,7 @@ form {
     width: 88%;
     max-width: 400px;
     margin: 0 auto;
-    margin-right: 93px;
+    margin-right: 61px;
     
 }
 h2 {
@@ -48,7 +48,7 @@ h2::before {
     top: -10px;
     left: 0;
     width: 15%; 
-    height: 3px; 
+    height: 4px; 
     background-color:#9a1b69; 
     border-radius: 2px; 
 }
@@ -89,7 +89,7 @@ button {
         margin-top: 10px;
         height: 35px;
         text-align: center;
-        margin-left: 326px;
+        margin-left: 316px;
 }
 
 
