@@ -414,8 +414,10 @@ def manage_users(request):
 def panel(request):
     return render(request,"panel.html")
 
+def dashboard(request):
+    return render(request,"dashboard.html")
 
-from django.shortcuts import render, redirect
+
 from .forms import ProfileForm
 
 def Profile(request):
@@ -431,9 +433,9 @@ def Profile(request):
     return render(request, 'Profile.html')
 
 
-def manage_users(request):
-    profiles = Profile.objects.all()  
-    return render(request, 'manage_users.html', {'profiles': profiles})
+# def manage_users(request):
+#     profiles = Profile.objects.all()  
+#     return render(request, 'manage_users.html', {'profiles': profiles})
 
 
 def edit_profile(request, profile_id):

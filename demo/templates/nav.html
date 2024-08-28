@@ -6,7 +6,7 @@
     <title>Dashboard Sidebar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Existing CSS styles... */
+        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -39,9 +39,24 @@
         }
 
         .sidebar nav ul li {
-            margin: 34px 0;
+            margin: 32px 0;
             position: relative;
+            
         }
+        .menu-item{
+            width: 215px !important;
+  margin-left: -20px !important;
+        }
+        
+.sidebar nav ul li .submenu li a {
+    padding: 5px 10px; 
+    font-size: 14px; 
+}
+
+
+.sidebar nav ul li .submenu li {
+    margin: 0; 
+}
 
         .sidebar nav ul li a {
             color: #fff;
@@ -53,6 +68,7 @@
 
         .sidebar nav ul li a i {
             margin-right: 10px;
+            padding-left: 28px;
         }
 
         .sidebar nav ul li a:hover {
@@ -62,29 +78,33 @@
         }
 
         .sidebar nav ul li .submenu {
-            display: none;
-            list-style-type: none;
-            padding-left: 19px;
-        }
+            
+    display: none;
+    list-style-type: none;
+    padding-left: 27px;
+  margin-top: 10px;
+}
+        
 
         .sidebar nav ul li.active .submenu {
             display: block;
         }
         .sidebar nav ul li .board:after {
-    content: ''; /* Remove the dropdown symbol */
-}
-/* Background color for active menu item */
-.sidebar nav ul li.active > a {
-    background-color: white;
-    color: #cf3d74; /* Change text color to contrast with white */
+    content: ''; 
 }
 
-/* Background color for active submenu item */
+.sidebar nav ul li.active > a {
+    background-color: white;
+    color: #cf3d74; 
+}
+
+
 .sidebar nav ul li .submenu li.active > a {
     background-color: pink;
-    color: #333; /* Change text color to contrast with pink */
-    border-left: 3px solid #333; /* Optional: add a vertical line */
-    padding-left: 7px; /* Adjust padding for the vertical line */
+    width: 100%;
+    color: #333; 
+    border-left: 3px solid #333; 
+    padding-left: 7px; 
 }
 
         .sidebar nav ul li a:after {
@@ -96,6 +116,7 @@
         .sidebar nav ul li .submenu li a:hover, 
 .sidebar nav ul li .submenu li a.active {
     background-color: pink; 
+    width: 100%;
     border-left: 3px solid #333; 
     padding-left: 7px; 
     transition: all 0.3s ease;
@@ -120,6 +141,8 @@
     list-style-type: none;
     padding: 10px 0;
     z-index: 1000;
+    top: 26px !important;
+  left: -151px !important;
 }
 
 .dropdown-menu li {
@@ -190,6 +213,17 @@ header .user-info img {
     margin-bottom: 10px;
     font-weight: bold;
 }
+.user1{
+    height: 30px !important;
+}
+.user2{
+    
+  width: 249px !important;
+  height: 31px !important;
+  margin-left: -61px !important;
+  padding-left: 64px !important;
+
+}
 
     </style>
 </head>
@@ -200,12 +234,13 @@ header .user-info img {
         </div>
         <nav>
             <ul>
-              <li><a href="#" class="board"><i class="fas fa-check-square"></i> Dashboard</a></li>
+                <li><a href="#" class="board"><i class="fas fa-check-square"></i> Dashboard</a></li>
+
 
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-user"></i> User</a>
+                    <a href="#" class="user1"><i class="fas fa-user"></i> User</a>
                     <ul class="submenu">
-                        <li><a href="/Profile/">New user</a></li>
+                        <li class="user2"><a href="/Profile/">New user</a></li>
                         <li><a href="/manage_users/">Manage user</a></li>
                     </ul>
                 </li>

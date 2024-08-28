@@ -43,7 +43,8 @@ urlpatterns = [
     path('manage_seat/',views.manage_seat,name='manage_seat'), 
     path('manage_users/',views.manage_users,name='manage_users'),
     path('panel/', views.panel, name='panel'),
-    path('Profile/', views.Profile, name='Profile')
+    path('Profile/', views.Profile, name='Profile'),
+    path('dashboard/', views.dashboard, name='dashboard')
     
 
 ]
