@@ -19,10 +19,8 @@
 margin-left: -3px;
   height: 70px;
   width: 70%; 
-   border: 1px solid rgb(230, 231, 233);
-   
+   border: 1px solid rgb(230, 231, 233);  
 }
-
 .Navbar{
   width: 20%; 
   
@@ -45,9 +43,7 @@ color: black;
   height: 1100px;
   background-color:rgb(28, 32, 42);
 
- 
 }
-
 .CloseButton{
   font-size: 20px;
    width: 15%;

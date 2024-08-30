@@ -15,7 +15,7 @@
         }
 
         .sidebar {
-            width: 215px;
+            width: 178px;
             background-color: #cf3d74;
             height: 100vh;
             position: fixed;
@@ -102,8 +102,6 @@
 .sidebar nav ul li .submenu li.active > a {
     background-color: pink;
     width: 100%;
-    color: #333; 
-    border-left: 3px solid #333; 
     padding-left: 7px; 
 }
 
@@ -113,12 +111,12 @@
             position: absolute;
             right: 10px;
         }
-        .sidebar nav ul li .submenu li a:hover, 
+        .sidebar nav ul li .submenu li a .point:hover, 
 .sidebar nav ul li .submenu li a.active {
     background-color: pink; 
     width: 100%;
     border-left: 3px solid #333; 
-    padding-left: 7px; 
+    padding-left: 2px; 
     transition: all 0.3s ease;
 }
 
@@ -164,12 +162,12 @@
     color: #fff;
 }
 
-        .main-content header {
+.main-content header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     background-color: #fff;
-    padding: 22px;
+    padding: 11px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -215,15 +213,43 @@ header .user-info img {
 }
 .user1{
     height: 30px !important;
+    width: 216px;
+    
 }
 .user2{
     
-  width: 249px !important;
+  width: 284px !important;
   height: 31px !important;
-  margin-left: -61px !important;
+  margin-left: -94px !important;
   padding-left: 64px !important;
 
 }
+.board{
+    width: 216px;
+  margin-left: -20px;
+  transition: background-color 0.3s ease;
+
+}
+.board:hover {
+    background-color: pink; 
+}
+
+.board:active {
+    background-color: white; 
+}
+.point{
+    padding-left: 40px !important;
+
+}
+.point:hover{
+    background-color: pink; 
+    width: 100%;
+    border-left: 3px solid #333 !important; 
+    padding-left: 2px; 
+    transition: all 0.3s ease;
+}
+
+
 
     </style>
 </head>
@@ -234,61 +260,61 @@ header .user-info img {
         </div>
         <nav>
             <ul>
-                <li><a href="#" class="board"><i class="fas fa-check-square"></i> Dashboard</a></li>
+                <li><a href="/layout1/" class="board"><i class="fas fa-check-square"></i> Dashboard</a></li>
 
 
                 <li class="menu-item">
                     <a href="#" class="user1"><i class="fas fa-user"></i> User</a>
                     <ul class="submenu">
-                        <li class="user2"><a href="/Profile/">New user</a></li>
-                        <li><a href="/manage_users/">Manage user</a></li>
+                        <li class="user2"><a href="/Profile/" class="point">New user</a></li>
+                        <li class="user2"><a href="/manage_users/" class="point">Manage user</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-plane"></i> Flight</a>
+                    <a href="#" class="user1"><i class="fas fa-plane"></i> Flight</a>
                     <ul class="submenu">
-                        <li><a href="#">New Flight</a></li>
-                        <li><a href="#">Manage Flights</a></li>
+                        <li class="user2"><a href="#" class="point">New Flight</a></li>
+                        <li class="user2"><a href="#" class="point">Manage Flights</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-chair"></i> Seat</a>
+                    <a href="#" class="user1"><i class="fas fa-chair"></i> Seat</a>
                     <ul class="submenu">
-                        <li><a href="#">New Seat</a></li>
-                        <li><a href="#">Manage Seat</a></li>
+                        <li class="user2"><a href="#" class="point">New Seat</a></li>
+                        <li class="user2"><a href="#" class="point">Manage Seat</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-walking"></i> Traveller</a>
+                    <a href="#" class="user1"><i class="fas fa-walking"></i> Traveller</a>
                     <ul class="submenu">
-                        <li><a href="#">New Travellers</a></li>
-                        <li><a href="#">Manage Traveller</a></li>
+                        <li class="user2"><a href="#" class="point">New Travellers</a></li>
+                        <li class="user2"><a href="#" class="point">Manage Traveller</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-user-friends"></i> Passenger</a>
+                    <a href="#" class="user1"><i class="fas fa-user-friends"></i> Passenger</a>
                     <ul class="submenu">
-                        <li><a href="#">New Passenger</a></li>
-                        <li><a href="#">Manage Passenger</a></li>
+                        <li class="user2"><a href="#" class="point">New Passenger</a></li>
+                        <li class="user2"><a href="#" class="point">Manage Passenger</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-credit-card"></i> Payment</a>
+                    <a href="#" class="user1"><i class="fas fa-credit-card"></i> Payment</a>
                     <ul class="submenu">
-                        <li><a href="#">Add Payment</a></li>
-                        <li><a href="#">Manage Payment</a></li>
+                        <li class="user2"><a href="#" class="point">Add Payment</a></li>
+                        <li class="user2"><a href="#" class="point">Manage Payment</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-file-alt"></i> Report</a>
+                    <a href="#" class="user1"><i class="fas fa-file-alt"></i> Report</a>
                     <ul class="submenu">
-                        <li><a href="#">Manage Flights</a></li>
+                        <li class="user2"><a href="#" class="point">Manage Flights</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-star"></i> Ratings</a>
+                    <a href="#" class="user1"><i class="fas fa-star"></i> Ratings</a>
                     <ul class="submenu">
-                        <li><a href="#">View Ratings</a></li>
+                        <li class="user2"><a href="#" class="point">View Ratings</a></li>
                     </ul>
                 </li>
             </ul>
@@ -309,21 +335,21 @@ header .user-info img {
               <i class="fas fa-chevron-down profile-arrow"></i>
               <div class="profile-dropdown">
                   <ul class="dropdown-menu">
-                      <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
-                      <li><a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                      <li><a href="#" class="Profile"><i class="fas fa-user"></i> Profile</a></li>
+                      <li><a href="#" class="loger" id="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                   </ul>
               </div>
           </div>
       </header>
   </div>
     <script>
-        // Toggle submenu for each menu item
+        
         document.querySelectorAll('.menu-item > a').forEach(item => {
             item.addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent the default action (navigation)
+                event.preventDefault(); 
                 const parent = this.parentElement;
 
-                // Toggle the active class to show/hide the submenu
+                
                 if (parent.classList.contains('active')) {
                     parent.classList.remove('active');
                 } else {
@@ -333,14 +359,14 @@ header .user-info img {
             });
         });
         
-        // Toggle profile dropdown
+    
         document.getElementById("user-info").addEventListener("click", function() {
             this.classList.toggle("active");
             let dropdownMenu = this.querySelector(".dropdown-menu");
             dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
         });
 
-        // Redirect on logout click
+        
         document.getElementById('logout').addEventListener('click', function(event) {
             event.preventDefault();
             window.location.href = '/panel'; 

@@ -116,9 +116,20 @@
   padding: 20px;
   color: #fff;
 }
+.user1{
+    height: 30px !important;
+  width: 202px;
 
+}
+.user2{
+    width: 159px !important;
+}
+.board{
+            width: 197px;
+        }
+        
     </style>
-    <!-- Include FontAwesome for icons -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -150,8 +161,8 @@
                     <td>{{ profile.email }}</td>
                     <td>{{ profile.contact }}</td>
                     <td>{{ profile.designation }}</td>
-                    <td>*****</td> <!-- Hide password for security -->
-                    <td>*****</td> <!-- Hide confirm password for security -->
+                    <td>*****</td> 
+                    <td>*****</td> 
                     <td>
                         <div class="btn-group">
                             <a href="{% url 'edit_profile' profile.id %}" class="edit">
