@@ -58,7 +58,7 @@ color: black;
 .Dashboard{
   height: 350px;
   font-size: medium;
-  width: 100%;
+  width: 97%;
 margin-top: 73px;
 margin-right: 10px;
  background-color: rgb(245, 245, 245);
@@ -81,7 +81,7 @@ margin-right: 10px;
 .Dashboard-Topdivs{
   height: 190px;
   display: flex;
-  width: 100%;
+  width: 102%;
   margin-left: -17px;
 }
 .fourdivs{
@@ -151,7 +151,6 @@ color: white;
   padding-left: 3%;
 
 }
-
 .Dashboard-Home-Content{
   float: right;
   margin-right: 1532px;
@@ -178,6 +177,7 @@ i{
 .table-data{
   width: 55%;
   margin-left: 111px;
+  background-color: white;
 }
 .card-table{
   width: 293px;
@@ -189,7 +189,6 @@ i{
     font-size: 61px;
     text-align: center;
     margin-top: -67px;
-
 }
 .number1{
   margin-top: -72px;

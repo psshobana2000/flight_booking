@@ -86,7 +86,7 @@ background-color: #e9ecef;
 }
 .Dashboard{
     height: 353px;
-    margin-left: 24px;
+    margin-left: 20px;
 }
 .dashboard-menu{
   display: flex;
@@ -99,7 +99,7 @@ background-color: #e9ecef;
     margin-top: -24px;
 }
 .new{
-    margin-top: 2px;
+    margin-top: 28px;
 }
 .number1{
     margin-top: -61px;

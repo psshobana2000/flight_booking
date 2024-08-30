@@ -10,7 +10,7 @@ body {
 }
 
 .login-container {
-    width: 58%;
+    width: 65%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
@@ -28,7 +28,7 @@ form {
     width: 88%;
     max-width: 400px;
     margin: 0 auto;
-    margin-right: 72px;
+    margin-right: 125px;
 }
 
 h2 {
@@ -97,12 +97,13 @@ button {
 
 .error {
     color: red;
-    font-size: 14px;
-    margin-left: 16px;
-    display: none;
-    padding: 0px;
-    position: absolute;
-}   
+  font-size: 14px;
+  margin-left: 11px;
+  display: none;
+  padding: 7px;
+  position: absolute;
+}
+  
  .navbar {
         display: flex;
         justify-content: flex-start;
