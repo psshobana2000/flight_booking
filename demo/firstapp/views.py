@@ -77,15 +77,15 @@ def admin_login_view(request):
         
         user = authenticate(username=username, password=password)
         if user is not None:
-            # Log in the user
+            
             login(request)
             
             if user.is_admin:
-                return redirect('layout1')  # Redirect to admin home page
+                return redirect('layout1')  
             else:
                 return redirect('successs') 
         else:
-            # Authentication failed
+            
             error_message = 'Invalid username or password'
     return render(request, './panel.html', {'error': error_message})
 
@@ -152,7 +152,7 @@ def accountApi(request, id=0):
         except Account.DoesNotExist:
             return JsonResponse("Account does not exist", status=404, safe=False)
 
-# Create your views here.
+
 
 class ListUsers(APIView):
 
@@ -191,7 +191,6 @@ def result(request):
 
 
 def course(request):
-    # data = courses.objects.all()
 
     data =Course.objects.all().order_by('Title')
     if request.method == 'POST':
@@ -274,7 +273,7 @@ def admin_login_api(request):
         
         user = authenticate(username=username, password=password)
         if user is not None:
-            # Log in the user
+            
             login(request)
             
         return JsonResponse({'id':'1','username': 'demoadmin','password':'demopass'}) 
@@ -406,19 +405,13 @@ def manage_seat(request):
 def sec(request):
     return render(request,"sec.html")
  
-
-
 def manage_users(request):
     return render(request,"manage_users.html")
 
 def panel(request):
     return render(request,"panel.html")
 
-def dashboard(request):
-    return render(request,"dashboard.html")
 
-
-from .forms import ProfileForm
 
 def Profile(request):
     if request.method == 'POST':
