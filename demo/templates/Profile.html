@@ -17,10 +17,8 @@
             padding: 20px;
             max-width: 800px;
             margin: 0 auto;
-        
             border-radius: 10px;
-        
-            margin-top: 65px;
+            margin-top: 15px;
         }
         .module-container {
             padding: 20px;
@@ -41,10 +39,11 @@
 
         }
         .user-modules h6 {
-           color: #D85D80;
-  font-size: 17px;
-  margin: 0;
-        }
+            color: #B64162;
+            font-size: 17px;
+            margin: 0;
+            margin-left: 24px;
+}
         .new-user p {
             margin: 0;
             color: #1a1919;
@@ -62,24 +61,24 @@
         .form-row .input-container input[type="email"],
         .form-row .input-container input[type="password"] {
             width: 97%;
-  padding: 0px;
-  border: 2px solid #7A2940;
-  border-radius: 5px;
-  outline: none;
-  height: 47px;
-  margin-left: 10px;
-  padding-left: -7px;
-  margin-bottom: 28px;
+            padding: 0px;
+            border: 2px solid #7A2940;
+            border-radius: 5px;
+            outline: none;
+            height: 47px;
+            margin-left: 10px;
+            padding-left: -7px;
+            margin-bottom: 28px;
 }
 
         
         .form-row .input-container .error {
             color: red;
-  font-size: 13px;
-  margin-top: -20px;
-  display: none;
-  margin-left: 17px;
-  position: absolute;
+            font-size: 13px;
+            margin-top: -20px;
+            display: none;
+            margin-left: 21px;
+            position: absolute;
 }
         
         .btn-group {
@@ -98,19 +97,19 @@
         }
         .btn-group .cancel {
             color: #871032;
-  background-color: white;
-  margin-right: 26px;
-  border: 2px solid silver;
-  border-radius: 38px;
-  width: 11%;
+            background-color: white;
+            margin-right: 26px;
+            border: 2px solid silver;
+            border-radius: 38px;
+            width: 11%;
 }
 
         
         .btn-group .save {
             background-color: #a33856;
-  margin-right: 282px;
-  width: 11%;
-  font-size: small;
+            margin-right: 282px;
+            width: 11%;
+            font-size: small;
 }
         
         .board{
@@ -127,21 +126,79 @@
         }
         #newUserForm{
             
-  width: 80%;
-  padding: 63px;
-  margin-left: 26px;
+        width: 80%;
+        padding: 63px;
+        margin-left: 26px;
         }
+
+        h3 {
+            color: black;
+            display: inline-block;
+            padding-bottom: 0px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 101px;
+            position: relative;
+            margin-bottom: 15px;
+            margin-top: 26px;
+}
+
+
+        h3::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 28%; 
+            height: 4px; 
+            background-color:#9a1b69; 
+            border-radius: 2px; 
+}
+
+        h3::after {
+            content: none; 
+}
+        #name {
+            padding-left: 10px; 
+        }
+        #email{
+            padding-left: 10px; 
+        }
+        #contact{
+            padding-left: 10px; 
+        }
+        #designation{
+            padding-left: 10px;
+        }
+        #password{
+            padding-left: 10px;
+        }
+        #confirm-password{
+            padding-left: 10px;
+        }
+        .new{
+            color:silver;
+            margin-left: 10px;
+        }
+        .toggle-button {
+            font-size: 33px;
+            cursor: pointer;
+            color: #333;
+            display: flex;
+            align-items: center;
+            margin-right: 1040px
+}
     </style>
 </head>
 <body>
     <div class="container">
         <div class="module-container user-modules">
         
-            <h6 class="user">USER MODULES<span class="new">.new user</span></h6>
+            <h6 class="user">USER MODULES<span class="new">. new user</span></h6>
         </div>
 
-        <div class="module-container new-user"  style="height: 500px;">
-            <h2>New User</h2>
+        <div class="module-container new-user"  style="height: 530px;">
+            <h3>New User</h3>
             <p>Use the form below to create a new user profile</p>
             <form id="newUserForm" method="post">
                 {% csrf_token %}
