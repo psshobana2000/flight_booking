@@ -1,7 +1,6 @@
 .Total{
   height: 450px;
 }
-
 .Button{
  width: 100%;
   padding: 5px;
@@ -11,10 +10,9 @@
   border-radius: 2px;
 }
 .Button:hover{
-  /* background-color: rgb(26, 142, 237); */
+  
   color: black;
 }
-
 .center{
 margin-left: -3px;
   height: 70px;
@@ -32,8 +30,6 @@ color: black;
   width: 80%;
   float: right;
   margin-top: -1100px;
-
-
 }
 .Sidebar{
   list-style-type: none;
@@ -53,7 +49,6 @@ color: black;
     background-color: rgb(28, 32, 42);
     border: none;
     color: white;
- 
   }
 .Dashboard{
   height: 350px;
@@ -61,9 +56,7 @@ color: black;
   width: 97%;
 margin-top: 73px;
 margin-right: 10px;
- background-color: rgb(245, 245, 245);
-
-  
+ background-color: rgb(245, 245, 245);  
 }
 .Dashboard-Home{
   height: 30px;
@@ -90,16 +83,15 @@ margin-right: 10px;
   display: inline-block;
   margin: 2%;
   border-radius: 3px;
-
- margin-left: 3%;
+  margin-left: 3%;
  
 }
 .fourdivtop{
   background-color:rgb(16, 144, 191);
   height: 35px;
-border-top-right-radius: 3px;
-border-top-left-radius:3px;
-color: white;
+  border-top-right-radius: 3px;
+  border-top-left-radius:3px;
+  color: white;
 
 }
 .Total-Orders{
@@ -129,8 +121,8 @@ color: white;
   background-color:rgb(23, 129, 167);
   color: rgb(100, 191, 240);
   font-size:50px;
- padding-top: 15px;
- padding-left: 10px;
+  padding-top: 15px;
+  padding-left: 10px;
 }
 .fourdivcenter:hover{
   color: white;

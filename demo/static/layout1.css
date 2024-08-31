@@ -23,7 +23,7 @@ body {
 .menu{
     margin-right: 1px;
     display: flex;
-   margin-left: 20px;
+    margin-left: 20px;
 }
 .navigation{
     margin-left: -18px;
@@ -31,55 +31,53 @@ body {
     padding: 15px;
 }
 .icon-menu{
-margin-left: -22px;
+    margin-left: -22px;
 }
 .demo-icon{
-border-left: 1px solid #80808036;
-border-right: 1px solid #80808036;
+    border-left: 1px solid #80808036;
+    border-right: 1px solid #80808036;
 }
 .nav-item a {
-font-size: 14px;
-}
-/* Common styles for navbar */
-.navbar {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 10px;
-background-color: #f8f9fa;
-border: 2px solid #ccc;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 14px;
 }
 
-/* Styles for left links */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
 .left-links {
-display: flex;
-gap: 15px;
+    display: flex;
+    gap: 15px;
 }
 
 .left-links a {
-color: rgb(159, 210, 230);
-font-size: 30px;
-font-weight: bold;
+    color: rgb(159, 210, 230);
+    font-size: 30px;
+    font-weight: bold;
 }
 
-/* Styles for right links */
+
 .right-links {
-display: flex;
-gap: 15px;
+    display: flex;
+    gap: 15px;
 }
 
-/* Styles for all links */
 .navbar a {
-text-decoration: none;
-color: rgb(33, 23, 23);
-padding: 5px 10px;
-border-radius: 5px;
+    text-decoration: none;
+    color: rgb(33, 23, 23);
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
-/* Hover effect for links */
 .navbar a:hover {
-background-color: #e9ecef;
+   background-color: #e9ecef;
 }
 .icon-detail{
   display: flex;
@@ -103,20 +101,20 @@ background-color: #e9ecef;
 }
 .number1{
     margin-top: -61px;
-  font-size: 42px;
-  text-align: center;
+    font-size: 42px;
+    text-align: center;
 }
 .number{
     font-size: 42px;
-  text-align: center;
-  margin-top: -61px;
-  margin-left: 161px;
+    text-align: center;
+    margin-top: -61px;
+    margin-left: 161px;
 }
 .number2{
     font-size: 42px;
-  text-align: center;
-  margin-top: -61px;
-  margin-left:192px !important;
+    text-align: center;
+    margin-top: -61px;
+    margin-left:192px !important;
 }
 .card-navigate{
     margin-left: -39px;
