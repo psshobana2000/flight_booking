@@ -125,18 +125,19 @@
             
         }
         .dropdown-menu {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    margin-top: 10px;
-    list-style-type: none;
-    padding: 10px 0;
-  
-    top: 26px !important;
-  left: -151px !important;
+            display: none;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-top: 6px;
+  list-style-type: none;
+  padding: 46px 0;
+  top: 26px !important;
+  left: -198px !important;
+  width: 204%;
+  width: 150px;
 }
 
 .dropdown-menu li {
@@ -218,7 +219,7 @@ header .user-info img {
   height: 31px !important;
   margin-left: -94px !important;
   padding-left: 64px !important;
-
+ 
 }
 .board{
     width: 216px;
@@ -227,11 +228,12 @@ header .user-info img {
 
 }
 .board:hover {
-    background-color: pink; 
+    
 }
 
 .board:active {
-    background-color: white; 
+    
+    color: #cf3d74;
 }
 .point{
     padding-left: 60px !important;
@@ -243,7 +245,10 @@ header .user-info img {
     border-left: 3px solid #333 !important; 
     padding-left: 2px; 
     transition: all 0.3s ease;
+    vertical-align: middle;
 }
+
+
 
     </style>
 </head>
@@ -260,7 +265,7 @@ header .user-info img {
                 <li class="menu-item">
                     <a href="#" class="user1"><i class="fas fa-user"></i> User</a>
                     <ul class="submenu">
-                        <li class="user2"><a href="/Profile/" class="point">New user</a></li>
+                        <li class="user2"><a href="/Profile/" class="point"> New user</a></li>
                         <li class="user2"><a href="/manage_users/" class="point">Manage user</a></li>
                     </ul>
                 </li>
@@ -329,14 +334,22 @@ header .user-info img {
               <i class="fas fa-chevron-down profile-arrow"></i>
               <div class="profile-dropdown">
                   <ul class="dropdown-menu">
-                      <li><a href="#" class="Profile"><i class="fas fa-user"></i> Profile</a></li>
-                      <li><a href="#" class="loger" id="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    <div class="user-info2" id="user-info">
+                        <img src="../static/images/profile.jpg" alt="User Profile">
+                        <span class="name2">
+                            <span style="font-weight: bold;">User Name</span><br>
+                            <span style="font-weight: lighter;">Admin</span>
+                        </span>
+                        <hr>
+                      <li><a href="#" class="Profile1"><i class="fas fa-user"></i> Profile</a></li>
+                      <li><a href="#" class="loger1" id="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                   </ul>
               </div>
           </div>
       </header>
   </div>
     <script>
+        
         
         document.querySelectorAll('.menu-item > a').forEach(item => {
             item.addEventListener('click', function(event) {

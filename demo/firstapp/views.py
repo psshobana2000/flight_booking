@@ -418,7 +418,7 @@ def Profile(request):
         form = ProfileForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('success.html')  
+            return redirect('success')  
         else:    
             return render(request, 'Profile.html', {'form': form})
     else:

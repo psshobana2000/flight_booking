@@ -16,10 +16,10 @@ body {
     overflow: hidden;
     background-color: rgb(251, 239, 241);
     margin-left: 456px;
-    margin-top: 177px;
+    margin-top: 162px;
     display: flex;
     justify-content: space-between;
-    height: 400px;
+    height: 410px;
     border-radius: 5px; 
     
 }
