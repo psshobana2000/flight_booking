@@ -249,19 +249,23 @@ margin-top: -42px;
 .Profile1{
 height: 12px;
 }
+
 .loger1{
 height: 12px;
 }
-.submenu li:hover::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 2px;
-    height: 50%;
-    background: #333;
-    transform: translateY(-50%);
+
+.user2  {
+    position: relative;
 }
+.user2 :hover::before {
+    content: '';
+    width: 2px;
+    height: 20px;
+    vertical-align: 2px;
+    background-color: #cf3d74;
+    margin-right: 9px;
+}
+
 hr{
     color: grey;
 }
