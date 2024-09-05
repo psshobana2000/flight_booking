@@ -1,0 +1,124 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .table-container {
+            width: 60%;
+            margin-left: 305px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+            border-radius: -2px;
+        
+            background-color: #fff; 
+
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            
+            margin-top: 60px;
+            
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f7c6ea;
+            color:black;
+        }
+
+        td {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .btn-group a, .btn-group button {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .edit {
+            background-color: #a5f6b3;
+            color: white;
+        }
+
+        .delete {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .edit i, .delete i {
+            margin-right: 5px;
+        }
+
+        .add-Profile {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            background-color: #a81c80;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            margin-left: 1138px;
+        }
+
+        .add-Profile i {
+            margin-right: 5px;
+        }
+        h2{
+            margin-left: 306px;
+        }
+        p{
+            margin-left: 306px;
+        }
+        .main-content header{
+        width: 100%;
+        }
+        .sidebar {
+  width: 180px;
+  background-color: #cf3d74;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  color: #fff;
+}
+.user1{
+    height: 30px !important;
+  width: 220px;
+
+}
+.user2{
+    width: 151px !important;
+}
+.board{
+    width: 220px;
+    height: 32px;
+        }
+        
+

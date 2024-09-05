@@ -405,13 +405,8 @@ def manage_seat(request):
 def sec(request):
     return render(request,"sec.html")
  
-def manage_users(request):
-    return render(request,"manage_users.html")
-
 def panel(request):
     return render(request,"panel.html")
-
-
 
 def Profile(request):
     if request.method == 'POST':
@@ -426,9 +421,9 @@ def Profile(request):
     return render(request, 'Profile.html')
 
 
-# def manage_users(request):
-#     profiles = Profile.objects.all()  
-#     return render(request, 'manage_users.html', {'profiles': profiles})
+def manage_users(request):
+    
+    return render(request, 'manage_users.html')
 
 
 def edit_profile(request, profile_id):

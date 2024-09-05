@@ -5,264 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Sidebar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
+    <link rel="stylesheet" href="../static/nav.css">
         
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            
-        }
-        .sidebar {
-            width: 178px;
-            background-color: #cf3d74;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding: 20px;
-            color: #fff;
-        }
-
-        .sidebar .logo h2 {
-            margin: 0;
-            padding: 10px 0;
-            font-size: 24px;
-            display: flex;
-            align-items: center;
-        }
-
-        .sidebar nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .sidebar nav ul li {
-            margin: 32px 0;
-            position: relative;
-            
-        }
-        .menu-item{
-            width: 215px !important;
-  margin-left: -20px !important;
-        }
-        
-.sidebar nav ul li .submenu li a {
-    padding: 5px 10px; 
-    font-size: 14px; 
-}
-
-
-.sidebar nav ul li .submenu li {
-    margin: 0; 
-}
-
-        .sidebar nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 15px;
-            display: flex;
-            align-items: center;
-        }
-
-        .sidebar nav ul li a i {
-            margin-right: 10px;
-            padding-left: 28px;
-        }
-
        
-
-        .sidebar nav ul li .submenu {
-            
-    display: none;
-    list-style-type: none;
-    padding-left: 27px;
-  margin-top: 10px;
-}
-        
-
-        .sidebar nav ul li.active .submenu {
-            display: block;
-        }
-        .sidebar nav ul li .board:after {
-    content: ''; 
-}
-
-.sidebar nav ul li.active > a {
-    background-color: white;
-    color: #cf3d74; 
-}
-
-
-.sidebar nav ul li .submenu li.active > a {
-    background-color: pink;
-    width: 100%;
-    padding-left: 7px; 
-}
-
-        .sidebar nav ul li a:after {
-            content: '\25BC';
-            font-size: 12px;
-            position: absolute;
-            right: 10px;
-        }
-        .sidebar nav ul li .submenu li a .point:hover, 
-.sidebar nav ul li .submenu li a.active {
-    background-color: pink; 
-    width: 100%;
-    border-left: 3px solid #333; 
-    padding-left: 2px; 
-    transition: all 0.3s ease;
-}
-
-
-        .sidebar nav ul li.active > a:after {
-            content: '\25B2';
-        }
-        .sidebar nav ul li .submenu li a:after {
-            content: ''; 
-            
-        }
-        .dropdown-menu {
-            display: none;
-  position: absolute;
-  right: 0;
-  background-color: #fff;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  margin-top: 6px;
-  list-style-type: none;
-  padding: 46px 0;
-  top: 26px !important;
-  left: -172px !important;
-  
-  width: 150px;
-}
-
-.dropdown-menu li {
-    padding: 10px 20px;
-}
-
-.dropdown-menu li a {
-    color: #333;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
-
-.dropdown-menu li:hover {
-    background-color: #f53b91;
-}
-
-.dropdown-menu li a:hover {
-    color: #fff;
-}
-
-.main-content header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: #fff;
-    padding: 11px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-header .user-info {
-    display: flex;
-    align-items: center;
-}
-
-header .user-info img {
-    border-radius: 50%;
-    margin-left: 10px;
-    width: 55px;
-    margin-right: 26px;
-}
-
-.profile-arrow {
-    font-size: 12px;
-    color: #333;
-    transition: transform 0.3s;
-    margin-left: 32px;
-}
-
-.profile-dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.profile-dropdown.active .profile-arrow {
-    transform: rotate(180deg);
-}
-.toggle-button {
-  font-size: 33px;
-  cursor: pointer;
-  color: #333;
-  display: flex;
-  align-items: center;
-  margin-right: 1019px;
-}
-.name {
-    font-size: 13px;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-.user1{
-    height: 30px !important;
-    width: 216px;
-    
-}
-.user2{
-    
-  width: 284px !important;
-  height: 31px !important;
-  margin-left: -94px !important;
-  padding-left: 64px !important;
- 
-}
-.board{
-    width: 216px;
-  margin-left: -20px;
-  transition: background-color 0.3s ease;
-
-}
-
-
-.board:active {
-    
-    color: #cf3d74;
-}
-.point{
-    padding-left: 60px !important;
-
-}
-.point:hover{
-    background-color: pink; 
-    width: 100%;
-    border-left: 3px solid #333 !important; 
-    padding-left: 2px; 
-    transition: all 0.3s ease;
-    vertical-align: middle;
-}
-.name2{
-   
-    display: flex;
-    flex-direction: column;
-    margin-left: 67px; 
-    margin-bottom: 20px;/* Adjust this value as needed */
-}
-
-
-.Profile1{
-    height: 0px;
-}
-.loger1{
-    height: 0px;
-}
-
-
-    </style>
 </head>
 <body>
     <div class="sidebar">
@@ -277,55 +22,55 @@ header .user-info img {
                 <li class="menu-item">
                     <a href="#" class="user1"><i class="fas fa-user"></i> User</a>
                     <ul class="submenu">
-                        <li class="user2"><a href="/Profile/" class="point"> New user</a></li>
-                        <li class="user2"><a href="/manage_users/" class="point">Manage user</a></li>
+                        <li class="user2"><a href="/Profile/" class="point">| New user</a></li>
+                        <li class="user2"><a href="/manage_users/" class="point">| Manage user</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
                     <a href="#" class="user1"><i class="fas fa-plane"></i> Flight</a>
                     <ul class="submenu">
-                        <li class="user2"><a href="#" class="point">New Flight</a></li>
-                        <li class="user2"><a href="#" class="point">Manage Flights</a></li>
+                        <li class="user2"><a href="#" class="point">| New Flight</a></li>
+                        <li class="user2"><a href="#" class="point">| Manage Flights</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
                     <a href="#" class="user1"><i class="fas fa-chair"></i> Seat</a>
                     <ul class="submenu">
-                        <li class="user2"><a href="#" class="point">New Seat</a></li>
-                        <li class="user2"><a href="#" class="point">Manage Seat</a></li>
+                        <li class="user2"><a href="#" class="point">| New Seat</a></li>
+                        <li class="user2"><a href="#" class="point">| Manage Seat</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
                     <a href="#" class="user1"><i class="fas fa-walking"></i> Traveller</a>
                     <ul class="submenu">
-                        <li class="user2"><a href="#" class="point">New Travellers</a></li>
-                        <li class="user2"><a href="#" class="point">Manage Traveller</a></li>
+                        <li class="user2"><a href="#" class="point">| New Travellers</a></li>
+                        <li class="user2"><a href="#" class="point">| Manage Traveller</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
                     <a href="#" class="user1"><i class="fas fa-user-friends"></i> Passenger</a>
                     <ul class="submenu">
-                        <li class="user2"><a href="#" class="point">New Passenger</a></li>
-                        <li class="user2"><a href="#" class="point">Manage Passenger</a></li>
+                        <li class="user2"><a href="#" class="point">| New Passenger</a></li>
+                        <li class="user2"><a href="#" class="point">| Manage Passenger</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
                     <a href="#" class="user1"><i class="fas fa-credit-card"></i> Payment</a>
                     <ul class="submenu">
-                        <li class="user2"><a href="#" class="point">Add Payment</a></li>
-                        <li class="user2"><a href="#" class="point">Manage Payment</a></li>
+                        <li class="user2"><a href="#" class="point">| Add Payment</a></li>
+                        <li class="user2"><a href="#" class="point">| Manage Payment</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
                     <a href="#" class="user1"><i class="fas fa-file-alt"></i> Report</a>
                     <ul class="submenu">
-                        <li class="user2"><a href="#" class="point">Manage Flights</a></li>
+                        <li class="user2"><a href="#" class="point">| Manage Flights</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
                     <a href="#" class="user1"><i class="fas fa-star"></i> Ratings</a>
                     <ul class="submenu">
-                        <li class="user2"><a href="#" class="point">View Ratings</a></li>
+                        <li class="user2"><a href="#" class="point">| View Ratings</a></li>
                     </ul>
                 </li>
             </ul>
