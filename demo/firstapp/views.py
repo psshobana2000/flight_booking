@@ -26,6 +26,8 @@ from rest_framework.authtoken.models import Token
 from django.shortcuts import render, get_object_or_404
 from .models import FlightRoute,Traveller
 from .forms import ProfileForm
+from .models import Profile  
+
 
 
 
@@ -412,18 +414,18 @@ def Profile(request):
     if request.method == 'POST':
         form = ProfileForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('success')  
-        else:    
+            form.save()   
             return render(request, 'Profile.html', {'form': form})
     else:
         form = ProfileForm()
     return render(request, 'Profile.html')
 
 
+
 def manage_users(request):
-    
-    return render(request, 'manage_users.html')
+    profiles = Profile.objects.all()
+    return render(request, 'manage_users.html', {'profiles': profiles})
+
 
 
 def edit_profile(request, profile_id):
@@ -436,7 +438,6 @@ def edit_profile(request, profile_id):
     else:
         form = ProfileForm(instance=profile)
     return render(request, 'edit_profile.html', {'form': form})
-
 
 
 

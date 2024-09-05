@@ -10,13 +10,13 @@ body {
 }
 
 .login-container {
-    width: 65%;
+    width: 85%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
     background-color: rgb(251, 239, 241);
-    margin-left: 456px;
-    margin-top: 162px;
+    margin-left: 331px;
+    margin-top: 138px;
     display: flex;
     justify-content: space-between;
     height: 410px;
@@ -28,7 +28,7 @@ form {
     width: 88%;
     max-width: 400px;
     margin: 0 auto;
-    margin-right: 125px;
+    margin-right: 304px;
 }
 
 h2 {
@@ -64,8 +64,8 @@ h2::after {
 
 input[type="text"],
 input[type="password"] {
-    width: calc(100% - 34px); 
-    padding: 14px;
+    width: calc(100% - -55px); 
+    padding: 18px;
     border: 2px solid #9a1b69;
     border-radius: 4px;
     font-size: 16px;
@@ -91,7 +91,7 @@ button {
         margin-top: 10px;
         height: 35px;
         text-align: center;
-        margin-left: 316px;
+        margin-left: 410px;
 }
 
 

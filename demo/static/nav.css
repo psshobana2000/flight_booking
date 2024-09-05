@@ -126,9 +126,10 @@ margin-top: 6px;
 list-style-type: none;
 padding: 46px 0;
 top: 26px !important;
-left: -172px !important;
-height: 150px;
+left: -168px !important;
+height: 170px;
 width: 150px;
+
 }
 
 .dropdown-menu li {
@@ -246,10 +247,10 @@ margin-top: -42px;
 
 
 .Profile1{
-height: 0px;
+height: 12px;
 }
 .loger1{
-height: 0px;
+height: 12px;
 }
 .submenu li:hover::before {
     content: '';
@@ -260,5 +261,8 @@ height: 0px;
     height: 50%;
     background: #333;
     transform: translateY(-50%);
+}
+hr{
+    color: grey;
 }
 

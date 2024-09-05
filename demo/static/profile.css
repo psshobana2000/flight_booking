@@ -34,7 +34,7 @@
             color: #B64162;
             font-size: 17px;
             margin: 0;
-            margin-left: 24px;
+            margin-left: 50px;
 }
         .new-user p {
             margin: 0;
@@ -179,4 +179,28 @@
             display: flex;
             align-items: center;
             margin-right: 1040px
+}
+.dropdown-menu{
+    position: absolute;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-top: 10px;
+  list-style-type: none;
+  padding: 17px 0;
+  top: 22px !important;
+  left: -168px !important;
+  height: 147px;
+  width: 150px;
+
+}
+.Profile1{
+    height: 12px !important;
+}
+.loger1{
+    height: 12px;
+}
+hr{
+   color:  #f8f7f74a;
 }
