@@ -414,7 +414,7 @@ def Profile(request):
     if request.method == 'POST':
         form = ProfileForm(request.POST)
         if form.is_valid():
-            form.save()   
+            form.save() 
             return render(request, 'Profile.html', {'form': form})
     else:
         form = ProfileForm()
@@ -422,10 +422,13 @@ def Profile(request):
 
 
 
-def manage_users(request):
-    profiles = Profile.objects.all()
-    return render(request, 'manage_users.html', {'profiles': profiles})
+# views.py
+from django.shortcuts import render
+from .models import Profile  # Ensure this import is correct
 
+def manage_users(request):
+    profiles = Profile.objects.all()  # Correct usage
+    return render(request, 'manage_users.html', {'profiles': profiles})
 
 
 def edit_profile(request, profile_id):
@@ -441,8 +444,11 @@ def edit_profile(request, profile_id):
 
 
 
-def delete_profile(request, profile_id):
-    profile = get_object_or_404(Profile, id=profile_id)
+from django.shortcuts import get_object_or_404, redirect
+from .models import Profile
+
+def delete_profile(request, pk):
+    profile = get_object_or_404(Profile, pk=pk)
     if request.method == 'POST':
         profile.delete()
         return redirect('manage_users')

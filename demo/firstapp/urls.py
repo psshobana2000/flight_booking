@@ -44,7 +44,8 @@ urlpatterns = [
     path('manage_users/',views.manage_users,name='manage_users'),
     path('panel/', views.panel, name='panel'),
     path('Profile/', views.Profile, name='Profile'),
-    
+    path('edit_profile/<int:pk>/', views.edit_profile, name='edit_profile'),
+    path('delete_profile/<int:pk>/', views.delete_profile, name='delete_profile'),
     
 
 ]
