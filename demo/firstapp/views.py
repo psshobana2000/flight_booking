@@ -437,9 +437,6 @@ def edit_profile(request, pk):
 
 
 
-from django.shortcuts import get_object_or_404, redirect
-from .models import Profile
-
 def delete_profile(request, pk):
     profile = get_object_or_404(Profile, pk=pk)
     if request.method == 'POST':
