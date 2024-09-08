@@ -2,7 +2,6 @@ from django.shortcuts import render,redirect
 from .forms import  Userform 
 from firstapp.forms import Placeform,FlightRouteForm,PassengerForm,TravellerForm,ProfileForm
 from django.contrib.auth import authenticate, login,logout
-from django.contrib import messages
 from .models import Passenger  
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import  MultiPartParser
@@ -25,7 +24,6 @@ from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token
 from django.shortcuts import render, get_object_or_404
 from .models import FlightRoute,Traveller
-from .forms import ProfileForm
 from .models import Profile  
 
 
@@ -410,7 +408,7 @@ def sec(request):
 def panel(request):
     return render(request,"panel.html")
 
-def Profile(request):
+def Profile1(request):
     if request.method == 'POST':
         form = ProfileForm(request.POST)
         if form.is_valid():
@@ -421,18 +419,13 @@ def Profile(request):
     return render(request, 'Profile.html')
 
 
-
-# views.py
-from django.shortcuts import render
-from .models import Profile  # Ensure this import is correct
-
 def manage_users(request):
     profiles = Profile.objects.all()  # Correct usage
     return render(request, 'manage_users.html', {'profiles': profiles})
 
 
-def edit_profile(request, profile_id):
-    profile = get_object_or_404(Profile, id=profile_id)
+def edit_profile(request, pk):
+    profile = get_object_or_404(Profile, pk=pk)
     if request.method == 'POST':
         form = ProfileForm(request.POST, instance=profile)
         if form.is_valid():

@@ -1,16 +1,113 @@
+{% include "nav.html" %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Profile</title>
+    <title>New User Form</title>
+    <link rel="stylesheet" href="../static/edit_profile.css">
 </head>
 <body>
-    <h1>Edit Profile</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Save</button>
-    </form>
+    <div class="container">
+        <div class="module-container user-modules">
+        
+            <h6 class="user">USER MODULES<span class="new">. new user</span></h6>
+        </div>
+
+        <div class="module-container new-user"  style="height: 530px;">
+            <h3>New User</h3>
+            <p>Use the form below to create a new user profile</p>
+            <form id="newUserForm" method="post">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="input-container">
+                        <input type="text" id="name" name="name" placeholder="Name">
+                        <span class="error" id="name-error">Please enter the name</span>
+                    </div>
+                    <div class="input-container">
+                        <input type="email" id="email" name="email" placeholder="E-Mail ID">
+                        <span class="error" id="email-error"> Please enter the valid email</span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-container">
+                        <input type="text" id="contact" name="contact" placeholder="Contact No.">
+                        <span class="error" id="contact-error">Contact number must contain 10 digits</span>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="designation" name="designation" placeholder="Designation">
+                        <span class="error" id="designation-error">Invalid designation</span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-container">
+                        <input type="password" id="password" name="password" placeholder="Password">
+                        <span class="error" id="password-error">Password field is required</span>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm Password">
+                        <span class="error" id="confirm-password-error">Password does not match</span>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="cancel">Cancel</button>
+                    <button type="submit" class="save">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById("newUserForm").addEventListener("submit", function(event) {
+            let isValid = true;
+
+            document.querySelectorAll(".error").forEach(function(error) {
+                error.style.display = "none";
+            });
+
+            const name = document.getElementById("name").value.trim();
+            if (name === "") {
+                isValid = false;
+                document.getElementById("name-error").style.display = "block";
+            }
+
+            const email = document.getElementById("email").value.trim();
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (email === "" || !emailPattern.test(email)) {
+                isValid = false;
+                document.getElementById("email-error").style.display = "block";
+            }
+
+            const contact = document.getElementById("contact").value.trim();
+            if (contact.length !== 10) {
+                isValid = false;
+                document.getElementById("contact-error").textContent = "Contact number must be exactly 10 digits";
+                document.getElementById("contact-error").style.display = "block";
+            } else if (!/^[0-9]{10}$/.test(contact)) {
+                isValid = false;
+                document.getElementById("contact-error").textContent = "Contact number must contain only digits";
+                document.getElementById("contact-error").style.display = "block";
+            }
+
+            const designation = document.getElementById("designation").value.trim();
+            if (designation === "") {
+                isValid = false;
+                document.getElementById("designation-error").style.display = "block";
+            }
+
+            const password = document.getElementById("password").value.trim();
+            const confirmPassword = document.getElementById("confirm-password").value.trim();
+            if (password === "") {
+                isValid = false;
+                document.getElementById("password-error").style.display = "block";
+            } else if (password !== confirmPassword) {
+                isValid = false;
+                document.getElementById("confirm-password-error").style.display = "block";
+            }
+
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+    </script>
 </body>
 </html>
