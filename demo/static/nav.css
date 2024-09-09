@@ -102,9 +102,7 @@ padding-left: 7px;
 .sidebar nav ul li .submenu li a.active {
 background-color: pink; 
 width: 100%;
-border-left: 3px solid #333; 
-padding-left: 2px; 
-transition: all 0.3s ease;
+
 }
 
 
@@ -125,11 +123,10 @@ border-radius: 5px;
 margin-top: 6px;
 list-style-type: none;
 padding: 46px 0;
-top: 26px !important;
-left: -168px !important;
-height: 170px;
-width: 150px;
-
+top: 32px !important;
+  left: -190px !important;
+  height: 185px;
+  width: 182px;
 }
 
 .dropdown-menu li {
@@ -220,11 +217,10 @@ transition: background-color 0.3s ease;
 
 }
 
-
 .board:active {
-
 color: #cf3d74;
 }
+
 .point{
 padding-left: 60px !important;
 
@@ -232,10 +228,7 @@ padding-left: 60px !important;
 .point:hover{
 background-color: pink; 
 width: 100%;
-border-left: 3px solid #333 !important; 
-padding-left: 2px; 
-transition: all 0.3s ease;
-vertical-align: middle;
+
 }
 .name2{
 
@@ -248,10 +241,12 @@ margin-top: -42px;
 
 .Profile1{
 height: 12px;
+font-size: 16px;
 }
 
 .loger1{
 height: 12px;
+font-size: 16px;
 }
 
 .user2  {
@@ -263,15 +258,11 @@ height: 12px;
     height: 20px;
     vertical-align: 2px;
     background-color: #cf3d74;
-    margin-right: 9px;
+       
 }
 
 hr{
     color: grey;
-}
-
-.user2 {
-    position:absolute; 
 }
 
 

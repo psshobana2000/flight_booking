@@ -44,7 +44,7 @@
                         <input type="password" id="password" name="password" placeholder="Password" autocomplete="off">
                         <span class="error" id="password-error">Password field is required</span>
                     </div>
-                   
+                    
                 </div>
                 <div class="btn-group">
                     <button type="button" class="cancel">Cancel</button>
@@ -92,14 +92,10 @@
             }
 
             const password = document.getElementById("password").value.trim();
-            const confirmPassword = document.getElementById("confirm-password").value.trim();
             if (password === "") {
                 isValid = false;
                 document.getElementById("password-error").style.display = "block";
-            } else if (password !== confirmPassword) {
-                isValid = false;
-                document.getElementById("confirm-password-error").style.display = "block";
-            }
+            } 
 
             if (!isValid) {
                 event.preventDefault();
