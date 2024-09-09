@@ -123,3 +123,25 @@ body {
 .sidebar{
     width: 216px;
 }
+.dropdown-menu {
+    top: 26px !important;
+    left: -202px !important;
+    height: 210px;
+    width: 192px;
+
+}
+hr{
+    margin-top: 34px;
+}
+.name2{
+    display: flex;
+  flex-direction: column;
+  margin-left: 77px;
+  margin-top: -40px;
+}
+header .user-info img {
+    border-radius: 50%;
+    margin-left: 10px;
+    width: 66px;
+    margin-right: 26px;
+  }
