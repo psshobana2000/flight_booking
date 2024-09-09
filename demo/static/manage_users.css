@@ -11,20 +11,16 @@
         }
 
         .table-container {
-            width: 60%;
-            margin-left: 305px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
-            border-radius: -2px;
-        
-            background-color: #fff; 
-
+            width: 49%;
+            margin-left: 283px;
+           
         }
 
         table {
-            width: 100%;
+            width: 198%;
             border-collapse: collapse;
-            
-            margin-top: 60px;
+            margin-top: 69px;
+            margin-left: -268px !important;
             
         }
 
@@ -34,12 +30,12 @@
         }
 
         th {
-            background-color: #f7c6ea;
+            background-color: #ee79a6;
             color:black;
         }
 
         td {
-            border-bottom: 1px solid #ddd;
+            border: 1px solid #ddd;
         }
 
         .btn-group {
@@ -90,10 +86,10 @@
             margin-right: 5px;
         }
         h2{
-            margin-left: 306px;
+            margin-left: 33px;
         }
         p{
-            margin-left: 306px;
+            margin-left: 33px;
         }
         .main-content header{
         width: 100%;
@@ -123,7 +119,7 @@
 
  hr{
     color: #f4eded3d;
-  margin-top: 10px;
+  margin-top: 33px;
  }       
         
  .name2 {
@@ -147,3 +143,53 @@
     height: 121px;
     width: 184px;
   }
+  .new.container {
+    
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+    width: 81%;
+    margin-left: 232px;
+    margin-top: 20px;
+}
+
+.container1 {
+    
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        width: 81%;
+        margin-left: 235px;
+        margin-top: 55px;
+        height: 10px;
+      
+}
+
+.module-container.user-modules {
+    color: #cf3d74;    
+}
+
+.module-container.user-modules .new {
+    color: grey; 
+}
+.main-content{
+        margin-top: -16px;
+}
+.user{
+    margin-top: -2px;
+    font-size: 16px;
+}
+.main-content header {
+    width: 86%;
+    margin-left: 206px;
+  }
+  .user-info2{
+    
+        margin-top: -21px;
+  }
+  .profile-page{
+    padding-right: 10px;
+}

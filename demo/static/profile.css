@@ -206,7 +206,7 @@
 }
 hr{
    color:  #f8f7f74a;
-   margin-top: 24px;
+   margin-top: 33px;
 }
 .name2{
     display: flex;
@@ -214,4 +214,7 @@ hr{
   margin-left: 71px;
   margin-top: -42px;
 
+}
+.profile-page{
+    padding-right: 10px;
 }
