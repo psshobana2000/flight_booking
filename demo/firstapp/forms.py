@@ -66,9 +66,9 @@ class TravellerForm(forms.ModelForm):
 
 
 class ProfileForm(forms.ModelForm):
-    confirm_password = forms.CharField(widget=forms.PasswordInput())
+    password = forms.CharField(widget=forms.PasswordInput())
 
     class Meta:
         model = Profile
-        fields = ['name', 'email', 'contact', 'designation', 'password','confirm_password']
+        fields = ['name', 'email', 'contact', 'designation', 'password']
         

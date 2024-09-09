@@ -26,7 +26,6 @@
                     <th>Contact</th>
                     <th>Designation</th>
                     <th>Password</th>
-                    <th>confirm_password</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -38,8 +37,7 @@
                     <td>{{ profile.email }}</td>
                     <td>{{ profile.contact }}</td>
                     <td>{{ profile.designation }}</td>
-                    <td>{{ Profile.Password}}</td> 
-                    <td>{{ profile.confirm_password}}</td> 
+                    <td>{{ profile.password}}</td> 
                     <td>
                         <div class="btn-group">
                             <a href="{% url 'edit_profile' profile.id %}" class="edit">
