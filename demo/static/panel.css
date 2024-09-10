@@ -62,8 +62,13 @@ h2::after {
     margin-bottom: 30px;
 }
 
+
 #username:focus:focus-visible{
-    border: 2px solid #c72571;
+    outline: none;
+
+}
+#password:focus:focus-visible{
+    outline: none;
 
 }
 

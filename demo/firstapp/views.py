@@ -25,6 +25,7 @@ from rest_framework.authtoken.models import Token
 from django.shortcuts import render, get_object_or_404
 from .models import FlightRoute,Traveller
 from .models import Profile  
+from django.contrib import messages
 
 
 
@@ -408,15 +409,22 @@ def sec(request):
 def panel(request):
     return render(request,"panel.html")
 
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .forms import ProfileForm
+
 def Profile1(request):
     if request.method == 'POST':
         form = ProfileForm(request.POST)
         if form.is_valid():
-            form.save() 
-            return render(request, 'Profile.html', {'message': "succesfully created"})
+            form.save()
+            messages.success(request, "Created successfully")
+            return redirect('Profile') 
     else:
         form = ProfileForm()
-    return render(request, 'Profile.html')
+
+    return render(request, 'Profile.html', {'form': form})
+
 
 
 def manage_users(request):

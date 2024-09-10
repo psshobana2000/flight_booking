@@ -15,11 +15,21 @@
         </div>
 
         <div class="module-container new-user"  style="height: 530px;">
+           
             <h3>New User</h3>
             <p>Use the form below to create a new user profile</p>
+            {% if messages %}
+    <div class="message-box">
+        {% for msg in messages %}
+            <p>{{ msg }}</p>
+        {% endfor %}
+    </div>
+{% endif %}
+
             <form id="newUserForm" method="post">
                 {% csrf_token %}
                 <div class="form-row">
+                   
                     <div class="input-container">
                         <input type="text" id="name" name="name" placeholder="Name" autocomplete="off">
                         <span class="error" id="name-error">Please enter the name</span>

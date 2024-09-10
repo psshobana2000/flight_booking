@@ -227,3 +227,20 @@ hr{
     border: 1px solid #c3e6cb;
     border-radius: 5px;
 }
+.message-box {
+    border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px 0;
+    margin-top: 10px;
+    margin-left: 0px;
+  background-color: #fae3ef;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  width: 13%;
+  height: 37px;
+  margin-left: 1000px;
+  margin-top: -61px;
+}
+.message-box p {
+    margin-top: 9px;
+}
