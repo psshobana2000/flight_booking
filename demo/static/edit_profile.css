@@ -1,5 +1,4 @@
- 
-        body {
+body {
             font-family: Arial, sans-serif;
             background-color: #FDE4EC;
             margin: 0;
@@ -31,7 +30,7 @@
 
         }
         .user-modules h6 {
-            color: #c72571;
+            color: #B64162;
             font-size: 17px;
             margin: 0;
             margin-left: 50px;
@@ -98,17 +97,17 @@
 
         
         .btn-group .save {
-            background-color:#c72571;
+            background-color: #a33856;
             margin-right: 426px;
             width: 9%;
             font-size: small;
 }
         
         .board{
-            width: 204px;
-            margin-left: -36px;
-            transition: background-color 0.3s ease;
-            height: 17px;
+                width: 218px;
+                margin-left: -20px;
+                transition: background-color 0.3s ease;
+                height: 35px;
         }
         .user2{
             width: 152px !important;
@@ -143,7 +142,7 @@
             left: 0;
             width: 28%; 
             height: 4px; 
-            background-color:#c72571; 
+            background-color:#9a1b69; 
             border-radius: 2px; 
 }
 
@@ -217,13 +216,4 @@ hr{
 }
 .profile-page{
     padding-right: 10px;
-}
-.success {
-    display: none;
-    background-color: #d4edda;
-    color: #155724;
-    padding: 15px;
-    margin-top: 10px;
-    border: 1px solid #c3e6cb;
-    border-radius: 5px;
 }

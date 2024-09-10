@@ -413,7 +413,7 @@ def Profile1(request):
         form = ProfileForm(request.POST)
         if form.is_valid():
             form.save() 
-            return render(request, 'Profile.html', {'form': form})
+            return render(request, 'Profile.html', {'message': "succesfully created"})
     else:
         form = ProfileForm()
     return render(request, 'Profile.html')

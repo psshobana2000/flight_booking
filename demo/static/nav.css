@@ -211,15 +211,12 @@ padding-left: 64px !important;
 
 }
 .board{
-width: 216px;
-margin-left: -20px;
+width: 235px;
+margin-left: -39px;
 transition: background-color 0.3s ease;
 
 }
 
-.board:active {
-color: #cf3d74;
-}
 
 .point{
 padding-left: 60px !important;
@@ -264,6 +261,25 @@ font-size: 16px;
 hr{
     color: #fdfbfb;
   margin-top: 35px;
+}
+.board {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000; /* Default text color */
+    padding: 10px 15px;
+    border-radius: -2px;
+    transition: background-color 0.3s ease;
+    height: 36px;
+}
+
+.board:hover {
+    background-color: #f7a2b4; /* Pink color on hover */
+    color: #fff; /* Optional: change text color on hover for better contrast */
+}
+
+.board i {
+    margin-right: 8px; /* Space between icon and text */
 }
 
 
