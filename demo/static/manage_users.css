@@ -30,7 +30,7 @@
         }
 
         th {
-            background-color: #ee79a6;
+            background-color: #f6c7d9e8;
             color:black;
         }
 
@@ -73,7 +73,7 @@
             display: inline-block;
             margin-bottom: 20px;
             padding: 10px 15px;
-            background-color: #a81c80;
+            background-color:#c72571;
             color: white;
             border-radius: 5px;
             text-decoration: none;
@@ -87,6 +87,7 @@
         }
         h2{
             margin-left: 33px;
+            margin-top: -47px;
         }
         p{
             margin-left: 33px;
@@ -96,7 +97,7 @@
         }
         .sidebar {
   width: 180px;
-  background-color: #cf3d74;
+  background-color:#c72571;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -120,6 +121,7 @@
  hr{
     color: #f4eded3d;
   margin-top: 33px;
+  
  }       
         
  .name2 {
@@ -169,7 +171,7 @@
 }
 
 .module-container.user-modules {
-    color: #cf3d74;    
+    color:#c72571;    
 }
 
 .module-container.user-modules .new {
@@ -181,6 +183,7 @@
 .user{
     margin-top: -2px;
     font-size: 16px;
+    margin-left: 31px;
 }
 .main-content header {
     width: 1293px;
@@ -192,4 +195,18 @@
   }
   .profile-page{
     padding-right: 10px;
+}
+h2::before {
+    content: "";
+    position: absolute !important;
+    top: -10px !important;
+    left: 0;
+    width: 15% !important; 
+    height: 4px !important; 
+    background-color:#c72571 !important; 
+    border-radius: 2px !important; 
+}
+
+h2::after {
+    content: none; 
 }

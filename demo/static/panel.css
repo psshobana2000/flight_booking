@@ -51,7 +51,7 @@ h2::before {
     left: 0;
     width: 15%; 
     height: 4px; 
-    background-color:#9a1b69; 
+    background-color:#c72571; 
     border-radius: 2px; 
 }
 
@@ -62,11 +62,16 @@ h2::after {
     margin-bottom: 30px;
 }
 
+#username:focus:focus-visible{
+    border: 2px solid #c72571;
+
+}
+
 input[type="text"],
 input[type="password"] {
     width: calc(100% - -55px); 
     padding: 18px;
-    border: 2px solid #9a1b69;
+    border: 2px solid #c72571;
     border-radius: 4px;
     font-size: 16px;
     margin-top: 10px;
@@ -82,7 +87,7 @@ input[type="password"]::placeholder {
 button {
         width: 23%;
         padding: 10px;
-        background-color: #9a1b69;
+        background-color:#c72571;
         color: #fff;
         border: none;
         border-radius: 23px;

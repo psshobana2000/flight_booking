@@ -31,7 +31,7 @@
 
         }
         .user-modules h6 {
-            color: #B64162;
+            color: #c72571;
             font-size: 17px;
             margin: 0;
             margin-left: 50px;
@@ -98,7 +98,7 @@
 
         
         .btn-group .save {
-            background-color: #a33856;
+            background-color:#c72571;
             margin-right: 426px;
             width: 9%;
             font-size: small;
@@ -143,7 +143,7 @@
             left: 0;
             width: 28%; 
             height: 4px; 
-            background-color:#9a1b69; 
+            background-color:#c72571; 
             border-radius: 2px; 
 }
 
