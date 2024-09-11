@@ -70,5 +70,5 @@ class ProfileForm(forms.ModelForm):
 
     class Meta:
         model = Profile
-        fields = ['name', 'email', 'contact', 'designation', 'password']
+        fields = ['name', 'email', 'contact', 'designation', 'password', 'confirm_password']
         

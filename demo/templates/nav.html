@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,7 +85,7 @@
           </div>
 
           <div class="user-info" id="user-info">
-              <img src="../static/images/profile.jpg" alt="User Profile">
+            <img class="user-info" src="{% static '/images/profile.jpg' %}">
               <span class="name">
                   <span style="font-weight: bold;">User Name</span><br>
                   <span style="font-weight: lighter;">Admin</span>

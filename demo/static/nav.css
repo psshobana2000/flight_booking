@@ -248,14 +248,18 @@ font-size: 16px;
 
 .user2  {
     position: relative;
+    
 }
 .user2 :hover::before {
     content: '';
     width: 2px;
     height: 20px;
     vertical-align: 2px;
-    background-color: #cf3d74;
-    
+    background-color: #cf3d74;  
+   
+}
+.user2 ::before{
+     margin-right: 10px;
 }
 
 hr{
@@ -266,7 +270,7 @@ hr{
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #000; /* Default text color */
+    color: #000; 
     padding: 10px 15px;
     border-radius: -2px;
     transition: background-color 0.3s ease;
@@ -274,15 +278,13 @@ hr{
 }
 
 .board:hover {
-    background-color: #f7a2b4; /* Pink color on hover */
-    color: #fff; /* Optional: change text color on hover for better contrast */
+    background-color: #f7a2b4; 
+    color: #fff; 
 }
 
 .board i {
-    margin-right: 8px; /* Space between icon and text */
+    margin-right: 8px; 
 }
-
-
 
 
 
