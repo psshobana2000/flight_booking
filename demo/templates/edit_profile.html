@@ -22,35 +22,38 @@
         <div class="module-container new-user" style="height: 530px;">
             <h3>Update User</h3>
             <p>Use the form below to update user profile</p>
-            <form id="newUserForm" method="post">
+            <form id="editUserForm" method="post" action="{% url 'edit_profile' profile.id %}">
+
                 {% csrf_token %}
                 <div class="form-row">
                     <div class="input-container">
-                        <input type="text" id="name" name="name" placeholder="Name">
+                        <input type="text" id="name" name="name" placeholder="Name" value="{{ profile.name }}" autocomplete="off">
+
                         <span class="error" id="name-error">Please enter the name</span>
+                        
                     </div>
                     <div class="input-container">
-                        <input type="email" id="email" name="email" placeholder="E-Mail ID">
+                        <input type="email" id="email" name="email" placeholder="E-Mail ID" value="{{ profile.email }}">
                         <span class="error" id="email-error"> Please enter a valid email</span>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="input-container">
-                        <input type="text" id="contact" name="contact" placeholder="Contact No.">
+                        <input type="text" id="contact" name="contact" placeholder="Contact No." value="{{ profile.contact }}" autocomplete="off">
                         <span class="error" id="contact-error">Contact number must contain 10 digits</span>
                     </div>
                     <div class="input-container">
-                        <input type="text" id="designation" name="designation" placeholder="Designation">
+                        <input type="text" id="designation" name="designation" placeholder="Designation" value="{{ profile.designation }}" autocomplete="off">
                         <span class="error" id="designation-error">Invalid designation</span>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="input-container">
-                        <input type="password" id="password" name="password" placeholder="Password">
+                        <input type="password" id="password" name="password" placeholder="Password" value="{{ profile.password}}" autocomplete="off">
                         <span class="error" id="password-error">Password field is required</span>
                     </div>
                     <div class="input-container">
-                        <input type="password" id="confirm_password" name="confirm_password" placeholder="confirm_password" autocomplete="off">
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="confirm_password" value="{{ profile.confirm_password}}">
                         <span class="error" id="confirm_password-error">Password does not match</span>
                     </div>
                 </div>

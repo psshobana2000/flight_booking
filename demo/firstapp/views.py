@@ -445,10 +445,10 @@ def edit_profile(request, pk):
     return render(request, 'edit_profile.html', {'form': form})
 
 
-
 def delete_profile(request, pk):
     profile = get_object_or_404(Profile, pk=pk)
     if request.method == 'POST':
         profile.delete()
+        messages.success(request, "Profile deleted successfully")
         return redirect('manage_users')
     return render(request, 'delete_profile.html', {'profile': profile})

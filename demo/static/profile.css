@@ -218,29 +218,25 @@ hr{
 .profile-page{
     padding-right: 10px;
 }
-.success {
-    display: none;
-    background-color: #d4edda;
-    color: #155724;
-    padding: 15px;
-    margin-top: 10px;
-    border: 1px solid #c3e6cb;
-    border-radius: 5px;
-}
+
 .message-box {
     border: 1px solid #ddd;
   padding: 15px;
   margin: 10px 0;
     margin-top: 10px;
     margin-left: 0px;
-  background-color: #fae3ef;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-  width: 13%;
-  height: 37px;
-  margin-left: 1000px;
-  margin-top: -61px;
+  width: 22% !important;
+  height: 37px !important;
+  margin-left: 854px !important;
+  margin-top: -77px !important;
+  
 }
 .message-box p {
-    margin-top: 9px;
+    margin-top: 9px !important;
+    color: green !important;
+    font-size: 22px;
+    margin-left: 37px;
+  
 }

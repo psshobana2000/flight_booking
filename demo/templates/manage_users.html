@@ -17,6 +17,17 @@
             <h6 class="user">USER MODULES<span class="new">. new user</span></h6>
         </div>
     </div>
+
+
+    {% if messages %}
+    <div class="delete-box">
+        {% for msg in messages %}
+            <p>{{ msg }}</p>
+        {% endfor %}
+    </div>
+{% endif %}
+
+
     <div class="new container">
     <a href="{% url 'Profile' %}" class="add-Profile">
         <i class="fas fa-plus"></i> 

@@ -210,3 +210,14 @@ h2::before {
 h2::after {
     content: none; 
 }
+.delete-box{
+    background-color: #e3d2d5;
+  width: 18%;
+  margin-left: 1097px !important;
+  margin-top: -60px !important;
+  height: 58px;
+  color: red !important;
+}
+.delete-box p{
+    font-size: 17px;
+}

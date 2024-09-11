@@ -145,3 +145,9 @@ header .user-info img {
     width: 66px;
     margin-right: 26px;
   }
+  .user2{
+    width: 284px !important;
+  height: 31px !important;
+  margin-left: -94px !important;
+  padding-left: 64px !important;
+  }
