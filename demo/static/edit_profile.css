@@ -104,16 +104,16 @@ body {
 }
         
         .board{
-                width: 218px;
+                width: 208px !important;
                 margin-left: -20px;
                 transition: background-color 0.3s ease;
-                height: 35px;
+                height: 17px !important;
         }
         .user2{
-            width: 152px !important;
-            height: 31px !important;
-            margin-left: -94px !important;
-            padding-left: 64px !important;
+            
+  height: 31px !important;
+  margin-left: -94px !important;
+  padding-left: 64px !important;
         }
         #newUserForm{
             
@@ -164,7 +164,7 @@ body {
         #password{
             padding-left: 10px;
         }
-        #confirm-password{
+        #confirm_password{
             padding-left: 10px;
         }
         .new{
@@ -177,7 +177,7 @@ body {
             color: #333;
             display: flex;
             align-items: center;
-            margin-right: 1040px
+            margin-right: 1037px !important;
 }
 .dropdown-menu{
     
@@ -191,7 +191,7 @@ body {
         padding: 17px 0;
         top: 22px !important;
         left: -200px !important;
-        height: 160px;
+        height: 105px !important;
         width: 178px;
       }
 
@@ -205,7 +205,7 @@ body {
 }
 hr{
    color:  #f8f7f74a;
-   margin-top: 33px;
+   margin-top: 28px;
 }
 .name2{
     display: flex;
