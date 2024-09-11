@@ -88,7 +88,6 @@ input[type="text"]::placeholder,
 input[type="password"]::placeholder {
     color: #999;
 }
-
 button {
         width: 23%;
         padding: 10px;

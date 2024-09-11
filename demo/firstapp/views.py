@@ -428,7 +428,8 @@ def Profile1(request):
 
 
 def manage_users(request):
-    profiles = Profile.objects.all()  # Correct usage
+    profiles = Profile.objects.all()  
+    profiles = profiles[::-1]  
     return render(request, 'manage_users.html', {'profiles': profiles})
 
 
