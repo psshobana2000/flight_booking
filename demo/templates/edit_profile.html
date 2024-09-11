@@ -5,13 +5,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New User Form</title>
-    <link rel="stylesheet" href="{% static '/layout1.css' %}">
-    <link rel="stylesheet" href="{% static '/edit_profile.css' %}">
-    <link rel="stylesheet" href="{% static '/nav.css' %}">
-    
-
-    
+    <title>Update User Profile</title>
+    <link rel="stylesheet" href="{% static 'layout1.css' %}">
+    <link rel="stylesheet" href="{% static 'edit_profile.css' %}">
+    <link rel="stylesheet" href="{% static 'nav.css' %}">
 </head>
 <body>
     <div class="container">
@@ -22,19 +19,16 @@
         <div class="module-container new-user" style="height: 530px;">
             <h3>Update User</h3>
             <p>Use the form below to update user profile</p>
-            <form id="editUserForm" method="post" action="{% url 'edit_profile' profile.id %}">
-
+            <form id="editUserForm" method="post">
                 {% csrf_token %}
                 <div class="form-row">
                     <div class="input-container">
                         <input type="text" id="name" name="name" placeholder="Name" value="{{ profile.name }}" autocomplete="off">
-
                         <span class="error" id="name-error">Please enter the name</span>
-                        
                     </div>
                     <div class="input-container">
                         <input type="email" id="email" name="email" placeholder="E-Mail ID" value="{{ profile.email }}">
-                        <span class="error" id="email-error"> Please enter a valid email</span>
+                        <span class="error" id="email-error">Please enter a valid email</span>
                     </div>
                 </div>
                 <div class="form-row">
@@ -49,11 +43,11 @@
                 </div>
                 <div class="form-row">
                     <div class="input-container">
-                        <input type="password" id="password" name="password" placeholder="Password" value="{{ profile.password}}" autocomplete="off">
+                        <input type="password" id="password" name="password" placeholder="Password" autocomplete="off">
                         <span class="error" id="password-error">Password field is required</span>
                     </div>
                     <div class="input-container">
-                        <input type="password" id="confirm_password" name="confirm_password" placeholder="confirm_password" value="{{ profile.confirm_password}}">
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password">
                         <span class="error" id="confirm_password-error">Password does not match</span>
                     </div>
                 </div>
@@ -65,7 +59,7 @@
         </div>
     </div>
     <script>
-        document.getElementById("newUserForm").addEventListener("submit", function(event) {
+        document.getElementById("editUserForm").addEventListener("submit", function(event) {
             let isValid = true;
 
             document.querySelectorAll(".error").forEach(function(error) {
@@ -103,11 +97,16 @@
             }
 
             const password = document.getElementById("password").value.trim();
-        
             if (password === "") {
                 isValid = false;
                 document.getElementById("password-error").style.display = "block";
             } 
+
+            const confirm_password = document.getElementById("confirm_password").value.trim();
+            if (confirm_password === "" || confirm_password !== password) {
+                isValid = false;
+                document.getElementById("confirm_password-error").style.display = "block";
+            }
 
             if (!isValid) {
                 event.preventDefault();

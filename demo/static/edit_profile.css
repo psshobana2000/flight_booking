@@ -209,11 +209,14 @@ hr{
 }
 .name2{
     display: flex;
-  flex-direction: column;
-  margin-left: 71px;
-  margin-top: -42px;
+    flex-direction: column;
+    margin-left: 77px;
+    margin-top: -48px !important;
 
 }
 .profile-page{
     padding-right: 10px;
+}
+.user-info2{
+    margin-top: -19px;
 }

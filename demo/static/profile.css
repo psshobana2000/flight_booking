@@ -231,6 +231,7 @@ hr{
   height: 37px !important;
   margin-left: 854px !important;
   margin-top: -77px !important;
+transition-duration: 5s;
   
 }
 .message-box p {
@@ -239,4 +240,28 @@ hr{
     font-size: 22px;
     margin-left: 37px;
   
+}
+.logic{
+    margin-left: 16px;
+}
+.logic1{
+    margin-left: 15px;
+}
+.logic2{
+    margin-left: 19px;
+}
+.logic3{
+    margin-left: 22px;
+}
+.logic4{
+    margin-left: 16px;
+}
+.logic5{
+    margin-left: 19px;
+}
+.logic6{
+    margin-left: 24px;
+}
+.logic7{
+    margin-left: 22px;
 }
