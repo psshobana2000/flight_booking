@@ -200,4 +200,7 @@ header .user-info img {
   .logic7{
     margin-left: 7px;
   }
- 
+ .board{
+  margin-left: -27px;
+  width: 223px;
+ }

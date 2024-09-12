@@ -34,12 +34,12 @@
             color: #c72571;
             font-size: 17px;
             margin: 0;
-            margin-left: 50px;
+            margin-left: 32px;
 }
         .new-user p {
             margin: 0;
             color: #1a1919;
-            margin-left: 54px;
+            margin-left: 34px;
         }
         .form-row {
             display: flex;
@@ -47,23 +47,22 @@
             margin-bottom: 15px;
         }
         .form-row .input-container {
-            width: 48%;
+            width: 47%;
         }
         .form-row .input-container input[type="text"],
         .form-row .input-container input[type="email"],
         .form-row .input-container input[type="password"] {
-            width: 97%;
+            width: 100%;
             padding: 0px;
             border: 2px solid #7A2940;
             border-radius: 5px;
             outline: none;
-            height: 47px;
+            height: 54px;
             margin-left: 10px;
             padding-left: -7px;
             margin-bottom: 38px;
 }
-
-        
+  
         .form-row .input-container .error {
             color: red;
             font-size: 13px;
@@ -96,15 +95,13 @@
             width: 9%;
 }
 
-        
         .btn-group .save {
             background-color:#c72571;
             margin-right: 426px;
             width: 9%;
             font-size: small;
 }
-        
-        .board{
+         .board{
             width: 204px;
             margin-left: -36px;
             transition: background-color 0.3s ease;
@@ -120,7 +117,7 @@
             
         width: 93%;
         padding: 63px;
-        margin-left: -22px;
+        margin-left: -48px;
         }
 
         h3 {
@@ -129,7 +126,7 @@
             padding-bottom: 0px;
             font-size: 20px;
             font-weight: bold;
-            margin-left: 53px;
+            margin-left: 34px;
             position: relative;
             margin-bottom: 15px;
             margin-top: 26px;
@@ -155,18 +152,22 @@
         }
         #email{
             padding-left: 10px; 
+            margin-left: 30px;
         }
         #contact{
             padding-left: 10px; 
+           
         }
         #designation{
             padding-left: 10px;
+            margin-left: 30px;
         }
         #password{
             padding-left: 10px;
         }
         #confirm_password{
             padding-left: 10px;
+            margin-left: 30px;
         }
         .new{
             color:silver;
@@ -231,7 +232,6 @@ hr{
   height: 37px !important;
   margin-left: 854px !important;
   margin-top: -77px !important;
-transition-duration: 5s;
   
 }
 .message-box p {
@@ -241,6 +241,7 @@ transition-duration: 5s;
     margin-left: 37px;
   
 }
+
 .logic{
     margin-left: 16px;
 }
@@ -265,3 +266,4 @@ transition-duration: 5s;
 .logic7{
     margin-left: 22px;
 }
+

@@ -1,6 +1,6 @@
 body {
             font-family: Arial, sans-serif;
-            background-color: #FDE4EC;
+            background-color: #FDE4EC !important;
             margin: 0;
             padding: 0;
         }
@@ -33,12 +33,13 @@ body {
             color: #B64162;
             font-size: 17px;
             margin: 0;
-            margin-left: 50px;
+            margin-left: 23px;
 }
         .new-user p {
             margin: 0;
             color: #1a1919;
-            margin-left: 54px;
+            margin-left: 27px;
+            padding-bottom: 30px;
         }
         .form-row {
             display: flex;
@@ -46,7 +47,8 @@ body {
             margin-bottom: 15px;
         }
         .form-row .input-container {
-            width: 48%;
+            width: 46%;
+            
         }
         .form-row .input-container input[type="text"],
         .form-row .input-container input[type="email"],
@@ -89,7 +91,7 @@ body {
         .btn-group .cancel {
             color: #871032;
             background-color: white;
-            margin-right: 29px;
+            margin-right: 36px;
             border: 2px solid silver;
             border-radius: 38px;
             width: 9%;
@@ -98,7 +100,7 @@ body {
         
         .btn-group .save {
             background-color: #a33856;
-            margin-right: 426px;
+            margin-right: 465px;
             width: 9%;
             font-size: small;
 }
@@ -128,7 +130,7 @@ body {
             padding-bottom: 0px;
             font-size: 20px;
             font-weight: bold;
-            margin-left: 53px;
+            margin-left: 25px;
             position: relative;
             margin-bottom: 15px;
             margin-top: 26px;
@@ -150,22 +152,28 @@ body {
             content: none; 
 }
         #name {
-            padding-left: 10px; 
+            padding-left: 10px;
+            margin-left: 29px; 
         }
         #email{
             padding-left: 10px; 
+            margin-left: -16px;
         }
         #contact{
             padding-left: 10px; 
+            margin-left: 29px;
         }
         #designation{
             padding-left: 10px;
+            margin-left: -16px;
         }
         #password{
             padding-left: 10px;
+            margin-left: 29px;
         }
         #confirm_password{
             padding-left: 10px;
+            margin-left: -16px;
         }
         .new{
             color:silver;

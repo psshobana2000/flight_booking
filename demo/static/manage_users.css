@@ -1,7 +1,7 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            background-color: #FDE4EC;
             margin: 20px;
         }
 
@@ -86,11 +86,11 @@
             margin-right: 5px;
         }
         h2{
-            margin-left: 33px;
+            margin-left: 10px;
             margin-top: -47px;
         }
         p{
-            margin-left: 33px;
+            margin-left: 11px;
         }
         .main-content header{
         width: 100%;
@@ -108,14 +108,16 @@
 .user1{
     height: 30px !important;
   width: 220px;
+  margin-left: 6px;
 
 }
 .user2{
     width: 151px !important;
 }
 .board{
-    width: 210px;
+    width: 200px !important;
   height: 19px;
+  margin-left: -30px;
         }
 
  hr{
@@ -169,7 +171,6 @@
         height: 10px;
       
 }
-
 .module-container.user-modules {
     color:#c72571;    
 }
@@ -211,13 +212,51 @@ h2::after {
     content: none; 
 }
 .delete-box{
-    background-color: #e3d2d5;
+    background-color: #e7e1e200;
   width: 18%;
   margin-left: 1097px !important;
-  margin-top: -60px !important;
-  height: 58px;
+  margin-top: -23px !important;
+  height: 61px;
   color: red !important;
+  text-align: center;
+  box-shadow: 0 2px 4px #a7a3a3;
+  padding: -5px;
+  border-radius: 3px;
+  font-size: 7px;
+  background-color: white;
+  
 }
 .delete-box p{
-    font-size: 17px;
+    font-size: 20px;
+}
+.logic{
+    
+        margin-left: 15px;
+}
+.logic1{
+    
+    margin-left: 13px;
+}
+.logic2{
+    
+    margin-left: 17px;
+}.logic3{
+    
+    margin-left: 19px;
+}
+.logic4{
+    
+    margin-left: 14px;
+}
+.logic5{
+    
+    margin-left: 16px;
+}
+.logic6{
+    
+    margin-left: 22px;
+}
+.logic7{
+    
+    margin-left: 22px;
 }
