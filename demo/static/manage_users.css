@@ -228,6 +228,10 @@ h2::after {
 }
 .delete-box p{
     font-size: 20px;
+    justify-content: center;
+}
+.top{
+    margin-top: 10px;
 }
 .logic{
     

@@ -23,31 +23,31 @@
                 {% csrf_token %}
                 <div class="form-row">
                     <div class="input-container">
-                        <input type="text" id="name" name="name" placeholder="Name" value="{{ profile.name }}" autocomplete="off">
+                        <input type="text" id="name" name="name" placeholder="Name" value="{{ form.name.value }}" autocomplete="off">
                         <span class="error" id="name-error">Please enter the name</span>
                     </div>
                     <div class="input-container">
-                        <input type="email" id="email" name="email" placeholder="E-Mail ID" value="{{ profile.email }}">
+                        <input type="email" id="email" name="email" placeholder="E-Mail ID" value="{{ form.email.value }}">
                         <span class="error" id="email-error">Please enter a valid email</span>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="input-container">
-                        <input type="text" id="contact" name="contact" placeholder="Contact No." value="{{ profile.contact }}" autocomplete="off">
+                        <input type="text" id="contact" name="contact" placeholder="Contact No." value="{{ form.contact.value }}" autocomplete="off">
                         <span class="error" id="contact-error">Contact number must contain 10 digits</span>
                     </div>
                     <div class="input-container">
-                        <input type="text" id="designation" name="designation" placeholder="Designation" value="{{ profile.designation }}" autocomplete="off">
+                        <input type="text" id="designation" name="designation" placeholder="Designation" value="{{ form.designation.value }}" autocomplete="off">
                         <span class="error" id="designation-error">Invalid designation</span>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="input-container">
-                        <input type="password" id="password" name="password" placeholder="Password" autocomplete="off">
+                        <input type="password" id="password" name="password" placeholder="Password" value="{{ form.password.value }}" autocomplete="off">
                         <span class="error" id="password-error">Password field is required</span>
                     </div>
                     <div class="input-container">
-                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password">
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" value="{{ form.confirm_password.value }}" autocomplete="off">
                         <span class="error" id="confirm_password-error">Password does not match</span>
                     </div>
                 </div>

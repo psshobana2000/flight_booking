@@ -10,33 +10,30 @@
 <body>
     <div class="container">
         <div class="module-container user-modules">
-        
             <h6 class="user">USER MODULES<span class="new">. new user</span></h6>
         </div>
 
-        <div class="module-container new-user"  style="height: 530px;">
-           
+        <div class="module-container new-user" style="height: 530px;">
             <h3>New User</h3>
             <p>Use the form below to create a new user profile</p>
             {% if messages %}
-    <div class="message-box">
-        {% for msg in messages %}
-            <p>{{ msg }}</p>
-        {% endfor %}
-    </div>
-{% endif %}
+                <div id="message-box" class="message-box">
+                    {% for msg in messages %}
+                        <p>{{ msg }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
 
             <form id="newUserForm" method="post">
                 {% csrf_token %}
                 <div class="form-row">
-                   
                     <div class="input-container">
                         <input type="text" id="name" name="name" placeholder="Name" autocomplete="off">
                         <span class="error" id="name-error">Please enter the name</span>
                     </div>
                     <div class="input-container">
                         <input type="email" id="email" name="email" placeholder="E-Mail ID">
-                        <span class="error" id="email-error"> Please enter the valid email</span>
+                        <span class="error" id="email-error">Please enter a valid email</span>
                     </div>
                 </div>
                 <div class="form-row">
@@ -55,8 +52,8 @@
                         <span class="error" id="password-error">Password field is required</span>
                     </div>
                     <div class="input-container">
-                        <input type="password" id="confirm_password" name="confirm_password" placeholder="confirm_password">
-                        <span class="error" id="confirm_password-error">Password does not match</span>
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password">
+                        <span class="error" id="confirm_password-error">Passwords do not match</span>
                     </div>
                 </div>
                 <div class="btn-group">
@@ -108,13 +105,31 @@
             if (password === "") {
                 isValid = false;
                 document.getElementById("password-error").style.display = "block";
-            } 
+            }
+
+            const confirmPassword = document.getElementById("confirm_password").value.trim();
+            if (password !== confirmPassword) {
+                isValid = false;
+                document.getElementById("confirm_password-error").style.display = "block";
+            }
 
             if (!isValid) {
                 event.preventDefault();
             }
-            
         });
+
+        function myFunction() {
+            var x = document.getElementById("message-box");
+            if (x) {  // Check if the element exists
+                x.className = "show";
+                setTimeout(function() {
+                    x.className = x.className.replace("show", "");
+                }, 5000);
+            }
+        }
+
+        // Call the function to display the message box if needed
+        myFunction();
     </script>
 </body>
 </html>

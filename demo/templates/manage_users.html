@@ -11,14 +11,6 @@
 </head>
 
 <body>
-    <div class="container1">
-        <div class="module-container user-modules">
-        
-            <h6 class="user">USER MODULES<span class="new">  . new user</span></h6>
-        </div>
-    </div>
-
-
     {% if messages %}
     <div class="delete-box">
         {% for msg in messages %}
@@ -26,14 +18,20 @@
         {% endfor %}
     </div>
 {% endif %}
-
+    <div class="container1">
+        
+        <div class="module-container user-modules">
+        
+            <h6 class="user">USER MODULES<span class="new">  . new user</span></h6>
+        </div>
+    </div>
 
     <div class="new container">
     <a href="{% url 'Profile' %}" class="add-Profile">
         <i class="fas fa-plus"></i> 
     </a>
 <h2 >Manage Users</h2>
-<p>Use the below form to update your profile</p>
+<p class="top">Use the below form to update your profile</p>
     <div class="table-container"> 
         <table>
             <thead>

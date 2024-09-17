@@ -232,8 +232,16 @@ hr{
   height: 37px !important;
   margin-left: 854px !important;
   margin-top: -77px !important;
+
+  
   
 }
+.message-box.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
 .message-box p {
     margin-top: 9px !important;
     color: green !important;
