@@ -232,6 +232,8 @@ hr{
   height: 37px !important;
   margin-left: 854px !important;
   margin-top: -77px !important;
+  cursor: pointer;
+  transition: 0.3s;
 
   
   
