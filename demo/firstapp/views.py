@@ -11,7 +11,6 @@ from firstapp.models import Account
 from firstapp.serializers import *
 from rest_framework.decorators import parser_classes, api_view
 from rest_framework.authtoken.serializers import AuthTokenSerializer
-from knox.auth import AuthToken
 from rest_framework.response import Response
 from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 from django.http import JsonResponse
@@ -230,22 +229,22 @@ def course(request):
         page_obj = paginator.page(paginator.num_pages)
     return render(request, 'course.html', {'page_obj': page_obj})
 
-@api_view(['POST'])
-def admin_login_api(request):
-    serializer = AuthTokenSerializer(data=request.data)
-    serializer.is_valid(raise_exception=True)
+# @api_view(['POST'])
+# def admin_login_api(request):
+#     serializer = AuthTokenSerializer(data=request.data)
+#     serializer.is_valid(raise_exception=True)
 
-    user = serializer.validated_data['user']
-    _, token = AuthToken.objects.create(user)
+#     user = serializer.validated_data['user']
+#     _, token = AuthToken.objects.create(user)
 
-    return Response({
-        'user_info': {
-            'id' : user.id,
-            'username' : user.username,
-            'email' : user.email,
-        },
-        'token' : token
-    })
+#     return Response({
+#         'user_info': {
+#             'id' : user.id,
+#             'username' : user.username,
+#             'email' : user.email,
+#         },
+#         'token' : token
+#     })
 
 @api_view(['GET'])
 def get_user_data(request):
