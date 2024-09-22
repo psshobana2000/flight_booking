@@ -235,8 +235,7 @@ hr{
   cursor: pointer;
   transition: 0.3s;
 
-  
-  
+
 }
 .message-box.show {
     visibility: visible;
