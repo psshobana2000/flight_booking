@@ -417,7 +417,7 @@ def Profile1(request):
         form = ProfileForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, "Created successfully")
+        
             return redirect('Profile') 
     else:
         form = ProfileForm()
@@ -448,6 +448,5 @@ def delete_profile(request, pk):
     profile = get_object_or_404(Profile, pk=pk)
     if request.method == 'POST':
         profile.delete()
-        messages.success(request, "Profile deleted successfully")
         return redirect('manage_users')
     return render(request, 'delete_profile.html', {'profile': profile})

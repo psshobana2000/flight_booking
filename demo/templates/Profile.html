@@ -132,6 +132,11 @@
             z-index: 1000;
             transition: opacity 0.10s ease-in-out;
         }
+        .fade-out {
+            opacity: 0;
+        }
+
+    
     </style>
 </head>
 <body>
@@ -186,55 +191,60 @@
     <script>
         document.getElementById("newUserForm").addEventListener("submit", function(event) {
             let isValid = true;
-
+    
             document.querySelectorAll(".error").forEach(function(error) {
                 error.style.display = "none";
             });
-
+    
             const name = document.getElementById("name").value.trim();
             if (name === "") {
                 isValid = false;
                 document.getElementById("name-error").style.display = "block";
             }
-
+    
             const email = document.getElementById("email").value.trim();
             const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             if (email === "" || !emailPattern.test(email)) {
                 isValid = false;
                 document.getElementById("email-error").style.display = "block";
             }
-
+    
             const contact = document.getElementById("contact").value.trim();
             if (contact.length !== 10 || !/^[0-9]{10}$/.test(contact)) {
                 isValid = false;
                 document.getElementById("contact-error").style.display = "block";
             }
-
+    
             const designation = document.getElementById("designation").value.trim();
             if (designation === "") {
                 isValid = false;
                 document.getElementById("designation-error").style.display = "block";
             }
-
+    
             const password = document.getElementById("password").value.trim();
             if (password === "") {
                 isValid = false;
                 document.getElementById("password-error").style.display = "block";
             }
-
+    
             const confirmPassword = document.getElementById("confirm_password").value.trim();
             if (password !== confirmPassword) {
                 isValid = false;
                 document.getElementById("confirm_password-error").style.display = "block";
             }
-
+    
             if (isValid) {
                 showSuccessMessage("Data saved successfully");
+                
             } else {
-                event.preventDefault();
+                event.preventDefault(); 
             }
         });
-
+         
+        setTimeout(() => {
+                successForm.submit();  
+            }, 5000); 
+    
         function showSuccessMessage(message) {
             const successMessage = document.createElement("div");
             successMessage.className = "success-message";
@@ -242,9 +252,14 @@
             document.body.appendChild(successMessage);
 
             setTimeout(() => {
+                successMessage.classList.add("fade-out");
+            }, 4500); 
+    
+            setTimeout(() => {
                 successMessage.remove();
-            }, 8000);
+            }, 5000); 
         }
     </script>
+    
 </body>
 </html>

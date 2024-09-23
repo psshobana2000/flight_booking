@@ -211,25 +211,7 @@ h2::before {
 h2::after {
     content: none; 
 }
-.delete-box{
-    background-color: #e7e1e200;
-  width: 18%;
-  margin-left: 1097px !important;
-  margin-top: -23px !important;
-  height: 61px;
-  color: red !important;
-  text-align: center;
-  box-shadow: 0 2px 4px #a7a3a3;
-  padding: -5px;
-  border-radius: 3px;
-  font-size: 7px;
-  background-color: white;
-  
-}
-.delete-box p{
-    font-size: 20px;
-    justify-content: center;
-}
+
 .top{
     margin-top: 10px;
 }
