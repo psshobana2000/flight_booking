@@ -106,7 +106,7 @@ body {
 }
         
         .board{
-                width: 208px !important;
+                width: 196px !important;
                 margin-left: -27px !important;
                 transition: background-color 0.3s ease;
                 height: 17px !important;
